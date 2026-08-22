@@ -1,0 +1,415 @@
+{
+  "$id": "indus-agent/semantic-routing-v2",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "agent_mode": {
+      "enum": [
+        "read_only",
+        "propose",
+        "write_approved",
+        "unsafe"
+      ]
+    },
+    "capabilities": {
+      "additionalProperties": false,
+      "properties": {
+        "network": {
+          "type": "boolean"
+        },
+        "shell": {
+          "type": "boolean"
+        },
+        "workspace_read": {
+          "type": "boolean"
+        },
+        "workspace_write": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "workspace_read",
+        "workspace_write",
+        "shell",
+        "network"
+      ],
+      "type": "object"
+    },
+    "case_id": {
+      "maxLength": 96,
+      "minLength": 3,
+      "type": "string"
+    },
+    "execution_contract": {
+      "type": "object"
+    },
+    "expected": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed_alternative_lifecycles": {
+          "items": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "allowed_tools": {
+                  "items": {
+                    "enum": [
+                      "delete_memory",
+                      "edit_file",
+                      "file_summary",
+                      "index_code",
+                      "list_files",
+                      "list_memories",
+                      "list_patches",
+                      "project_map",
+                      "propose_edit_file",
+                      "propose_write_file",
+                      "query_knowledge",
+                      "read_file",
+                      "recall",
+                      "refresh_knowledge",
+                      "remember",
+                      "run_command",
+                      "search_code",
+                      "search_docs",
+                      "search_symbols",
+                      "show_patch",
+                      "test_patch",
+                      "update_memory",
+                      "write_file"
+                    ]
+                  },
+                  "minItems": 1,
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "phase": {
+                  "enum": [
+                    "inspection",
+                    "proposal",
+                    "mutation",
+                    "verification",
+                    "answer"
+                  ]
+                }
+              },
+              "required": [
+                "phase",
+                "allowed_tools"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "type": "array"
+        },
+        "allowed_immediate_tools": {
+          "items": {
+            "enum": [
+              "delete_memory",
+              "edit_file",
+              "file_summary",
+              "index_code",
+              "list_files",
+              "list_memories",
+              "list_patches",
+              "project_map",
+              "propose_edit_file",
+              "propose_write_file",
+              "query_knowledge",
+              "read_file",
+              "recall",
+              "refresh_knowledge",
+              "remember",
+              "run_command",
+              "search_code",
+              "search_docs",
+              "search_symbols",
+              "show_patch",
+              "test_patch",
+              "update_memory",
+              "write_file"
+            ]
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "allowed_terminal_tools": {
+          "items": {
+            "enum": [
+              "delete_memory",
+              "edit_file",
+              "file_summary",
+              "index_code",
+              "list_files",
+              "list_memories",
+              "list_patches",
+              "project_map",
+              "propose_edit_file",
+              "propose_write_file",
+              "query_knowledge",
+              "read_file",
+              "recall",
+              "refresh_knowledge",
+              "remember",
+              "run_command",
+              "search_code",
+              "search_docs",
+              "search_symbols",
+              "show_patch",
+              "test_patch",
+              "update_memory",
+              "write_file"
+            ]
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "immediate_action_side_effect": {
+          "type": "boolean"
+        },
+        "immediate_tool_family": {
+          "enum": [
+            "blocked",
+            "clarification",
+            "documentation_retrieval",
+            "execution_verification",
+            "file_creation",
+            "file_inspection",
+            "final_response",
+            "memory_retrieval",
+            "mutation_proposal",
+            "patch_inspection",
+            "repository_discovery",
+            "symbol_inspection",
+            "targeted_mutation"
+          ]
+        },
+        "reason_code": {
+          "maxLength": 96,
+          "minLength": 3,
+          "type": "string"
+        },
+        "required_lifecycle": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "allowed_tools": {
+                "items": {
+                  "enum": [
+                    "delete_memory",
+                    "edit_file",
+                    "file_summary",
+                    "index_code",
+                    "list_files",
+                    "list_memories",
+                    "list_patches",
+                    "project_map",
+                    "propose_edit_file",
+                    "propose_write_file",
+                    "query_knowledge",
+                    "read_file",
+                    "recall",
+                    "refresh_knowledge",
+                    "remember",
+                    "run_command",
+                    "search_code",
+                    "search_docs",
+                    "search_symbols",
+                    "show_patch",
+                    "test_patch",
+                    "update_memory",
+                    "write_file"
+                  ]
+                },
+                "minItems": 1,
+                "type": "array",
+                "uniqueItems": true
+              },
+              "phase": {
+                "enum": [
+                  "inspection",
+                  "proposal",
+                  "mutation",
+                  "verification",
+                  "answer"
+                ]
+              }
+            },
+            "required": [
+              "phase",
+              "allowed_tools"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "response_mode": {
+          "enum": [
+            "action",
+            "blocked",
+            "clarification",
+            "final_answer"
+          ]
+        },
+        "risk_level": {
+          "enum": [
+            "critical",
+            "high",
+            "low",
+            "medium"
+          ]
+        },
+        "specialist": {
+          "enum": [
+            "debugging",
+            "documentation",
+            "general",
+            "implementation",
+            "repository_inspector",
+            "security_review",
+            "verification"
+          ]
+        },
+        "task_class": {
+          "enum": [
+            "blocked",
+            "explanation",
+            "inspection",
+            "mutation",
+            "planning",
+            "verification"
+          ]
+        },
+        "terminal_mutation_expected": {
+          "type": "boolean"
+        },
+        "terminal_tool_family": {
+          "enum": [
+            "blocked",
+            "clarification",
+            "documentation_retrieval",
+            "execution_verification",
+            "file_creation",
+            "file_inspection",
+            "final_response",
+            "memory_retrieval",
+            "mutation_proposal",
+            "patch_inspection",
+            "repository_discovery",
+            "symbol_inspection",
+            "targeted_mutation",
+            null
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "user_mutation_goal": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "task_class",
+        "specialist",
+        "immediate_tool_family",
+        "allowed_immediate_tools",
+        "terminal_tool_family",
+        "allowed_terminal_tools",
+        "required_lifecycle",
+        "allowed_alternative_lifecycles",
+        "response_mode",
+        "user_mutation_goal",
+        "immediate_action_side_effect",
+        "terminal_mutation_expected",
+        "risk_level",
+        "reason_code"
+      ],
+      "type": "object"
+    },
+    "forbidden_tools": {
+      "items": {
+        "enum": [
+          "delete_memory",
+          "edit_file",
+          "file_summary",
+          "index_code",
+          "list_files",
+          "list_memories",
+          "list_patches",
+          "project_map",
+          "propose_edit_file",
+          "propose_write_file",
+          "query_knowledge",
+          "read_file",
+          "recall",
+          "refresh_knowledge",
+          "remember",
+          "run_command",
+          "search_code",
+          "search_docs",
+          "search_symbols",
+          "show_patch",
+          "test_patch",
+          "update_memory",
+          "write_file"
+        ]
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "partition": {
+      "enum": [
+        "development",
+        "regression",
+        "adversarial",
+        "capability_mode",
+        "ambiguity",
+        "lifecycle",
+        "end_to_end",
+        "blind"
+      ]
+    },
+    "prompt": {
+      "maxLength": 4096,
+      "minLength": 8,
+      "type": "string"
+    },
+    "source_case_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tags": {
+      "items": {
+        "maxLength": 96,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "workspace_fixture": {
+      "maxLength": 256,
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "case_id",
+    "source_case_id",
+    "partition",
+    "prompt",
+    "workspace_fixture",
+    "agent_mode",
+    "capabilities",
+    "expected",
+    "forbidden_tools",
+    "tags"
+  ],
+  "title": "Indus Agent lifecycle-aware semantic routing case",
+  "type": "object"
+}

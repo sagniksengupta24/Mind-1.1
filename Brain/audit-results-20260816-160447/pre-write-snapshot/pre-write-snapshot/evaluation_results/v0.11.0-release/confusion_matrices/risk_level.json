@@ -1,0 +1,22 @@
+[
+  {
+    "expected": "critical",
+    "actual": "critical",
+    "count": 30
+  },
+  {
+    "expected": "high",
+    "actual": "high",
+    "count": 28
+  },
+  {
+    "expected": "low",
+    "actual": "low",
+    "count": 78
+  },
+  {
+    "expected": "medium",
+    "actual": "medium",
+    "count": 64
+  }
+]

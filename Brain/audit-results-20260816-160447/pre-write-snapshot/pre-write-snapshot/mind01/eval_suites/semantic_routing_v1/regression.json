@@ -1,0 +1,1779 @@
+{
+  "cases": [
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-001",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "list_files"
+        ],
+        "intent_type": "repository_discovery",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Map the repository areas relevant to error translation before opening src/error_translation_8.py.",
+      "rationale_code": "repository_inventory",
+      "tags": [
+        "inspection",
+        "repository_discovery",
+        "error_translation"
+      ],
+      "workspace_fixture": "fixtures/error_translation"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-002",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "file_summary"
+        ],
+        "intent_type": "file_read",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Read src/database_migration_9.py directly and summarize how it handles database migration.",
+      "rationale_code": "direct_file_read",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "database_migration"
+      ],
+      "workspace_fixture": "fixtures/database_migration"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-003",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_symbols",
+          "search_code"
+        ],
+        "intent_type": "symbol_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Locate the definition of the symbol handle_CLI_startup_10 used by CLI startup.",
+      "rationale_code": "symbol_lookup",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "CLI_startup"
+      ],
+      "workspace_fixture": "fixtures/CLI_startup"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-004",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "dependency_inspection",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Inspect dependency declarations affecting token redaction in src/token_redaction_11.py.",
+      "rationale_code": "dependency_inspection",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "token_redaction"
+      ],
+      "workspace_fixture": "fixtures/token_redaction"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-005",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_docs",
+          "query_knowledge"
+        ],
+        "intent_type": "documentation_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "documentation",
+        "task_class": "inspection",
+        "tool_family": "documentation_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Search the indexed documentation for guidance about path normalization.",
+      "rationale_code": "documentation_lookup",
+      "tags": [
+        "inspection",
+        "documentation_retrieval",
+        "path_normalization"
+      ],
+      "workspace_fixture": "fixtures/path_normalization"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-006",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "explanation",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Explain the tradeoffs of plugin discovery without inspecting or changing this repository.",
+      "rationale_code": "direct_explanation",
+      "tags": [
+        "explanation",
+        "final_response",
+        "plugin_discovery"
+      ],
+      "workspace_fixture": "fixtures/plugin_discovery"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "regression-007",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "test_execution",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Run the targeted tests for src/test_isolation_14.py to verify test isolation; do not modify source.",
+      "rationale_code": "test_execution",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "test_isolation"
+      ],
+      "workspace_fixture": "fixtures/test_isolation"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "regression-008",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "compilation",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Compile src/trace_correlation_15.py with the project compiler to check trace correlation.",
+      "rationale_code": "compilation_check",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "trace_correlation"
+      ],
+      "workspace_fixture": "fixtures/trace_correlation"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "regression-009",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "linting",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Run the configured linter on src/rate_limiting_16.py and report issues related to rate limiting.",
+      "rationale_code": "lint_check",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "rate_limiting"
+      ],
+      "workspace_fixture": "fixtures/rate_limiting"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "regression-010",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "command_execution",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "debugging",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Execute the repository's existing diagnostic command for schema migration.",
+      "rationale_code": "command_execution",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "schema_migration"
+      ],
+      "workspace_fixture": "fixtures/schema_migration"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-011",
+      "expected": {
+        "allowed_exact_tools": [
+          "propose_edit_file"
+        ],
+        "intent_type": "patch_proposal",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "mutation_proposal"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Propose a minimal edit to src/artifact_hashing_18.py for artifact hashing, but do not apply it.",
+      "rationale_code": "existing_file_patch_proposal",
+      "tags": [
+        "planning",
+        "mutation_proposal",
+        "artifact_hashing"
+      ],
+      "workspace_fixture": "fixtures/artifact_hashing"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-012",
+      "expected": {
+        "allowed_exact_tools": [
+          "propose_write_file"
+        ],
+        "intent_type": "file_proposal",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "mutation_proposal"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Draft a proposed new file at src/rollback_recovery_19.py for rollback recovery; leave the workspace unchanged.",
+      "rationale_code": "new_file_patch_proposal",
+      "tags": [
+        "planning",
+        "mutation_proposal",
+        "rollback_recovery"
+      ],
+      "workspace_fixture": "fixtures/rollback_recovery"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "regression-013",
+      "expected": {
+        "allowed_exact_tools": [
+          "edit_file"
+        ],
+        "intent_type": "targeted_edit",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "targeted_mutation"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "After reading src/symbol_indexing_20.py, apply the approved small replacement needed for symbol indexing.",
+      "rationale_code": "approved_targeted_edit",
+      "tags": [
+        "mutation",
+        "targeted_mutation",
+        "symbol_indexing"
+      ],
+      "workspace_fixture": "fixtures/symbol_indexing"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "regression-014",
+      "expected": {
+        "allowed_exact_tools": [
+          "write_file"
+        ],
+        "intent_type": "file_creation",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "file_creation"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Create the approved file src/documentation_freshness_21.py implementing documentation freshness.",
+      "rationale_code": "approved_file_creation",
+      "tags": [
+        "mutation",
+        "file_creation",
+        "documentation_freshness"
+      ],
+      "workspace_fixture": "fixtures/documentation_freshness"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "regression-015",
+      "expected": {
+        "allowed_exact_tools": [
+          "write_file"
+        ],
+        "intent_type": "full_file_replacement",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "file_creation"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Replace the complete contents of src/memory_provenance_22.py with the already approved memory provenance implementation.",
+      "rationale_code": "approved_full_file_replacement",
+      "tags": [
+        "mutation",
+        "file_creation",
+        "memory_provenance"
+      ],
+      "workspace_fixture": "fixtures/memory_provenance"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-016",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "mutation_without_approval",
+        "mutation_intent": true,
+        "response_mode": "blocked",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "blocked"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Fix timeout handling in src/timeout_handling_23.py, but this session has no write approval.",
+      "rationale_code": "mutation_requires_approval",
+      "tags": [
+        "blocked",
+        "blocked",
+        "timeout_handling"
+      ],
+      "workspace_fixture": "fixtures/timeout_handling"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-017",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "inspect_before_mutation",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "debugging",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Inspect src/output_truncation_24.py to diagnose output truncation before proposing any change.",
+      "rationale_code": "inspect_before_mutate",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "output_truncation"
+      ],
+      "workspace_fixture": "fixtures/output_truncation"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-018",
+      "expected": {
+        "allowed_exact_tools": [
+          "list_patches",
+          "show_patch"
+        ],
+        "intent_type": "patch_inspection",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "patch_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Show the existing patch proposal associated with policy enforcement.",
+      "rationale_code": "patch_review",
+      "tags": [
+        "inspection",
+        "patch_inspection",
+        "policy_enforcement"
+      ],
+      "workspace_fixture": "fixtures/policy_enforcement"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-019",
+      "expected": {
+        "allowed_exact_tools": [
+          "recall",
+          "list_memories"
+        ],
+        "intent_type": "memory_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "inspection",
+        "tool_family": "memory_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Recall the recorded project decision about receipt verification.",
+      "rationale_code": "memory_lookup",
+      "tags": [
+        "inspection",
+        "memory_retrieval",
+        "receipt_verification"
+      ],
+      "workspace_fixture": "fixtures/receipt_verification"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-020",
+      "expected": {
+        "allowed_exact_tools": [
+          "index_code"
+        ],
+        "intent_type": "index_refresh",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Index source symbols needed to investigate mode selection, without changing product source.",
+      "rationale_code": "symbol_index_refresh",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "mode_selection"
+      ],
+      "workspace_fixture": "fixtures/mode_selection"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-021",
+      "expected": {
+        "allowed_exact_tools": [
+          "refresh_knowledge"
+        ],
+        "intent_type": "knowledge_refresh",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "documentation",
+        "task_class": "inspection",
+        "tool_family": "documentation_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Refresh local project knowledge for patch review; do not edit source files.",
+      "rationale_code": "knowledge_refresh",
+      "tags": [
+        "inspection",
+        "documentation_retrieval",
+        "patch_review"
+      ],
+      "workspace_fixture": "fixtures/patch_review"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "regression-022",
+      "expected": {
+        "allowed_exact_tools": [
+          "test_patch"
+        ],
+        "intent_type": "patch_test",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Test the existing patch for import safety using its configured verification command.",
+      "rationale_code": "patch_test",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "import_safety"
+      ],
+      "workspace_fixture": "fixtures/import_safety"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-023",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "security_review",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "high",
+        "specialist": "security_review",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Review src/concurrent_sessions_30.py for authentication and authorization risks involving concurrent sessions.",
+      "rationale_code": "security_inspection",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "concurrent_sessions"
+      ],
+      "workspace_fixture": "fixtures/concurrent_sessions"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-024",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "implementation_plan",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Plan the implementation of HTTP error mapping across the repository without calling tools yet.",
+      "rationale_code": "planning_response",
+      "tags": [
+        "planning",
+        "final_response",
+        "HTTP_error_mapping"
+      ],
+      "workspace_fixture": "fixtures/HTTP_error_mapping"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-025",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_docs"
+        ],
+        "intent_type": "evidence_comparison",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "documentation",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Compare src/environment_parsing_32.py with its documented behavior for environment parsing using repository evidence.",
+      "rationale_code": "evidence_comparison",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "environment_parsing"
+      ],
+      "workspace_fixture": "fixtures/environment_parsing"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-026",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "intent_type": "reference_search",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Find every reference to handle_command_allowlisting_33 before assessing command allowlisting.",
+      "rationale_code": "reference_search",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "command_allowlisting"
+      ],
+      "workspace_fixture": "fixtures/command_allowlisting"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-027",
+      "expected": {
+        "allowed_exact_tools": [
+          "file_summary",
+          "read_file"
+        ],
+        "intent_type": "file_summary",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Summarize the structure of src/workspace_boundaries_34.py as it relates to workspace boundaries.",
+      "rationale_code": "file_structure_summary",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "workspace_boundaries"
+      ],
+      "workspace_fixture": "fixtures/workspace_boundaries"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-028",
+      "expected": {
+        "allowed_exact_tools": [
+          "list_patches",
+          "show_patch"
+        ],
+        "intent_type": "proposal_review",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "verification",
+        "task_class": "inspection",
+        "tool_family": "patch_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Verify the proposed change for model fallback without applying it to the workspace.",
+      "rationale_code": "proposal_review",
+      "tags": [
+        "inspection",
+        "patch_inspection",
+        "model_fallback"
+      ],
+      "workspace_fixture": "fixtures/model_fallback"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-029",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_symbols"
+        ],
+        "intent_type": "grounded_explanation",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Explain what handle_structured_generation_36 does after grounding the answer in src/structured_generation_36.py.",
+      "rationale_code": "grounded_explanation",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "structured_generation"
+      ],
+      "workspace_fixture": "fixtures/structured_generation"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-030",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "intent_type": "capability_assessment",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Assess whether repair budgets is supported by the current repository without changing anything.",
+      "rationale_code": "capability_assessment",
+      "tags": [
+        "inspection",
+        "repository_discovery",
+        "repair_budgets"
+      ],
+      "workspace_fixture": "fixtures/repair_budgets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-031",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "list_files"
+        ],
+        "intent_type": "repository_discovery",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Map the repository areas relevant to response modes before opening src/response_modes_38.py.",
+      "rationale_code": "repository_inventory",
+      "tags": [
+        "inspection",
+        "repository_discovery",
+        "response_modes"
+      ],
+      "workspace_fixture": "fixtures/response_modes"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-032",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "file_summary"
+        ],
+        "intent_type": "file_read",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Read src/capability_grants_39.py directly and summarize how it handles capability grants.",
+      "rationale_code": "direct_file_read",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "capability_grants"
+      ],
+      "workspace_fixture": "fixtures/capability_grants"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-033",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_symbols",
+          "search_code"
+        ],
+        "intent_type": "symbol_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Locate the definition of the symbol handle_security_logging_40 used by security logging.",
+      "rationale_code": "symbol_lookup",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "security_logging"
+      ],
+      "workspace_fixture": "fixtures/security_logging"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-034",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "dependency_inspection",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Inspect dependency declarations affecting release packaging in src/release_packaging_41.py.",
+      "rationale_code": "dependency_inspection",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "release_packaging"
+      ],
+      "workspace_fixture": "fixtures/release_packaging"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-035",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_docs",
+          "query_knowledge"
+        ],
+        "intent_type": "documentation_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "documentation",
+        "task_class": "inspection",
+        "tool_family": "documentation_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Search the indexed documentation for guidance about source archiving.",
+      "rationale_code": "documentation_lookup",
+      "tags": [
+        "inspection",
+        "documentation_retrieval",
+        "source_archiving"
+      ],
+      "workspace_fixture": "fixtures/source_archiving"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-036",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "explanation",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Explain the tradeoffs of version reporting without inspecting or changing this repository.",
+      "rationale_code": "direct_explanation",
+      "tags": [
+        "explanation",
+        "final_response",
+        "version_reporting"
+      ],
+      "workspace_fixture": "fixtures/version_reporting"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "regression-037",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "test_execution",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Run the targeted tests for src/evaluation_validation_44.py to verify evaluation validation; do not modify source.",
+      "rationale_code": "test_execution",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "evaluation_validation"
+      ],
+      "workspace_fixture": "fixtures/evaluation_validation"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "regression-038",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "compilation",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Compile src/risk_classification_45.py with the project compiler to check risk classification.",
+      "rationale_code": "compilation_check",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "risk_classification"
+      ],
+      "workspace_fixture": "fixtures/risk_classification"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "regression-039",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "linting",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Run the configured linter on src/ambiguity_handling_46.py and report issues related to ambiguity handling.",
+      "rationale_code": "lint_check",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "ambiguity_handling"
+      ],
+      "workspace_fixture": "fixtures/ambiguity_handling"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "regression-040",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "command_execution",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "debugging",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Execute the repository's existing diagnostic command for tool visibility.",
+      "rationale_code": "command_execution",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "tool_visibility"
+      ],
+      "workspace_fixture": "fixtures/tool_visibility"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-041",
+      "expected": {
+        "allowed_exact_tools": [
+          "propose_edit_file"
+        ],
+        "intent_type": "patch_proposal",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "mutation_proposal"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Propose a minimal edit to src/specialist_routing_48.py for specialist routing, but do not apply it.",
+      "rationale_code": "existing_file_patch_proposal",
+      "tags": [
+        "planning",
+        "mutation_proposal",
+        "specialist_routing"
+      ],
+      "workspace_fixture": "fixtures/specialist_routing"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-042",
+      "expected": {
+        "allowed_exact_tools": [
+          "propose_write_file"
+        ],
+        "intent_type": "file_proposal",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "mutation_proposal"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Draft a proposed new file at src/exact_tool_choice_49.py for exact tool choice; leave the workspace unchanged.",
+      "rationale_code": "new_file_patch_proposal",
+      "tags": [
+        "planning",
+        "mutation_proposal",
+        "exact_tool_choice"
+      ],
+      "workspace_fixture": "fixtures/exact_tool_choice"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "regression-043",
+      "expected": {
+        "allowed_exact_tools": [
+          "edit_file"
+        ],
+        "intent_type": "targeted_edit",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "targeted_mutation"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "After reading src/regression_reporting_50.py, apply the approved small replacement needed for regression reporting.",
+      "rationale_code": "approved_targeted_edit",
+      "tags": [
+        "mutation",
+        "targeted_mutation",
+        "regression_reporting"
+      ],
+      "workspace_fixture": "fixtures/regression_reporting"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "regression-044",
+      "expected": {
+        "allowed_exact_tools": [
+          "write_file"
+        ],
+        "intent_type": "file_creation",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "file_creation"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Create the approved file src/knowledge_refresh_51.py implementing knowledge refresh.",
+      "rationale_code": "approved_file_creation",
+      "tags": [
+        "mutation",
+        "file_creation",
+        "knowledge_refresh"
+      ],
+      "workspace_fixture": "fixtures/knowledge_refresh"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "regression-045",
+      "expected": {
+        "allowed_exact_tools": [
+          "write_file"
+        ],
+        "intent_type": "full_file_replacement",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "file_creation"
+      },
+      "forbidden_tools": [],
+      "partition": "regression",
+      "prompt": "Replace the complete contents of src/documentation_retrieval_52.py with the already approved documentation retrieval implementation.",
+      "rationale_code": "approved_full_file_replacement",
+      "tags": [
+        "mutation",
+        "file_creation",
+        "documentation_retrieval"
+      ],
+      "workspace_fixture": "fixtures/documentation_retrieval"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-046",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "mutation_without_approval",
+        "mutation_intent": true,
+        "response_mode": "blocked",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "blocked"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Fix memory deletion in src/memory_deletion_53.py, but this session has no write approval.",
+      "rationale_code": "mutation_requires_approval",
+      "tags": [
+        "blocked",
+        "blocked",
+        "memory_deletion"
+      ],
+      "workspace_fixture": "fixtures/memory_deletion"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-047",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "inspect_before_mutation",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "debugging",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Inspect src/patch_persistence_54.py to diagnose patch persistence before proposing any change.",
+      "rationale_code": "inspect_before_mutate",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "patch_persistence"
+      ],
+      "workspace_fixture": "fixtures/patch_persistence"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-048",
+      "expected": {
+        "allowed_exact_tools": [
+          "list_patches",
+          "show_patch"
+        ],
+        "intent_type": "patch_inspection",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "patch_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Show the existing patch proposal associated with shell approval.",
+      "rationale_code": "patch_review",
+      "tags": [
+        "inspection",
+        "patch_inspection",
+        "shell_approval"
+      ],
+      "workspace_fixture": "fixtures/shell_approval"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-049",
+      "expected": {
+        "allowed_exact_tools": [
+          "recall",
+          "list_memories"
+        ],
+        "intent_type": "memory_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "inspection",
+        "tool_family": "memory_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Recall the recorded project decision about file creation.",
+      "rationale_code": "memory_lookup",
+      "tags": [
+        "inspection",
+        "memory_retrieval",
+        "file_creation"
+      ],
+      "workspace_fixture": "fixtures/file_creation"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "regression-050",
+      "expected": {
+        "allowed_exact_tools": [
+          "index_code"
+        ],
+        "intent_type": "index_refresh",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "regression",
+      "prompt": "Index source symbols needed to investigate targeted replacement, without changing product source.",
+      "rationale_code": "symbol_index_refresh",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "targeted_replacement"
+      ],
+      "workspace_fixture": "fixtures/targeted_replacement"
+    }
+  ],
+  "partition": "regression",
+  "suite_version": "semantic-routing-v1"
+}

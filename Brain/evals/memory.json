@@ -1,0 +1,10 @@
+{
+  "category": "memory",
+  "tasks": [
+    {
+      "name": "memory-dry-run-harness",
+      "prompt": "Memory harness check: recall tagged ranked memory if a live model is available.",
+      "expected_contains": ["Dry run ready", "Memory"]
+    }
+  ]
+}

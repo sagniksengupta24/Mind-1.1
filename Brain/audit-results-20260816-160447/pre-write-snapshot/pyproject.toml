@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel>=0.43"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mind01"
+version = "0.11.1.dev0"
+description = "Local-first AI engineering agent prototype"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2",
+    "pytest>=8",
+    "pytest-cov>=5",
+    "setuptools>=68",
+    "wheel",
+]
+
+[project.scripts]
+mind01 = "mind01.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["mind01*"]
+
+[tool.setuptools.package-data]
+mind01 = [
+    "eval_suites/**/*.json",
+    "eval_suites/**/README.md",
+    "eval_suites/**/*.fixture",
+    "eval_suites/**/*.py",
+]
+
+[tool.pyright]
+extraPaths = ["tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,1691 @@
+{
+  "destination_suite": "semantic-routing-v3",
+  "entries": [
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-001",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-001",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-002",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-002",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-003",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-003",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-004",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-004",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-005",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-005",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-006",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-006",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-007",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-007",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-008",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-008",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-009",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-009",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-010",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-010",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-011",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-011",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-012",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-012",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-013",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-013",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-014",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-014",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-015",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-015",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-016",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-016",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-017",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-017",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-018",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-018",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-019",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-019",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-020",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-020",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-021",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-021",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-022",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-022",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-023",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-023",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-024",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-024",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-025",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-025",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-026",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-026",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-027",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-027",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-028",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-028",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-029",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-029",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-030",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-030",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-031",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-031",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-032",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-032",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-033",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-033",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-034",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-034",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-035",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-035",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-036",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-036",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-037",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-037",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-038",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-038",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-039",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-039",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-040",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-040",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-041",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-041",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-042",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-042",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-043",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-043",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-044",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-044",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-045",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-045",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-046",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-046",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-047",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-047",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-048",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-048",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-049",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-049",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-050",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-050",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-051",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-051",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-052",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-052",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-053",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-053",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-054",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-054",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-055",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-055",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-056",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-056",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-057",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-057",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-058",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-058",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-059",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-059",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-development-060",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-development-060",
+      "source_dataset": "semantic_routing_v2/development.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-001",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-001",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-002",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-002",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-003",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-003",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-004",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-004",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-005",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-005",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-006",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-006",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-007",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-007",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-008",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-008",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-009",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-009",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-010",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-010",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-011",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-011",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-012",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-012",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-013",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-013",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-014",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-014",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-015",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-015",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-016",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-016",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-017",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-017",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-018",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-018",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-019",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-019",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-020",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-020",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-021",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-021",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-022",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-022",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-023",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-023",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-024",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-024",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-025",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-025",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-026",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-026",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-027",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-027",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-028",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-028",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-029",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-029",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-030",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-030",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-031",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-031",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-032",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-032",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-033",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-033",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-034",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-034",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-035",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-035",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-036",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-036",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-037",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-037",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-038",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-038",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-039",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-039",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-040",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-040",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-041",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-041",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-042",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-042",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-043",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-043",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-044",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-044",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-045",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-045",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-046",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-046",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-047",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-047",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-048",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-048",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-049",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-049",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-regression-050",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-regression-050",
+      "source_dataset": "semantic_routing_v2/regression.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-001",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-001",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-002",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-002",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-003",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-003",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-004",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-004",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-005",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-005",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-006",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-006",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-007",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-007",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-008",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-008",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-009",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-009",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-010",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-010",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-011",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-011",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-012",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-012",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-013",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-013",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-014",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-014",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-015",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-015",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-016",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-016",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-017",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-017",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-018",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-018",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-019",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-019",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-020",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-020",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-021",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-021",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-022",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-022",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-023",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-023",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-024",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-024",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-025",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-025",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-026",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-026",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-027",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-027",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-028",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-028",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-029",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-029",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-adversarial-030",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-adversarial-030",
+      "source_dataset": "semantic_routing_v2/adversarial.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-001",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-001",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-002",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-002",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-003",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-003",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-004",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-004",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-005",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-005",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-006",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-006",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-007",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-007",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-008",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-008",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-009",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-009",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-010",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-010",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-011",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-011",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-012",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-012",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-013",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-013",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-014",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-014",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-015",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-015",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-016",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-016",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-017",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-017",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-018",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-018",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-019",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-019",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-020",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-020",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-021",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-021",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-022",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-022",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-023",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-023",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-024",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-024",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-025",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-025",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-026",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-026",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-027",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-027",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-028",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-028",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-029",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-029",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-capability-mode-030",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-capability-mode-030",
+      "source_dataset": "semantic_routing_v2/capability_modes.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-001",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-001",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-002",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-002",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-003",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-003",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-004",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-004",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-005",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-005",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-006",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-006",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-007",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-007",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-008",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-008",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-009",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-009",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-010",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-010",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-011",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-011",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-012",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-012",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-013",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-013",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-014",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-014",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-015",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-015",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-016",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-016",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-017",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-017",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-018",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-018",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-019",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-019",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-020",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-020",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-021",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-021",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-022",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-022",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-023",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-023",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-024",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-024",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-025",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-025",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-026",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-026",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-027",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-027",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-028",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-028",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-029",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-029",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "v2-ambiguity-030",
+      "label_semantics_changed": false,
+      "source_case_id": "v2-ambiguity-030",
+      "source_dataset": "semantic_routing_v2/ambiguity.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-001",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-001",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-002",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-002",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-003",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-003",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-004",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-004",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-005",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-005",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-006",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-006",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-007",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-007",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-008",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-008",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-009",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-009",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-010",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-010",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-011",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-011",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-012",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-012",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-013",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-013",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-014",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-014",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-015",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-015",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-016",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-016",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-017",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-017",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-018",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-018",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-019",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-019",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-020",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-020",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-021",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-021",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-022",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-022",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-023",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-023",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-024",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-024",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-025",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-025",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-026",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-026",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-027",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-027",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-028",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-028",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-029",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-029",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-030",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-030",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-031",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-031",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-032",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-032",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-033",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-033",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-034",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-034",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-035",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-035",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-036",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-036",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-037",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-037",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-038",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-038",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-039",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-039",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    },
+    {
+      "change": "added public fixture/policy facts, explicit alternative immediate families, and annotation audit fields",
+      "destination_case_id": "lifecycle-040",
+      "label_semantics_changed": false,
+      "source_case_id": "lifecycle-040",
+      "source_dataset": "semantic_routing_v2/lifecycle.json"
+    }
+  ],
+  "execution_case_count": 60,
+  "generated_at": "2026-07-16T20:25:03.342502+00:00",
+  "migrated_case_count": 240,
+  "new_execution_case_count": 36,
+  "schema_version": "3.0",
+  "source_suite": "semantic-routing-v2"
+}

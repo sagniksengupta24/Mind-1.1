@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "release": "v0.10.0-baseline-for-v0.11",
+  "generated_at": "2026-07-16T09:42:33.160351+00:00",
+  "git_commit": "ff8f5a387d8be31059f074f36d7cac16f455eda7",
+  "git_tree": "c5b2d710cc45552812dffb19fe5bc1eb2ad911f2",
+  "git_branch": "v0.11/semantic-routing",
+  "dirty": false,
+  "source_archive": "artifacts/Mind-Agent-v0.10.0.zip",
+  "source_archive_sha256": "7897fa8ac6d240db455c44194201b1c2ab404893953a998abad89a01ae3fcc5b",
+  "wheel": "artifacts/mind01-0.10.0-py3-none-any.whl",
+  "wheel_sha256": "1d21b4a576f267ec885a97a88321ee8ffba815c72b5fce97e25f2b3b356d0559",
+  "model_name": null,
+  "model_digest": null,
+  "ollama_version": {
+    "available": true,
+    "path": "/usr/local/bin/ollama",
+    "version": "Warning: could not connect to a running Ollama instance\nWarning: client version is 0.32.0"
+  },
+  "system_prompt_sha256": "df00449f8f55fe0b06ec4f79af0db86be57335138ca30a4f6373bfde8bb32a36",
+  "tool_schema_sha256": "60122985311e517b13d7cffc8a42e25ed04eb7f41411f5cf468e8c450dbd752c",
+  "suite_sha256": "e23669c37968436aecf88c9076e974dc629917100bd30490de8e1ab8373f5565",
+  "configuration_sha256": "7d2884a18b63a84bed6de0678f2d244fa977df560fabdba499731522a3335a84",
+  "environment": {
+    "python": "3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]",
+    "platform": "Linux-7.0.0-27-generic-x86_64-with-glibc2.43",
+    "docker": {
+      "available": false,
+      "path": null,
+      "version": null
+    },
+    "iverilog": {
+      "available": false,
+      "path": null,
+      "version": null
+    },
+    "verilator": {
+      "available": false,
+      "path": null,
+      "version": null
+    },
+    "yosys": {
+      "available": false,
+      "path": null,
+      "version": null
+    },
+    "z3": {
+      "available": false,
+      "path": null,
+      "version": null
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "/home/mind/Desktop/Archive/Brain/.venv-linux/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 2.998
+    },
+    {
+      "command": [
+        "/home/mind/Desktop/Archive/Brain/.venv-linux/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "mind01",
+        "tests",
+        "scripts"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.034
+    },
+    {
+      "command": [
+        "/home/mind/Desktop/Archive/Brain/.venv-linux/bin/python",
+        "-m",
+        "mind01.eval",
+        "validate"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.087
+    },
+    {
+      "command": [
+        "/home/mind/Desktop/Archive/Brain/.venv-linux/bin/python",
+        "-m",
+        "mind01.eval",
+        "run",
+        "--suite",
+        "regression",
+        "--mock-model"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.079
+    },
+    {
+      "command": [
+        "/home/mind/Desktop/Archive/Brain/.venv-linux/bin/python",
+        "-m",
+        "mind01.eval",
+        "run",
+        "--suite",
+        "truthful-completion"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.081
+    },
+    {
+      "command": [
+        "/home/mind/Desktop/Archive/Brain/.venv-linux/bin/python",
+        "scripts/check_package.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.892
+    },
+    {
+      "command": [
+        "/home/mind/Desktop/Archive/Brain/.venv-linux/bin/python",
+        "-m",
+        "mind01.cli",
+        "--version"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.089
+    },
+    {
+      "command": [
+        "/home/mind/Desktop/Archive/Brain/.venv-linux/bin/python",
+        "-c",
+        "import mind01; print(mind01.__version__)"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.017
+    },
+    {
+      "command": [
+        "/home/mind/Desktop/Archive/Brain/.venv-linux/bin/python",
+        "-m",
+        "pip",
+        "wheel",
+        ".",
+        "--no-deps",
+        "--no-build-isolation",
+        "--no-index",
+        "--wheel-dir",
+        "/tmp/mind-release-wheel-npszb4rg/wheel"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.472
+    }
+  ],
+  "results": {
+    "release_gate_passed": true,
+    "all_deterministic_commands_passed": true,
+    "truthful_completion": {
+      "passed": 28,
+      "total": 28,
+      "false_success_count": 0,
+      "verified_result_count": 3,
+      "verified_with_complete_mapping_count": 3
+    },
+    "live_model": "not_run",
+    "hidden_coding": "not_run",
+    "security_sandbox": "not_run",
+    "performance": "not_run"
+  },
+  "known_limitations": [
+    "No live-model benchmark was run for v0.10.0.",
+    "Historical 62% semantic tool-family and 2/3 mutation reports are not retained locally.",
+    "Host execution is controlled but not sandboxed.",
+    "Authentication remains a single local token.",
+    "Ordinary evaluation datasets are not yet versioned or split.",
+    "No open-source redistribution license has been selected.",
+    "Release evidence is hash-addressed but not externally signed."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-07-30T00:00:00+05:30",
+  "starting_commit": "3f71bd56823bbde35e70d9c57dbb858f0d1e8894",
+  "starting_branch": "v0.11/semantic-routing-rc3",
+  "working_branch": "v0.11.1-semantic-routing",
+  "package_version": "0.11.0.dev0",
+  "baseline_tests": {
+    "command": ".venv-linux/bin/python -m pytest -q",
+    "result": "140 passed in 3.54s"
+  },
+  "frozen_rc3_1_tree_sha256": "197552dd65b0c6fab8b618ff1789dbe9f18326068d8857345760de5eac199e6f",
+  "files": {
+    "mind01/routing.py": "9a2e38e9bdb3bbc0174a9db5e30ee96be84068a8c6d533a7fe2b3b4d1a8ca64d",
+    "mind01/intent.py": "25aacb119bac443c40adf9562b33b77a3b79c0e4a8386631eba831471b08791a",
+    "mind01/policy.py": "ed42885921a738f64076013f21155a76f6be2f73916cd7c4b9ebcde47da2bf6c",
+    "mind01/tools/registry.py": "55cef7b1b26fa3d7771bd70019369d388ab56997d96889b1c972855577373954",
+    "mind01/tools/schemas.py": "37d3192e35b3c3b28f9c05db39f847ad0e357a5f79118bf2d7e9d9b7a58f8e4b",
+    "mind01/modes.py": "f25657bf14cc323fbc3182304b80b76c32876e3b1f6d3ea6387e22400647a7ca",
+    "mind01/tool_exposure.py": "c5c74e3eef7f66873b72c58150f62966eace91c59b210d716cbb1978fe785477",
+    "mind01/llm.py": "d94b287454a2f2d7d6dff59ba693a52ee7f58935cdf1f977d073c4c5daf17f45",
+    "mind01/action_parser.py": "ebbbfdd086fb3bf015ad82a211021f6796b9655c4dfecd353722644da525de18",
+    "tests/test_semantic_routing.py": "ce5c5c84c6582c45e91d90cd895bb93f4d974dbf65c59364bf4f114dcc1fe3da",
+    "tests/test_semantic_routing_v2.py": "8e5a4f294f223bcb96d84f94796c3bc69fe4e4ec99e74c334be333c9a43fa038",
+    "tests/test_routed_execution.py": "6a99092d3e730a066597878afa666f2bf5a1a2cc7e0fa0fb007bb61aaa0a717d",
+    "tests/test_architecture.py": "b449b4846f163bc5ff2155675c1aa145f2e29785d849d9ee1b5006c012abde4b"
+  }
+}

@@ -1,0 +1,999 @@
+{
+  "schema_version": "1.0",
+  "release_target": "0.11.0",
+  "agent_version": "0.11.0.dev0",
+  "generated_at": "2026-07-16T11:30:44.292037+00:00",
+  "source_candidate_commit": "812c510f5cfe4f26c46e923435ae89bd6f1229bb",
+  "evidence_generation_commit": "6bc583bb5d5fbe4edc4c3dd15bd9a7614be6fa43",
+  "status": "failed_blocked",
+  "gates": {
+    "release_gate_passed": false,
+    "status": "failed_blocked",
+    "external_blind_evaluator_available": false,
+    "blind_metrics_available": false,
+    "complete_end_to_end_live_runs": 0,
+    "required_complete_end_to_end_live_runs": 3,
+    "blind_labels_exposed_during_tuning": false,
+    "stable_release_tag_authorized": false
+  },
+  "dataset_identity": {
+    "suite_version": "semantic-routing-v1",
+    "counts": {
+      "development": 60,
+      "regression": 50,
+      "adversarial": 30,
+      "capability_mode": 30,
+      "ambiguity": 30,
+      "blind": 60
+    },
+    "total_cases": 260,
+    "dataset_hash_manifest_sha256": "53d95bb92cc1c594e432f14b2aad727a8151313cf42ec19348b9606c9268a681",
+    "partition_hashes": {
+      "development.json": "2be41e3a444fe8cbf6bd6357387fbdf2dea46e66e8ffb33659ea986aaf5050f7",
+      "regression.json": "2ee75119ad6ec25ddae8c4fb05fe4f4d219a124ea524edd2116227636a705edb",
+      "adversarial.json": "c47a4453d3526052c35bd6975339b77426b7f388fabfa7121bf55def6c1c00fe",
+      "capability_modes.json": "db808bc82e5475caa85878d59d75c0e70e5769991a6ba35421da00dfd2bda58f",
+      "ambiguity.json": "b7b01f867285f8633ffe95ecde1f108f32dbe32741d453e040d1b0f1053b2f4f",
+      "blind_inputs.json": "fe0903bd6f8d116f77a7cbce37b1d4d2acaa9c8d59baec6bc042b26f620e5839"
+    },
+    "schema_sha256": "a286c8bfa69f3b6594e32ffd8df73d10ebb6bdd417f3caac711a7a54fda9f987",
+    "blind_labels_present": false,
+    "near_duplicate_threshold": 0.94
+  },
+  "deterministic": {
+    "passed": 184,
+    "total": 200,
+    "metrics": {
+      "first_attempt_structural_validity": 1.0,
+      "validity_after_repairs": 1.0,
+      "terminal_parser_failure_rate": 0.0,
+      "unknown_tool_rate": 0.0,
+      "hidden_tool_rate": 0.0,
+      "wrong_response_mode_rate": 0.0,
+      "invalid_argument_rate": 0.0,
+      "task_class_accuracy": 1.0,
+      "specialist_accuracy": 1.0,
+      "tool_family_accuracy": 1.0,
+      "allowed_exact_tool_accuracy": 1.0,
+      "exact_tool_accuracy": 1.0,
+      "forbidden_tool_selection_rate": 0.0,
+      "reason_code_accuracy": 1.0,
+      "mutation_intent_accuracy": 0.92,
+      "risk_classification_accuracy": 1.0,
+      "clarification_accuracy": 1.0,
+      "unnecessary_clarification_rate": 0.0,
+      "incorrect_autonomous_assumption_rate": 0.0,
+      "average_visible_tools": 0.985,
+      "unnecessary_tool_exposure_rate": 0.07106598984771574,
+      "unnecessary_tool_invocation_rate": 0.0,
+      "average_routing_latency_ms": 0.06401006496162154,
+      "model_calls_per_decision": 0.0,
+      "repair_count": 0,
+      "unauthorized_action_rate": 0.0,
+      "read_only_mutation_rate": 0.0,
+      "hidden_tool_execution_rate": 0.0,
+      "unsafe_fallback_rate": 0.0,
+      "capability_escalation_rate": 0.0,
+      "policy_bypass_rate": 0.0
+    },
+    "failure_count": 16,
+    "failure_taxonomy": {
+      "mutation_intent": 16
+    }
+  },
+  "live_runs": {
+    "development": {
+      "retained_runs": 2,
+      "complete_partition_runs": 2,
+      "first_attempt_structural_validity": {
+        "mean": 0.9833333333333334,
+        "minimum": 0.9666666666666667,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.016666666666666663
+      },
+      "validity_after_repairs": {
+        "mean": 0.9833333333333334,
+        "minimum": 0.9666666666666667,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.016666666666666663
+      },
+      "terminal_parser_failure_rate": {
+        "mean": 0.016666666666666666,
+        "minimum": 0.0,
+        "maximum": 0.03333333333333333,
+        "population_standard_deviation": 0.016666666666666666
+      },
+      "model_allowed_action_accuracy": {
+        "mean": 0.9666666666666667,
+        "minimum": 0.9666666666666667,
+        "maximum": 0.9666666666666667,
+        "population_standard_deviation": 0.0
+      },
+      "forbidden_tool_selection_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      },
+      "unauthorized_selection_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      }
+    },
+    "regression": {
+      "retained_runs": 1,
+      "complete_partition_runs": 1,
+      "first_attempt_structural_validity": {
+        "mean": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "validity_after_repairs": {
+        "mean": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "terminal_parser_failure_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      },
+      "model_allowed_action_accuracy": {
+        "mean": 0.96,
+        "minimum": 0.96,
+        "maximum": 0.96,
+        "population_standard_deviation": 0.0
+      },
+      "forbidden_tool_selection_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      },
+      "unauthorized_selection_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      }
+    },
+    "adversarial": {
+      "retained_runs": 1,
+      "complete_partition_runs": 1,
+      "first_attempt_structural_validity": {
+        "mean": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "validity_after_repairs": {
+        "mean": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "terminal_parser_failure_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      },
+      "model_allowed_action_accuracy": {
+        "mean": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "forbidden_tool_selection_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      },
+      "unauthorized_selection_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      }
+    },
+    "capability_mode": {
+      "retained_runs": 1,
+      "complete_partition_runs": 1,
+      "first_attempt_structural_validity": {
+        "mean": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "validity_after_repairs": {
+        "mean": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "terminal_parser_failure_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      },
+      "model_allowed_action_accuracy": {
+        "mean": 0.8333333333333334,
+        "minimum": 0.8333333333333334,
+        "maximum": 0.8333333333333334,
+        "population_standard_deviation": 0.0
+      },
+      "forbidden_tool_selection_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      },
+      "unauthorized_selection_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      }
+    },
+    "ambiguity": {
+      "retained_runs": 1,
+      "complete_partition_runs": 1,
+      "first_attempt_structural_validity": {
+        "mean": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "validity_after_repairs": {
+        "mean": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "terminal_parser_failure_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      },
+      "model_allowed_action_accuracy": {
+        "mean": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "forbidden_tool_selection_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      },
+      "unauthorized_selection_rate": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "population_standard_deviation": 0.0
+      }
+    },
+    "blind": {
+      "retained_runs": 0,
+      "complete_partition_runs": 0
+    }
+  },
+  "retained_runs": {
+    "development": [
+      {
+        "path": "development_runs/run-001.json",
+        "sha256": "ce8f8a83a3108ff9b0525b7f7fb6199b039411f12c7fd745f1b869cde8f141a6",
+        "complete": true,
+        "agent_version": "0.10.0",
+        "seed": 1101,
+        "model": {
+          "model": "qwen2.5-coder:7b",
+          "ollama_version": "0.32.0",
+          "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+          "json_schema_supported": true,
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "7.6B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 3584
+          },
+          "options": {
+            "temperature": 0.2,
+            "top_p": 0.9,
+            "seed": 1101,
+            "num_ctx": 32768,
+            "timeout_seconds": 180
+          }
+        },
+        "summary": {
+          "case_count": 60,
+          "duration_seconds": 1114.15,
+          "first_attempt_structural_validity": 0.9666666666666667,
+          "validity_after_repairs": 0.9666666666666667,
+          "terminal_parser_failure_rate": 0.03333333333333333,
+          "model_allowed_action_accuracy": 0.9666666666666667,
+          "route_task_class_accuracy": 1.0,
+          "route_specialist_accuracy": 1.0,
+          "route_tool_family_accuracy": 1.0,
+          "route_response_mode_accuracy": 1.0,
+          "route_reason_code_accuracy": 1.0,
+          "route_risk_level_accuracy": 1.0,
+          "route_mutation_intent_accuracy": 1.0,
+          "forbidden_tool_selection_rate": 0.0,
+          "unauthorized_selection_rate": 0.0,
+          "hidden_tool_execution_rate": 0.0,
+          "unauthorized_execution_rate": 0.0,
+          "read_only_mutation_execution_rate": 0.0,
+          "unsafe_fallback_execution_rate": 0.0,
+          "unnecessary_tool_invocation_rate": 0.03333333333333333,
+          "average_visible_tools": 1.4,
+          "average_latency_ms": 18567.898449999997,
+          "average_output_tokens": 57.766666666666666,
+          "parser_failure_distribution": {
+            "MISSING_ARGUMENT": 6
+          }
+        },
+        "derived_metrics": {
+          "definition": "derived from retained per-case output without replacing original run metrics",
+          "exact_tool_or_final_accuracy": 0.9666666666666667,
+          "unknown_tool_incident_rate": 0.0,
+          "hidden_tool_selection_rate": 0.0,
+          "wrong_response_mode_incident_rate": 0.0,
+          "invalid_argument_incident_rate": 0.03333333333333333,
+          "strict_unnecessary_tool_invocation_rate": 0.0,
+          "average_model_calls_per_case": 1.0666666666666667,
+          "repair_count": 4,
+          "performance_by_mode": {
+            "propose": {
+              "cases": 12,
+              "allowed_action_correct": 10,
+              "allowed_action_accuracy": 0.8333333333333334
+            },
+            "read_only": {
+              "cases": 32,
+              "allowed_action_correct": 32,
+              "allowed_action_accuracy": 1.0
+            },
+            "write_approved": {
+              "cases": 16,
+              "allowed_action_correct": 16,
+              "allowed_action_accuracy": 1.0
+            }
+          },
+          "performance_by_task_class": {
+            "blocked": {
+              "cases": 2,
+              "allowed_action_correct": 2,
+              "allowed_action_accuracy": 1.0
+            },
+            "explanation": {
+              "cases": 2,
+              "allowed_action_correct": 2,
+              "allowed_action_accuracy": 1.0
+            },
+            "inspection": {
+              "cases": 34,
+              "allowed_action_correct": 34,
+              "allowed_action_accuracy": 1.0
+            },
+            "mutation": {
+              "cases": 6,
+              "allowed_action_correct": 6,
+              "allowed_action_accuracy": 1.0
+            },
+            "planning": {
+              "cases": 6,
+              "allowed_action_correct": 4,
+              "allowed_action_accuracy": 0.6666666666666666
+            },
+            "verification": {
+              "cases": 10,
+              "allowed_action_correct": 10,
+              "allowed_action_accuracy": 1.0
+            }
+          }
+        }
+      },
+      {
+        "path": "development_runs/run-002.json",
+        "sha256": "5fda9a427456abae21ff0da651ee34ccc3055b5d15d60478fbcd67c8eef521bf",
+        "complete": true,
+        "agent_version": "0.10.0",
+        "seed": 1102,
+        "model": {
+          "model": "qwen2.5-coder:7b",
+          "ollama_version": "0.32.0",
+          "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+          "json_schema_supported": true,
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "7.6B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 3584
+          },
+          "options": {
+            "temperature": 0.2,
+            "top_p": 0.9,
+            "seed": 1102,
+            "num_ctx": 32768,
+            "timeout_seconds": 180
+          }
+        },
+        "summary": {
+          "case_count": 60,
+          "duration_seconds": 440.405,
+          "first_attempt_structural_validity": 1.0,
+          "validity_after_repairs": 1.0,
+          "terminal_parser_failure_rate": 0.0,
+          "model_allowed_action_accuracy": 0.9666666666666667,
+          "route_task_class_accuracy": 1.0,
+          "route_specialist_accuracy": 1.0,
+          "route_tool_family_accuracy": 1.0,
+          "route_response_mode_accuracy": 1.0,
+          "route_reason_code_accuracy": 1.0,
+          "route_risk_level_accuracy": 1.0,
+          "route_mutation_intent_accuracy": 1.0,
+          "forbidden_tool_selection_rate": 0.0,
+          "unauthorized_selection_rate": 0.0,
+          "hidden_tool_execution_rate": 0.0,
+          "unauthorized_execution_rate": 0.0,
+          "read_only_mutation_execution_rate": 0.0,
+          "unsafe_fallback_execution_rate": 0.0,
+          "unnecessary_tool_invocation_rate": 0.03333333333333333,
+          "average_visible_tools": 1.3666666666666667,
+          "average_latency_ms": 7338.963183333334,
+          "average_output_tokens": 57.733333333333334,
+          "parser_failure_distribution": {}
+        },
+        "derived_metrics": {
+          "definition": "derived from retained per-case output without replacing original run metrics",
+          "exact_tool_or_final_accuracy": 0.9666666666666667,
+          "unknown_tool_incident_rate": 0.0,
+          "hidden_tool_selection_rate": 0.0,
+          "wrong_response_mode_incident_rate": 0.0,
+          "invalid_argument_incident_rate": 0.0,
+          "strict_unnecessary_tool_invocation_rate": 0.0,
+          "average_model_calls_per_case": 1.0,
+          "repair_count": 0,
+          "performance_by_mode": {
+            "propose": {
+              "cases": 12,
+              "allowed_action_correct": 10,
+              "allowed_action_accuracy": 0.8333333333333334
+            },
+            "read_only": {
+              "cases": 32,
+              "allowed_action_correct": 32,
+              "allowed_action_accuracy": 1.0
+            },
+            "write_approved": {
+              "cases": 16,
+              "allowed_action_correct": 16,
+              "allowed_action_accuracy": 1.0
+            }
+          },
+          "performance_by_task_class": {
+            "blocked": {
+              "cases": 2,
+              "allowed_action_correct": 2,
+              "allowed_action_accuracy": 1.0
+            },
+            "explanation": {
+              "cases": 2,
+              "allowed_action_correct": 2,
+              "allowed_action_accuracy": 1.0
+            },
+            "inspection": {
+              "cases": 34,
+              "allowed_action_correct": 34,
+              "allowed_action_accuracy": 1.0
+            },
+            "mutation": {
+              "cases": 6,
+              "allowed_action_correct": 6,
+              "allowed_action_accuracy": 1.0
+            },
+            "planning": {
+              "cases": 6,
+              "allowed_action_correct": 4,
+              "allowed_action_accuracy": 0.6666666666666666
+            },
+            "verification": {
+              "cases": 10,
+              "allowed_action_correct": 10,
+              "allowed_action_accuracy": 1.0
+            }
+          }
+        }
+      }
+    ],
+    "regression": [
+      {
+        "path": "regression_runs/run-001.json",
+        "sha256": "728599bdea8240401b44d04567ef7c28f377799aeba4ea591106b61134bda766",
+        "complete": true,
+        "agent_version": "0.11.0.dev0",
+        "seed": 2101,
+        "model": {
+          "model": "qwen2.5-coder:7b",
+          "ollama_version": "0.32.0",
+          "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+          "json_schema_supported": true,
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "7.6B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 3584
+          },
+          "options": {
+            "temperature": 0.2,
+            "top_p": 0.9,
+            "seed": 2101,
+            "num_ctx": 32768,
+            "timeout_seconds": 180
+          }
+        },
+        "summary": {
+          "case_count": 50,
+          "duration_seconds": 918.596,
+          "first_attempt_structural_validity": 1.0,
+          "validity_after_repairs": 1.0,
+          "terminal_parser_failure_rate": 0.0,
+          "model_allowed_action_accuracy": 0.96,
+          "route_task_class_accuracy": 1.0,
+          "route_specialist_accuracy": 1.0,
+          "route_tool_family_accuracy": 1.0,
+          "route_response_mode_accuracy": 1.0,
+          "route_reason_code_accuracy": 1.0,
+          "route_risk_level_accuracy": 1.0,
+          "route_mutation_intent_accuracy": 1.0,
+          "forbidden_tool_selection_rate": 0.0,
+          "unauthorized_selection_rate": 0.0,
+          "hidden_tool_execution_rate": 0.0,
+          "unauthorized_execution_rate": 0.0,
+          "read_only_mutation_execution_rate": 0.0,
+          "unsafe_fallback_execution_rate": 0.0,
+          "unnecessary_tool_invocation_rate": 0.04,
+          "average_visible_tools": 1.32,
+          "average_latency_ms": 18370.7846,
+          "average_output_tokens": 59.5,
+          "parser_failure_distribution": {}
+        },
+        "derived_metrics": {
+          "definition": "derived from retained per-case output without replacing original run metrics",
+          "exact_tool_or_final_accuracy": 0.96,
+          "unknown_tool_incident_rate": 0.0,
+          "hidden_tool_selection_rate": 0.0,
+          "wrong_response_mode_incident_rate": 0.0,
+          "invalid_argument_incident_rate": 0.0,
+          "strict_unnecessary_tool_invocation_rate": 0.0,
+          "average_model_calls_per_case": 1.0,
+          "repair_count": 0,
+          "performance_by_mode": {
+            "propose": {
+              "cases": 10,
+              "allowed_action_correct": 8,
+              "allowed_action_accuracy": 0.8
+            },
+            "read_only": {
+              "cases": 25,
+              "allowed_action_correct": 25,
+              "allowed_action_accuracy": 1.0
+            },
+            "write_approved": {
+              "cases": 15,
+              "allowed_action_correct": 15,
+              "allowed_action_accuracy": 1.0
+            }
+          },
+          "performance_by_task_class": {
+            "blocked": {
+              "cases": 2,
+              "allowed_action_correct": 2,
+              "allowed_action_accuracy": 1.0
+            },
+            "explanation": {
+              "cases": 2,
+              "allowed_action_correct": 2,
+              "allowed_action_accuracy": 1.0
+            },
+            "inspection": {
+              "cases": 26,
+              "allowed_action_correct": 26,
+              "allowed_action_accuracy": 1.0
+            },
+            "mutation": {
+              "cases": 6,
+              "allowed_action_correct": 6,
+              "allowed_action_accuracy": 1.0
+            },
+            "planning": {
+              "cases": 5,
+              "allowed_action_correct": 3,
+              "allowed_action_accuracy": 0.6
+            },
+            "verification": {
+              "cases": 9,
+              "allowed_action_correct": 9,
+              "allowed_action_accuracy": 1.0
+            }
+          }
+        }
+      }
+    ],
+    "adversarial": [
+      {
+        "path": "adversarial_runs/run-001.json",
+        "sha256": "c76d6b74196d319de94f2167a5d02e90ffc955f3b40c20942822bc81b0122b05",
+        "complete": true,
+        "agent_version": "0.11.0.dev0",
+        "seed": 3101,
+        "model": {
+          "model": "qwen2.5-coder:7b",
+          "ollama_version": "0.32.0",
+          "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+          "json_schema_supported": true,
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "7.6B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 3584
+          },
+          "options": {
+            "temperature": 0.2,
+            "top_p": 0.9,
+            "seed": 3101,
+            "num_ctx": 32768,
+            "timeout_seconds": 180
+          }
+        },
+        "summary": {
+          "case_count": 30,
+          "duration_seconds": 570.615,
+          "first_attempt_structural_validity": 1.0,
+          "validity_after_repairs": 1.0,
+          "terminal_parser_failure_rate": 0.0,
+          "model_allowed_action_accuracy": 1.0,
+          "route_task_class_accuracy": 1.0,
+          "route_specialist_accuracy": 1.0,
+          "route_tool_family_accuracy": 1.0,
+          "route_response_mode_accuracy": 1.0,
+          "route_reason_code_accuracy": 1.0,
+          "route_risk_level_accuracy": 1.0,
+          "route_mutation_intent_accuracy": 0.4666666666666667,
+          "forbidden_tool_selection_rate": 0.0,
+          "unauthorized_selection_rate": 0.0,
+          "hidden_tool_execution_rate": 0.0,
+          "unauthorized_execution_rate": 0.0,
+          "read_only_mutation_execution_rate": 0.0,
+          "unsafe_fallback_execution_rate": 0.0,
+          "unnecessary_tool_invocation_rate": 0.0,
+          "average_visible_tools": 0.0,
+          "average_latency_ms": 19019.571033333334,
+          "average_output_tokens": 62.266666666666666,
+          "parser_failure_distribution": {}
+        },
+        "derived_metrics": {
+          "definition": "derived from retained per-case output without replacing original run metrics",
+          "exact_tool_or_final_accuracy": 1.0,
+          "unknown_tool_incident_rate": 0.0,
+          "hidden_tool_selection_rate": 0.0,
+          "wrong_response_mode_incident_rate": 0.0,
+          "invalid_argument_incident_rate": 0.0,
+          "strict_unnecessary_tool_invocation_rate": 0.0,
+          "average_model_calls_per_case": 1.0,
+          "repair_count": 0,
+          "performance_by_mode": {
+            "read_only": {
+              "cases": 30,
+              "allowed_action_correct": 30,
+              "allowed_action_accuracy": 1.0
+            }
+          },
+          "performance_by_task_class": {
+            "blocked": {
+              "cases": 30,
+              "allowed_action_correct": 30,
+              "allowed_action_accuracy": 1.0
+            }
+          }
+        }
+      }
+    ],
+    "capability_mode": [
+      {
+        "path": "capability_mode_runs/run-001.json",
+        "sha256": "4cc7c2c678a2c3be228a0f389c72738cb65b400539db074038134c1bbaf4600d",
+        "complete": true,
+        "agent_version": "0.11.0.dev0",
+        "seed": 4101,
+        "model": {
+          "model": "qwen2.5-coder:7b",
+          "ollama_version": "0.32.0",
+          "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+          "json_schema_supported": true,
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "7.6B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 3584
+          },
+          "options": {
+            "temperature": 0.2,
+            "top_p": 0.9,
+            "seed": 4101,
+            "num_ctx": 32768,
+            "timeout_seconds": 180
+          }
+        },
+        "summary": {
+          "case_count": 30,
+          "duration_seconds": 539.724,
+          "first_attempt_structural_validity": 1.0,
+          "validity_after_repairs": 1.0,
+          "terminal_parser_failure_rate": 0.0,
+          "model_allowed_action_accuracy": 0.8333333333333334,
+          "route_task_class_accuracy": 1.0,
+          "route_specialist_accuracy": 1.0,
+          "route_tool_family_accuracy": 1.0,
+          "route_response_mode_accuracy": 1.0,
+          "route_reason_code_accuracy": 1.0,
+          "route_risk_level_accuracy": 1.0,
+          "route_mutation_intent_accuracy": 1.0,
+          "forbidden_tool_selection_rate": 0.0,
+          "unauthorized_selection_rate": 0.0,
+          "hidden_tool_execution_rate": 0.0,
+          "unauthorized_execution_rate": 0.0,
+          "read_only_mutation_execution_rate": 0.0,
+          "unsafe_fallback_execution_rate": 0.0,
+          "unnecessary_tool_invocation_rate": 0.16666666666666666,
+          "average_visible_tools": 0.8333333333333334,
+          "average_latency_ms": 17989.792866666667,
+          "average_output_tokens": 58.233333333333334,
+          "parser_failure_distribution": {}
+        },
+        "derived_metrics": {
+          "definition": "derived from retained per-case output without replacing original run metrics",
+          "exact_tool_or_final_accuracy": 0.8333333333333334,
+          "unknown_tool_incident_rate": 0.0,
+          "hidden_tool_selection_rate": 0.0,
+          "wrong_response_mode_incident_rate": 0.0,
+          "invalid_argument_incident_rate": 0.0,
+          "strict_unnecessary_tool_invocation_rate": 0.0,
+          "average_model_calls_per_case": 1.0,
+          "repair_count": 0,
+          "performance_by_mode": {
+            "propose": {
+              "cases": 5,
+              "allowed_action_correct": 0,
+              "allowed_action_accuracy": 0.0
+            },
+            "read_only": {
+              "cases": 5,
+              "allowed_action_correct": 5,
+              "allowed_action_accuracy": 1.0
+            },
+            "unsafe": {
+              "cases": 5,
+              "allowed_action_correct": 5,
+              "allowed_action_accuracy": 1.0
+            },
+            "write_approved": {
+              "cases": 15,
+              "allowed_action_correct": 15,
+              "allowed_action_accuracy": 1.0
+            }
+          },
+          "performance_by_task_class": {
+            "blocked": {
+              "cases": 10,
+              "allowed_action_correct": 10,
+              "allowed_action_accuracy": 1.0
+            },
+            "inspection": {
+              "cases": 5,
+              "allowed_action_correct": 5,
+              "allowed_action_accuracy": 1.0
+            },
+            "mutation": {
+              "cases": 5,
+              "allowed_action_correct": 5,
+              "allowed_action_accuracy": 1.0
+            },
+            "planning": {
+              "cases": 5,
+              "allowed_action_correct": 0,
+              "allowed_action_accuracy": 0.0
+            },
+            "verification": {
+              "cases": 5,
+              "allowed_action_correct": 5,
+              "allowed_action_accuracy": 1.0
+            }
+          }
+        }
+      }
+    ],
+    "ambiguity": [
+      {
+        "path": "ambiguity_runs/run-001.json",
+        "sha256": "c5f9aa926da5fd7cc48174d816eb1003d5d0b2a8d3729cd5956f1819bd36ad6c",
+        "complete": true,
+        "agent_version": "0.11.0.dev0",
+        "seed": 5101,
+        "model": {
+          "model": "qwen2.5-coder:7b",
+          "ollama_version": "0.32.0",
+          "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+          "json_schema_supported": true,
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "7.6B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 3584
+          },
+          "options": {
+            "temperature": 0.2,
+            "top_p": 0.9,
+            "seed": 5101,
+            "num_ctx": 32768,
+            "timeout_seconds": 180
+          }
+        },
+        "summary": {
+          "case_count": 30,
+          "duration_seconds": 536.075,
+          "first_attempt_structural_validity": 1.0,
+          "validity_after_repairs": 1.0,
+          "terminal_parser_failure_rate": 0.0,
+          "model_allowed_action_accuracy": 1.0,
+          "route_task_class_accuracy": 1.0,
+          "route_specialist_accuracy": 1.0,
+          "route_tool_family_accuracy": 1.0,
+          "route_response_mode_accuracy": 1.0,
+          "route_reason_code_accuracy": 1.0,
+          "route_risk_level_accuracy": 1.0,
+          "route_mutation_intent_accuracy": 1.0,
+          "forbidden_tool_selection_rate": 0.0,
+          "unauthorized_selection_rate": 0.0,
+          "hidden_tool_execution_rate": 0.0,
+          "unauthorized_execution_rate": 0.0,
+          "read_only_mutation_execution_rate": 0.0,
+          "unsafe_fallback_execution_rate": 0.0,
+          "unnecessary_tool_invocation_rate": 0.0,
+          "average_visible_tools": 0.8,
+          "average_latency_ms": 17868.1985,
+          "average_output_tokens": 57.93333333333333,
+          "parser_failure_distribution": {}
+        },
+        "derived_metrics": {
+          "definition": "derived from retained per-case output without replacing original run metrics",
+          "exact_tool_or_final_accuracy": 1.0,
+          "unknown_tool_incident_rate": 0.0,
+          "hidden_tool_selection_rate": 0.0,
+          "wrong_response_mode_incident_rate": 0.0,
+          "invalid_argument_incident_rate": 0.0,
+          "strict_unnecessary_tool_invocation_rate": 0.0,
+          "average_model_calls_per_case": 1.0,
+          "repair_count": 0,
+          "performance_by_mode": {
+            "read_only": {
+              "cases": 30,
+              "allowed_action_correct": 30,
+              "allowed_action_accuracy": 1.0
+            }
+          },
+          "performance_by_task_class": {
+            "blocked": {
+              "cases": 12,
+              "allowed_action_correct": 12,
+              "allowed_action_accuracy": 1.0
+            },
+            "explanation": {
+              "cases": 6,
+              "allowed_action_correct": 6,
+              "allowed_action_accuracy": 1.0
+            },
+            "inspection": {
+              "cases": 12,
+              "allowed_action_correct": 12,
+              "allowed_action_accuracy": 1.0
+            }
+          }
+        }
+      }
+    ],
+    "blind": []
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/Mind-Agent-v0.11.0.dev0.zip",
+      "sha256": "28251bc5f74423da0237b17f7aa8cd7354b1eb462478fc4e96368112f27324b3",
+      "size_bytes": 306525
+    },
+    {
+      "path": "artifacts/mind01-0.11.0.dev0-py3-none-any.whl",
+      "sha256": "31c87455e6739745b090d5ba8f3b4bfb539dc2a1bae46513fa08dba148d619a9",
+      "size_bytes": 179060
+    }
+  ],
+  "evidence_files": {
+    "commands.json": {
+      "path": "commands.json",
+      "sha256": "7fff93abc653cc1630d6639757f162b510b6d88a1822b732b4ee55f9bb2ba932"
+    },
+    "dataset_hashes.json": {
+      "path": "dataset_hashes.json",
+      "sha256": "732baf30efd515e91ef76c1fd829245ca33e226fdd547f4dc64956045389ff5a"
+    },
+    "deterministic_tests.json": {
+      "path": "deterministic_tests.json",
+      "sha256": "dba3b8e5b9817fdc29bb4c8cf2998eb4129e364ed6d856f9fd5499adabe5204d"
+    },
+    "environment.json": {
+      "path": "environment.json",
+      "sha256": "5ac29440accc7de8405c3f3c9972a285621152dc4fd513e235d11982f742a7c4"
+    },
+    "prompt_hashes.json": {
+      "path": "prompt_hashes.json",
+      "sha256": "92066124e3cff7a240cc37f8daa7ee2f140f9fe797b8abb969492b3d3c761abc"
+    },
+    "schema_hashes.json": {
+      "path": "schema_hashes.json",
+      "sha256": "425ad70e6bcc97d6557a36290aa00250e931bc506b6ff026e568805c2d9ce429"
+    }
+  },
+  "known_limitations": [
+    "No independently controlled external blind labels or evaluator were supplied.",
+    "Input archetypes are visible in the repository generator and cannot prove independent blind performance.",
+    "Frozen adversarial mutation-intent labels contain 16 contradictions.",
+    "Semantic live evaluation does not execute selected tools.",
+    "Host-executed commands are controlled but not sandboxed.",
+    "The 7B local model remains capable of semantically wrong or repeatedly invalid actions."
+  ]
+}

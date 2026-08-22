@@ -1,0 +1,67 @@
+[
+  {
+    "expected": "blocked",
+    "actual": "blocked",
+    "count": 44
+  },
+  {
+    "expected": "clarification",
+    "actual": "clarification",
+    "count": 12
+  },
+  {
+    "expected": "documentation_retrieval",
+    "actual": "documentation_retrieval",
+    "count": 7
+  },
+  {
+    "expected": "execution_verification",
+    "actual": "execution_verification",
+    "count": 24
+  },
+  {
+    "expected": "file_creation",
+    "actual": "file_creation",
+    "count": 8
+  },
+  {
+    "expected": "file_inspection",
+    "actual": "file_inspection",
+    "count": 29
+  },
+  {
+    "expected": "final_response",
+    "actual": "final_response",
+    "count": 13
+  },
+  {
+    "expected": "memory_retrieval",
+    "actual": "memory_retrieval",
+    "count": 4
+  },
+  {
+    "expected": "mutation_proposal",
+    "actual": "mutation_proposal",
+    "count": 13
+  },
+  {
+    "expected": "patch_inspection",
+    "actual": "patch_inspection",
+    "count": 7
+  },
+  {
+    "expected": "repository_discovery",
+    "actual": "repository_discovery",
+    "count": 13
+  },
+  {
+    "expected": "symbol_inspection",
+    "actual": "symbol_inspection",
+    "count": 17
+  },
+  {
+    "expected": "targeted_mutation",
+    "actual": "targeted_mutation",
+    "count": 9
+  }
+]

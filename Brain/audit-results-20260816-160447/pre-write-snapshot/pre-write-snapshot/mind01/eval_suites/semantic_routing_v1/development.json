@@ -1,0 +1,2148 @@
+{
+  "cases": [
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-001",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "list_files"
+        ],
+        "intent_type": "repository_discovery",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Map the repository areas relevant to API pagination before opening src/API_pagination_1.py.",
+      "rationale_code": "repository_inventory",
+      "tags": [
+        "inspection",
+        "repository_discovery",
+        "API_pagination"
+      ],
+      "workspace_fixture": "fixtures/API_pagination"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-002",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "file_summary"
+        ],
+        "intent_type": "file_read",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Read src/session_expiry_2.py directly and summarize how it handles session expiry.",
+      "rationale_code": "direct_file_read",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "session_expiry"
+      ],
+      "workspace_fixture": "fixtures/session_expiry"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-003",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_symbols",
+          "search_code"
+        ],
+        "intent_type": "symbol_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Locate the definition of the symbol handle_configuration_loading_3 used by configuration loading.",
+      "rationale_code": "symbol_lookup",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "configuration_loading"
+      ],
+      "workspace_fixture": "fixtures/configuration_loading"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-004",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "dependency_inspection",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Inspect dependency declarations affecting audit retention in src/audit_retention_4.py.",
+      "rationale_code": "dependency_inspection",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "audit_retention"
+      ],
+      "workspace_fixture": "fixtures/audit_retention"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-005",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_docs",
+          "query_knowledge"
+        ],
+        "intent_type": "documentation_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "documentation",
+        "task_class": "inspection",
+        "tool_family": "documentation_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Search the indexed documentation for guidance about dependency pinning.",
+      "rationale_code": "documentation_lookup",
+      "tags": [
+        "inspection",
+        "documentation_retrieval",
+        "dependency_pinning"
+      ],
+      "workspace_fixture": "fixtures/dependency_pinning"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-006",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "explanation",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Explain the tradeoffs of cache invalidation without inspecting or changing this repository.",
+      "rationale_code": "direct_explanation",
+      "tags": [
+        "explanation",
+        "final_response",
+        "cache_invalidation"
+      ],
+      "workspace_fixture": "fixtures/cache_invalidation"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "development-007",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "test_execution",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Run the targeted tests for src/request_validation_7.py to verify request validation; do not modify source.",
+      "rationale_code": "test_execution",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "request_validation"
+      ],
+      "workspace_fixture": "fixtures/request_validation"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "development-008",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "compilation",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Compile src/error_translation_8.py with the project compiler to check error translation.",
+      "rationale_code": "compilation_check",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "error_translation"
+      ],
+      "workspace_fixture": "fixtures/error_translation"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "development-009",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "linting",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Run the configured linter on src/database_migration_9.py and report issues related to database migration.",
+      "rationale_code": "lint_check",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "database_migration"
+      ],
+      "workspace_fixture": "fixtures/database_migration"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "development-010",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "command_execution",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "debugging",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Execute the repository's existing diagnostic command for CLI startup.",
+      "rationale_code": "command_execution",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "CLI_startup"
+      ],
+      "workspace_fixture": "fixtures/CLI_startup"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-011",
+      "expected": {
+        "allowed_exact_tools": [
+          "propose_edit_file"
+        ],
+        "intent_type": "patch_proposal",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "mutation_proposal"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Propose a minimal edit to src/token_redaction_11.py for token redaction, but do not apply it.",
+      "rationale_code": "existing_file_patch_proposal",
+      "tags": [
+        "planning",
+        "mutation_proposal",
+        "token_redaction"
+      ],
+      "workspace_fixture": "fixtures/token_redaction"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-012",
+      "expected": {
+        "allowed_exact_tools": [
+          "propose_write_file"
+        ],
+        "intent_type": "file_proposal",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "mutation_proposal"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Draft a proposed new file at src/path_normalization_12.py for path normalization; leave the workspace unchanged.",
+      "rationale_code": "new_file_patch_proposal",
+      "tags": [
+        "planning",
+        "mutation_proposal",
+        "path_normalization"
+      ],
+      "workspace_fixture": "fixtures/path_normalization"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "development-013",
+      "expected": {
+        "allowed_exact_tools": [
+          "edit_file"
+        ],
+        "intent_type": "targeted_edit",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "targeted_mutation"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "After reading src/plugin_discovery_13.py, apply the approved small replacement needed for plugin discovery.",
+      "rationale_code": "approved_targeted_edit",
+      "tags": [
+        "mutation",
+        "targeted_mutation",
+        "plugin_discovery"
+      ],
+      "workspace_fixture": "fixtures/plugin_discovery"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "development-014",
+      "expected": {
+        "allowed_exact_tools": [
+          "write_file"
+        ],
+        "intent_type": "file_creation",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "file_creation"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Create the approved file src/test_isolation_14.py implementing test isolation.",
+      "rationale_code": "approved_file_creation",
+      "tags": [
+        "mutation",
+        "file_creation",
+        "test_isolation"
+      ],
+      "workspace_fixture": "fixtures/test_isolation"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "development-015",
+      "expected": {
+        "allowed_exact_tools": [
+          "write_file"
+        ],
+        "intent_type": "full_file_replacement",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "file_creation"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Replace the complete contents of src/trace_correlation_15.py with the already approved trace correlation implementation.",
+      "rationale_code": "approved_full_file_replacement",
+      "tags": [
+        "mutation",
+        "file_creation",
+        "trace_correlation"
+      ],
+      "workspace_fixture": "fixtures/trace_correlation"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-016",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "mutation_without_approval",
+        "mutation_intent": true,
+        "response_mode": "blocked",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "blocked"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Fix rate limiting in src/rate_limiting_16.py, but this session has no write approval.",
+      "rationale_code": "mutation_requires_approval",
+      "tags": [
+        "blocked",
+        "blocked",
+        "rate_limiting"
+      ],
+      "workspace_fixture": "fixtures/rate_limiting"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-017",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "inspect_before_mutation",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "debugging",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Inspect src/schema_migration_17.py to diagnose schema migration before proposing any change.",
+      "rationale_code": "inspect_before_mutate",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "schema_migration"
+      ],
+      "workspace_fixture": "fixtures/schema_migration"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-018",
+      "expected": {
+        "allowed_exact_tools": [
+          "list_patches",
+          "show_patch"
+        ],
+        "intent_type": "patch_inspection",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "patch_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Show the existing patch proposal associated with artifact hashing.",
+      "rationale_code": "patch_review",
+      "tags": [
+        "inspection",
+        "patch_inspection",
+        "artifact_hashing"
+      ],
+      "workspace_fixture": "fixtures/artifact_hashing"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-019",
+      "expected": {
+        "allowed_exact_tools": [
+          "recall",
+          "list_memories"
+        ],
+        "intent_type": "memory_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "inspection",
+        "tool_family": "memory_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Recall the recorded project decision about rollback recovery.",
+      "rationale_code": "memory_lookup",
+      "tags": [
+        "inspection",
+        "memory_retrieval",
+        "rollback_recovery"
+      ],
+      "workspace_fixture": "fixtures/rollback_recovery"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-020",
+      "expected": {
+        "allowed_exact_tools": [
+          "index_code"
+        ],
+        "intent_type": "index_refresh",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Index source symbols needed to investigate symbol indexing, without changing product source.",
+      "rationale_code": "symbol_index_refresh",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "symbol_indexing"
+      ],
+      "workspace_fixture": "fixtures/symbol_indexing"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-021",
+      "expected": {
+        "allowed_exact_tools": [
+          "refresh_knowledge"
+        ],
+        "intent_type": "knowledge_refresh",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "documentation",
+        "task_class": "inspection",
+        "tool_family": "documentation_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Refresh local project knowledge for documentation freshness; do not edit source files.",
+      "rationale_code": "knowledge_refresh",
+      "tags": [
+        "inspection",
+        "documentation_retrieval",
+        "documentation_freshness"
+      ],
+      "workspace_fixture": "fixtures/documentation_freshness"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "development-022",
+      "expected": {
+        "allowed_exact_tools": [
+          "test_patch"
+        ],
+        "intent_type": "patch_test",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Test the existing patch for memory provenance using its configured verification command.",
+      "rationale_code": "patch_test",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "memory_provenance"
+      ],
+      "workspace_fixture": "fixtures/memory_provenance"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-023",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "security_review",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "high",
+        "specialist": "security_review",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Review src/timeout_handling_23.py for authentication and authorization risks involving timeout handling.",
+      "rationale_code": "security_inspection",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "timeout_handling"
+      ],
+      "workspace_fixture": "fixtures/timeout_handling"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-024",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "implementation_plan",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Plan the implementation of output truncation across the repository without calling tools yet.",
+      "rationale_code": "planning_response",
+      "tags": [
+        "planning",
+        "final_response",
+        "output_truncation"
+      ],
+      "workspace_fixture": "fixtures/output_truncation"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-025",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_docs"
+        ],
+        "intent_type": "evidence_comparison",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "documentation",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Compare src/policy_enforcement_25.py with its documented behavior for policy enforcement using repository evidence.",
+      "rationale_code": "evidence_comparison",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "policy_enforcement"
+      ],
+      "workspace_fixture": "fixtures/policy_enforcement"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-026",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "intent_type": "reference_search",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Find every reference to handle_receipt_verification_26 before assessing receipt verification.",
+      "rationale_code": "reference_search",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "receipt_verification"
+      ],
+      "workspace_fixture": "fixtures/receipt_verification"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-027",
+      "expected": {
+        "allowed_exact_tools": [
+          "file_summary",
+          "read_file"
+        ],
+        "intent_type": "file_summary",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Summarize the structure of src/mode_selection_27.py as it relates to mode selection.",
+      "rationale_code": "file_structure_summary",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "mode_selection"
+      ],
+      "workspace_fixture": "fixtures/mode_selection"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-028",
+      "expected": {
+        "allowed_exact_tools": [
+          "list_patches",
+          "show_patch"
+        ],
+        "intent_type": "proposal_review",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "verification",
+        "task_class": "inspection",
+        "tool_family": "patch_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Verify the proposed change for patch review without applying it to the workspace.",
+      "rationale_code": "proposal_review",
+      "tags": [
+        "inspection",
+        "patch_inspection",
+        "patch_review"
+      ],
+      "workspace_fixture": "fixtures/patch_review"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-029",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_symbols"
+        ],
+        "intent_type": "grounded_explanation",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Explain what handle_import_safety_29 does after grounding the answer in src/import_safety_29.py.",
+      "rationale_code": "grounded_explanation",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "import_safety"
+      ],
+      "workspace_fixture": "fixtures/import_safety"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-030",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "intent_type": "capability_assessment",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Assess whether concurrent sessions is supported by the current repository without changing anything.",
+      "rationale_code": "capability_assessment",
+      "tags": [
+        "inspection",
+        "repository_discovery",
+        "concurrent_sessions"
+      ],
+      "workspace_fixture": "fixtures/concurrent_sessions"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-031",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "list_files"
+        ],
+        "intent_type": "repository_discovery",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Map the repository areas relevant to HTTP error mapping before opening src/HTTP_error_mapping_31.py.",
+      "rationale_code": "repository_inventory",
+      "tags": [
+        "inspection",
+        "repository_discovery",
+        "HTTP_error_mapping"
+      ],
+      "workspace_fixture": "fixtures/HTTP_error_mapping"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-032",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "file_summary"
+        ],
+        "intent_type": "file_read",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Read src/environment_parsing_32.py directly and summarize how it handles environment parsing.",
+      "rationale_code": "direct_file_read",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "environment_parsing"
+      ],
+      "workspace_fixture": "fixtures/environment_parsing"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-033",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_symbols",
+          "search_code"
+        ],
+        "intent_type": "symbol_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Locate the definition of the symbol handle_command_allowlisting_33 used by command allowlisting.",
+      "rationale_code": "symbol_lookup",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "command_allowlisting"
+      ],
+      "workspace_fixture": "fixtures/command_allowlisting"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-034",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "dependency_inspection",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Inspect dependency declarations affecting workspace boundaries in src/workspace_boundaries_34.py.",
+      "rationale_code": "dependency_inspection",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "workspace_boundaries"
+      ],
+      "workspace_fixture": "fixtures/workspace_boundaries"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-035",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_docs",
+          "query_knowledge"
+        ],
+        "intent_type": "documentation_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "documentation",
+        "task_class": "inspection",
+        "tool_family": "documentation_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Search the indexed documentation for guidance about model fallback.",
+      "rationale_code": "documentation_lookup",
+      "tags": [
+        "inspection",
+        "documentation_retrieval",
+        "model_fallback"
+      ],
+      "workspace_fixture": "fixtures/model_fallback"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-036",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "explanation",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Explain the tradeoffs of structured generation without inspecting or changing this repository.",
+      "rationale_code": "direct_explanation",
+      "tags": [
+        "explanation",
+        "final_response",
+        "structured_generation"
+      ],
+      "workspace_fixture": "fixtures/structured_generation"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "development-037",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "test_execution",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Run the targeted tests for src/repair_budgets_37.py to verify repair budgets; do not modify source.",
+      "rationale_code": "test_execution",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "repair_budgets"
+      ],
+      "workspace_fixture": "fixtures/repair_budgets"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "development-038",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "compilation",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Compile src/response_modes_38.py with the project compiler to check response modes.",
+      "rationale_code": "compilation_check",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "response_modes"
+      ],
+      "workspace_fixture": "fixtures/response_modes"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "development-039",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "linting",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Run the configured linter on src/capability_grants_39.py and report issues related to capability grants.",
+      "rationale_code": "lint_check",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "capability_grants"
+      ],
+      "workspace_fixture": "fixtures/capability_grants"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "development-040",
+      "expected": {
+        "allowed_exact_tools": [
+          "run_command"
+        ],
+        "intent_type": "command_execution",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "debugging",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Execute the repository's existing diagnostic command for security logging.",
+      "rationale_code": "command_execution",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "security_logging"
+      ],
+      "workspace_fixture": "fixtures/security_logging"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-041",
+      "expected": {
+        "allowed_exact_tools": [
+          "propose_edit_file"
+        ],
+        "intent_type": "patch_proposal",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "mutation_proposal"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Propose a minimal edit to src/release_packaging_41.py for release packaging, but do not apply it.",
+      "rationale_code": "existing_file_patch_proposal",
+      "tags": [
+        "planning",
+        "mutation_proposal",
+        "release_packaging"
+      ],
+      "workspace_fixture": "fixtures/release_packaging"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-042",
+      "expected": {
+        "allowed_exact_tools": [
+          "propose_write_file"
+        ],
+        "intent_type": "file_proposal",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "mutation_proposal"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Draft a proposed new file at src/source_archiving_42.py for source archiving; leave the workspace unchanged.",
+      "rationale_code": "new_file_patch_proposal",
+      "tags": [
+        "planning",
+        "mutation_proposal",
+        "source_archiving"
+      ],
+      "workspace_fixture": "fixtures/source_archiving"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "development-043",
+      "expected": {
+        "allowed_exact_tools": [
+          "edit_file"
+        ],
+        "intent_type": "targeted_edit",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "targeted_mutation"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "After reading src/version_reporting_43.py, apply the approved small replacement needed for version reporting.",
+      "rationale_code": "approved_targeted_edit",
+      "tags": [
+        "mutation",
+        "targeted_mutation",
+        "version_reporting"
+      ],
+      "workspace_fixture": "fixtures/version_reporting"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "development-044",
+      "expected": {
+        "allowed_exact_tools": [
+          "write_file"
+        ],
+        "intent_type": "file_creation",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "file_creation"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Create the approved file src/evaluation_validation_44.py implementing evaluation validation.",
+      "rationale_code": "approved_file_creation",
+      "tags": [
+        "mutation",
+        "file_creation",
+        "evaluation_validation"
+      ],
+      "workspace_fixture": "fixtures/evaluation_validation"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "development-045",
+      "expected": {
+        "allowed_exact_tools": [
+          "write_file"
+        ],
+        "intent_type": "full_file_replacement",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "mutation",
+        "tool_family": "file_creation"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Replace the complete contents of src/risk_classification_45.py with the already approved risk classification implementation.",
+      "rationale_code": "approved_full_file_replacement",
+      "tags": [
+        "mutation",
+        "file_creation",
+        "risk_classification"
+      ],
+      "workspace_fixture": "fixtures/risk_classification"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-046",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "mutation_without_approval",
+        "mutation_intent": true,
+        "response_mode": "blocked",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "blocked"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Fix ambiguity handling in src/ambiguity_handling_46.py, but this session has no write approval.",
+      "rationale_code": "mutation_requires_approval",
+      "tags": [
+        "blocked",
+        "blocked",
+        "ambiguity_handling"
+      ],
+      "workspace_fixture": "fixtures/ambiguity_handling"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-047",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "inspect_before_mutation",
+        "mutation_intent": true,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "debugging",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Inspect src/tool_visibility_47.py to diagnose tool visibility before proposing any change.",
+      "rationale_code": "inspect_before_mutate",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "tool_visibility"
+      ],
+      "workspace_fixture": "fixtures/tool_visibility"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-048",
+      "expected": {
+        "allowed_exact_tools": [
+          "list_patches",
+          "show_patch"
+        ],
+        "intent_type": "patch_inspection",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "patch_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Show the existing patch proposal associated with specialist routing.",
+      "rationale_code": "patch_review",
+      "tags": [
+        "inspection",
+        "patch_inspection",
+        "specialist_routing"
+      ],
+      "workspace_fixture": "fixtures/specialist_routing"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-049",
+      "expected": {
+        "allowed_exact_tools": [
+          "recall",
+          "list_memories"
+        ],
+        "intent_type": "memory_lookup",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "inspection",
+        "tool_family": "memory_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Recall the recorded project decision about exact tool choice.",
+      "rationale_code": "memory_lookup",
+      "tags": [
+        "inspection",
+        "memory_retrieval",
+        "exact_tool_choice"
+      ],
+      "workspace_fixture": "fixtures/exact_tool_choice"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-050",
+      "expected": {
+        "allowed_exact_tools": [
+          "index_code"
+        ],
+        "intent_type": "index_refresh",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Index source symbols needed to investigate regression reporting, without changing product source.",
+      "rationale_code": "symbol_index_refresh",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "regression_reporting"
+      ],
+      "workspace_fixture": "fixtures/regression_reporting"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-051",
+      "expected": {
+        "allowed_exact_tools": [
+          "refresh_knowledge"
+        ],
+        "intent_type": "knowledge_refresh",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "documentation",
+        "task_class": "inspection",
+        "tool_family": "documentation_retrieval"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Refresh local project knowledge for knowledge refresh; do not edit source files.",
+      "rationale_code": "knowledge_refresh",
+      "tags": [
+        "inspection",
+        "documentation_retrieval",
+        "knowledge_refresh"
+      ],
+      "workspace_fixture": "fixtures/knowledge_refresh"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "development-052",
+      "expected": {
+        "allowed_exact_tools": [
+          "test_patch"
+        ],
+        "intent_type": "patch_test",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "medium",
+        "specialist": "verification",
+        "task_class": "verification",
+        "tool_family": "execution_verification"
+      },
+      "forbidden_tools": [],
+      "partition": "development",
+      "prompt": "Test the existing patch for documentation retrieval using its configured verification command.",
+      "rationale_code": "patch_test",
+      "tags": [
+        "verification",
+        "execution_verification",
+        "documentation_retrieval"
+      ],
+      "workspace_fixture": "fixtures/documentation_retrieval"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-053",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "intent_type": "security_review",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "high",
+        "specialist": "security_review",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Review src/memory_deletion_53.py for authentication and authorization risks involving memory deletion.",
+      "rationale_code": "security_inspection",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "memory_deletion"
+      ],
+      "workspace_fixture": "fixtures/memory_deletion"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-054",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "implementation_plan",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "implementation",
+        "task_class": "planning",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Plan the implementation of patch persistence across the repository without calling tools yet.",
+      "rationale_code": "planning_response",
+      "tags": [
+        "planning",
+        "final_response",
+        "patch_persistence"
+      ],
+      "workspace_fixture": "fixtures/patch_persistence"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-055",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_docs"
+        ],
+        "intent_type": "evidence_comparison",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "documentation",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Compare src/shell_approval_55.py with its documented behavior for shell approval using repository evidence.",
+      "rationale_code": "evidence_comparison",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "shell_approval"
+      ],
+      "workspace_fixture": "fixtures/shell_approval"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-056",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "intent_type": "reference_search",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Find every reference to handle_file_creation_56 before assessing file creation.",
+      "rationale_code": "reference_search",
+      "tags": [
+        "inspection",
+        "symbol_inspection",
+        "file_creation"
+      ],
+      "workspace_fixture": "fixtures/file_creation"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-057",
+      "expected": {
+        "allowed_exact_tools": [
+          "file_summary",
+          "read_file"
+        ],
+        "intent_type": "file_summary",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Summarize the structure of src/targeted_replacement_57.py as it relates to targeted replacement.",
+      "rationale_code": "file_structure_summary",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "targeted_replacement"
+      ],
+      "workspace_fixture": "fixtures/targeted_replacement"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-058",
+      "expected": {
+        "allowed_exact_tools": [
+          "list_patches",
+          "show_patch"
+        ],
+        "intent_type": "proposal_review",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "verification",
+        "task_class": "inspection",
+        "tool_family": "patch_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Verify the proposed change for full-file replacement without applying it to the workspace.",
+      "rationale_code": "proposal_review",
+      "tags": [
+        "inspection",
+        "patch_inspection",
+        "full-file_replacement"
+      ],
+      "workspace_fixture": "fixtures/full-file_replacement"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-059",
+      "expected": {
+        "allowed_exact_tools": [
+          "read_file",
+          "search_symbols"
+        ],
+        "intent_type": "grounded_explanation",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "file_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Explain what handle_compiler_diagnostics_59 does after grounding the answer in src/compiler_diagnostics_59.py.",
+      "rationale_code": "grounded_explanation",
+      "tags": [
+        "inspection",
+        "file_inspection",
+        "compiler_diagnostics"
+      ],
+      "workspace_fixture": "fixtures/compiler_diagnostics"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "development-060",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "intent_type": "capability_assessment",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "development",
+      "prompt": "Assess whether test selection is supported by the current repository without changing anything.",
+      "rationale_code": "capability_assessment",
+      "tags": [
+        "inspection",
+        "repository_discovery",
+        "test_selection"
+      ],
+      "workspace_fixture": "fixtures/test_selection"
+    }
+  ],
+  "partition": "development",
+  "suite_version": "semantic-routing-v1"
+}

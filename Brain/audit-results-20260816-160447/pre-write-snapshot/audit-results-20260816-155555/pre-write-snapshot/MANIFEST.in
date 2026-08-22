@@ -1,0 +1,8 @@
+prune .mind01
+prune build
+prune dist
+prune .pytest_cache
+prune __pycache__
+recursive-exclude * __pycache__ *.py[cod]
+exclude .coverage
+exclude *.zip

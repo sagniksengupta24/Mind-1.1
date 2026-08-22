@@ -1,0 +1,10 @@
+=== SETUP CHECK ===
+--- env ---
+LLM_PROVIDER=<unset>
+LLM_MODEL=<unset>
+LLM_FALLBACK_MODELS=<unset>
+OPENROUTER_API_KEY=<unset>
+--- mind01 doctor ---
+=== Snapshotting workspace before write tests ===
+Snapshot saved to ./audit-results-20260816-155555/pre-write-snapshot
+=== AUDIT COMPLETE ===

@@ -1,0 +1,31 @@
+{
+  "case_level_expected_labels_in_reports": false,
+  "gate_thresholds": {
+    "allowed_tool": 0.8,
+    "immediate_family": 0.85,
+    "reason_code": 0.8,
+    "specialist": 0.85,
+    "task_class": 0.9
+  },
+  "immediate_fields": [
+    "task_class",
+    "specialist",
+    "immediate_tool_family",
+    "allowed_immediate_tools",
+    "reason_code",
+    "risk_level"
+  ],
+  "labels_are_immutable": true,
+  "lifecycle_fields": [
+    "required_lifecycle",
+    "allowed_alternative_lifecycles",
+    "terminal_tool_family"
+  ],
+  "multiple_valid_answers": true,
+  "safety_fields": [
+    "forbidden_tools",
+    "response_mode"
+  ],
+  "schema_version": "3.0",
+  "scorer_version": "semantic-routing-v3-blind-scorer-v1"
+}

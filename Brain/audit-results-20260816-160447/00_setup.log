@@ -1,0 +1,16 @@
+=== SETUP CHECK ===
+--- env ---
+LLM_PROVIDER=openrouter
+LLM_MODEL=poolside/laguna-s-2.1:free
+LLM_FALLBACK_MODELS=poolside/laguna-xs-2.1:free,nvidia/nemotron-3.5-lightning:free
+OPENROUTER_API_KEY=<set, redacted>
+--- mind01 doctor ---
+ok      python: 3.14.6 on macOS-26.6.1-arm64-arm-64bit-Mach-O
+ok      provider: using cloud provider `openrouter` — local Ollama checks skipped
+ok      api-key: present
+ok      base-url: https://openrouter.ai/api/v1
+ok      model: poolside/laguna-s-2.1:free
+ok      connectivity: not checked — cloud reachability isn't probed to avoid spending a paid/rate-limited request
+=== Snapshotting workspace before write tests ===
+Snapshot saved to ./audit-results-20260816-160447/pre-write-snapshot
+=== AUDIT COMPLETE ===

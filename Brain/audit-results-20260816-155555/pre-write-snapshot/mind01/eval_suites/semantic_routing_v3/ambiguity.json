@@ -1,0 +1,1998 @@
+{
+  "cases": [
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-001",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for token redaction; several unrelated handlers exist and no target is identified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-001",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_1",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-002",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "symbol_inspection"
+        ],
+        "allowed_immediate_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "symbol_inspection",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "search_code",
+              "search_symbols"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements path normalization, then report it without changing anything.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-002",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_2",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-003",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for plugin discovery, but the required format and destination are unspecified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-003",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_3",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-004",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "final_response"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "final_response",
+        "rationale_codes": [
+          "direct_explanation",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "direct_explanation",
+        "required_lifecycle": [],
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain test isolation conceptually; no repository evidence is requested.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": true,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-004",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_4",
+        "direct_explanation",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-005",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "repository_discovery"
+        ],
+        "allowed_immediate_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "repository_discovery",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "project_map",
+              "search_code"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether trace correlation uses one or multiple implementations.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_multiple",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-005",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_5",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-006",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for rate limiting; several unrelated handlers exist and no target is identified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-006",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_6",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-007",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "symbol_inspection"
+        ],
+        "allowed_immediate_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "symbol_inspection",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "search_code",
+              "search_symbols"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements schema migration, then report it without changing anything.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-007",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_7",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-008",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for artifact hashing, but the required format and destination are unspecified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-008",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_8",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-009",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "final_response"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "final_response",
+        "rationale_codes": [
+          "direct_explanation",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "direct_explanation",
+        "required_lifecycle": [],
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain rollback recovery conceptually; no repository evidence is requested.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": true,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-009",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_9",
+        "direct_explanation",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-010",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "repository_discovery"
+        ],
+        "allowed_immediate_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "repository_discovery",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "project_map",
+              "search_code"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether symbol indexing uses one or multiple implementations.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_multiple",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-010",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_10",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-011",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for documentation freshness; several unrelated handlers exist and no target is identified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-011",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_11",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-012",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "symbol_inspection"
+        ],
+        "allowed_immediate_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "symbol_inspection",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "search_code",
+              "search_symbols"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements memory provenance, then report it without changing anything.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-012",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_12",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-013",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for timeout handling, but the required format and destination are unspecified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-013",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_13",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-014",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "final_response"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "final_response",
+        "rationale_codes": [
+          "direct_explanation",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "direct_explanation",
+        "required_lifecycle": [],
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain output truncation conceptually; no repository evidence is requested.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": true,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-014",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_14",
+        "direct_explanation",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-015",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "repository_discovery"
+        ],
+        "allowed_immediate_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "repository_discovery",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "project_map",
+              "search_code"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether policy enforcement uses one or multiple implementations.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_multiple",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-015",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_15",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-016",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for receipt verification; several unrelated handlers exist and no target is identified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-016",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_16",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-017",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "symbol_inspection"
+        ],
+        "allowed_immediate_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "symbol_inspection",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "search_code",
+              "search_symbols"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements mode selection, then report it without changing anything.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-017",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_17",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-018",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for patch review, but the required format and destination are unspecified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-018",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_18",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-019",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "final_response"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "final_response",
+        "rationale_codes": [
+          "direct_explanation",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "direct_explanation",
+        "required_lifecycle": [],
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain import safety conceptually; no repository evidence is requested.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": true,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-019",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_19",
+        "direct_explanation",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-020",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "repository_discovery"
+        ],
+        "allowed_immediate_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "repository_discovery",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "project_map",
+              "search_code"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether concurrent sessions uses one or multiple implementations.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_multiple",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-020",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_20",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-021",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for HTTP error mapping; several unrelated handlers exist and no target is identified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-021",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_21",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-022",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "symbol_inspection"
+        ],
+        "allowed_immediate_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "symbol_inspection",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "search_code",
+              "search_symbols"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements environment parsing, then report it without changing anything.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-022",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_22",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-023",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for command allowlisting, but the required format and destination are unspecified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-023",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_23",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-024",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "final_response"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "final_response",
+        "rationale_codes": [
+          "direct_explanation",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "direct_explanation",
+        "required_lifecycle": [],
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain workspace boundaries conceptually; no repository evidence is requested.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": true,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-024",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_24",
+        "direct_explanation",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-025",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "repository_discovery"
+        ],
+        "allowed_immediate_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "repository_discovery",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "project_map",
+              "search_code"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether model fallback uses one or multiple implementations.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_multiple",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-025",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_25",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-026",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for structured generation; several unrelated handlers exist and no target is identified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-026",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_26",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-027",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "symbol_inspection"
+        ],
+        "allowed_immediate_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "symbol_inspection",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "search_code",
+              "search_symbols"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements repair budgets, then report it without changing anything.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-027",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_27",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-028",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "clarification"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "clarification",
+        "rationale_codes": [
+          "clarification_missing_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "clarification_missing_target",
+        "required_lifecycle": [],
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": true
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for response modes, but the required format and destination are unspecified.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "apply_existing",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "unspecified",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-028",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_28",
+        "clarification_missing_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-029",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "final_response"
+        ],
+        "allowed_immediate_tools": [],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "final_response",
+        "rationale_codes": [
+          "direct_explanation",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "direct_explanation",
+        "required_lifecycle": [],
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain capability grants conceptually; no repository evidence is requested.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": false,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": true,
+        "target_state": "exists_unique",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-029",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_29",
+        "direct_explanation",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "workspace_read": true,
+        "workspace_write": false
+      },
+      "case_id": "v2-ambiguity-030",
+      "expected": {
+        "allowed_alternative_lifecycles": [],
+        "allowed_immediate_tool_families": [
+          "repository_discovery"
+        ],
+        "allowed_immediate_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "allowed_terminal_tools": [],
+        "ambiguities": [],
+        "annotation_confidence": 1.0,
+        "immediate_action_side_effect": false,
+        "immediate_tool_family": "repository_discovery",
+        "rationale_codes": [
+          "repository_resolves_target",
+          "documented_v2_migration_ground_truth"
+        ],
+        "reason_code": "repository_resolves_target",
+        "required_lifecycle": [
+          {
+            "allowed_tools": [
+              "project_map",
+              "search_code"
+            ],
+            "phase": "inspection"
+          }
+        ],
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "terminal_mutation_expected": false,
+        "terminal_tool_family": null,
+        "user_mutation_goal": false
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether security logging uses one or multiple implementations.",
+      "public_facts": {
+        "prompt_injection": false,
+        "repository_resolvable": true,
+        "requested_operation": "inspect",
+        "route_state": "none",
+        "self_contained": false,
+        "target_state": "exists_multiple",
+        "unsafe_operation": false,
+        "unsupported_operation": false
+      },
+      "source_case_id": "ambiguity-030",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_30",
+        "repository_resolves_target",
+        "migrated_from_v1"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    }
+  ],
+  "partition": "ambiguity",
+  "schema_version": "3.0"
+}

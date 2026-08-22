@@ -1,0 +1,43 @@
+diff -ru --ex ./audit-results-20260816-160447/pre-write-snapshot/.mind01/traces/20260816.jsonl ./.mind01/traces/20260816.jsonl
+--- ./audit-results-20260816-160447/pre-write-snapshot/.mind01/traces/20260816.jsonl	2026-08-16 16:05:05
++++ ./.mind01/traces/20260816.jsonl	2026-08-16 16:05:05
+@@ -97,3 +97,5 @@
+ {"duration_ms": 0, "error": "Tool `run_command` requires `--allow-shell` in mode `write-approved`.", "event_hash": "779c1ff813a75bc7e129df22db7fca2d6859214a273f252830a201c55dfc35b2", "event_id": "8df0190f1a6b4a179ae51b1faccfe950", "event_type": "tool_call", "mode": "write-approved", "model_name": null, "normalized_args": {"command": "python3 --version", "output_limit": 20000, "timeout_seconds": 60}, "policy_decision": "blocked", "previous_event_hash": "727e3daa979e15562edf1fee448211cea2a0d6452e89fcde7a972045452529a7", "raw_args": {"command": "python3 --version"}, "receipt_id": null, "session_id": null, "timestamp": "2026-08-16T10:11:55.066002+00:00", "tool_name": "run_command", "tool_result_summary": null, "trace_id": "8df0190f1a6b4a179ae51b1faccfe950"}
+ {"event_hash": "d929392eaeb19f9a6e8b909370be325995db2f8537201d9fb04ac6432db3c440", "event_id": "8fd2f7db1561479498b93a1d0b398cfe", "event_type": "agent_prompt", "mode": "read-only", "model_name": "poolside/laguna-s-2.1:free", "policy_decision": "accepted", "previous_event_hash": "779c1ff813a75bc7e129df22db7fca2d6859214a273f252830a201c55dfc35b2", "prompt": {"preview": "What Python version does this project require, per pyproject.toml?", "sha256": "a5981077a636477c78ee4215cdee90b5e4ba9fd97f99db417afa53143c69df57", "size": 66}, "session_id": "202f29f70cef4fd1a6b933d829c0e784", "timestamp": "2026-08-16T10:34:47.407694+00:00", "trace_id": "8fd2f7db1561479498b93a1d0b398cfe"}
+ {"event_hash": "756adeeaf44b58346feac43b032fd24e53029ac6a80c607daf1f009f27a96a5c", "event_id": "9f3064d95dc449e9befed4266f878d80", "event_type": "agent_route", "intent_id": "intent-92ad7561c0dead07d2f3ba91", "mode": "read-only", "model_name": "poolside/laguna-s-2.1:free", "planning_required": true, "policy_decision": "routed", "previous_event_hash": "d929392eaeb19f9a6e8b909370be325995db2f8537201d9fb04ac6432db3c440", "reason_code": "direct_file_read", "route_confidence": 0.9, "semantic_specialist": "repository_inspector", "session_id": "202f29f70cef4fd1a6b933d829c0e784", "skills": ["repository_analysis"], "specialist": "repository_understanding", "timestamp": "2026-08-16T10:34:47.409835+00:00", "tool_family": "file_inspection", "trace_id": "9f3064d95dc449e9befed4266f878d80", "verification_strategy": []}
++{"event_hash": "71253403cb8602a25f44c29c58a5ec1e4cd6bef4bf0ffa65950e056c7c7abcfc", "event_id": "3a51f3df6e8e49489494f64408aa46f0", "event_type": "agent_prompt", "mode": "read-only", "model_name": "poolside/laguna-s-2.1:free", "policy_decision": "accepted", "previous_event_hash": "756adeeaf44b58346feac43b032fd24e53029ac6a80c607daf1f009f27a96a5c", "prompt": {"preview": "Add a new LLM provider option called 'groq' alongside the existing 'openrouter' and 'openai_compatible' providers. It should behave like openai_compatible but d", "sha256": "d65de9a703f3a764d48a06327f560659d64e2ce95c334ab3d3c02625955a320c", "size": 535}, "session_id": "c016f9a58d83477b8594796fe0c30f63", "timestamp": "2026-08-16T10:35:05.903153+00:00", "trace_id": "3a51f3df6e8e49489494f64408aa46f0"}
++{"event_hash": "75b85e8f0ff3bdd31830d1b29bb9215e8cd4b8be94861b3d6a7ea0148517d1eb", "event_id": "d36a48ec3441457c84348f9785cbffab", "event_type": "agent_route", "intent_id": "intent-c711e59e49a1df065aafb813", "mode": "read-only", "model_name": "poolside/laguna-s-2.1:free", "planning_required": false, "policy_decision": "routed", "previous_event_hash": "71253403cb8602a25f44c29c58a5ec1e4cd6bef4bf0ffa65950e056c7c7abcfc", "reason_code": "mutation_requires_approval", "route_confidence": 0.9, "semantic_specialist": "implementation", "session_id": "c016f9a58d83477b8594796fe0c30f63", "skills": ["safe_code_edit", "add_feature", "refactor_code"], "specialist": "code_modification", "timestamp": "2026-08-16T10:35:05.904993+00:00", "tool_family": "blocked", "trace_id": "d36a48ec3441457c84348f9785cbffab", "verification_strategy": ["python syntax", "targeted tests"]}
+diff -ru --ex ./audit-results-20260816-160447/pre-write-snapshot/.mind01/traces/head.json ./.mind01/traces/head.json
+--- ./audit-results-20260816-160447/pre-write-snapshot/.mind01/traces/head.json	2026-08-16 16:05:05
++++ ./.mind01/traces/head.json	2026-08-16 16:05:05
+@@ -1,4 +1,4 @@
+ {
+-  "event_hash": "756adeeaf44b58346feac43b032fd24e53029ac6a80c607daf1f009f27a96a5c",
+-  "event_id": "9f3064d95dc449e9befed4266f878d80"
++  "event_hash": "75b85e8f0ff3bdd31830d1b29bb9215e8cd4b8be94861b3d6a7ea0148517d1eb",
++  "event_id": "d36a48ec3441457c84348f9785cbffab"
+ }
+\ No newline at end of file
+diff -ru --ex ./audit-results-20260816-160447/pre-write-snapshot/.pytest_cache/v/cache/lastfailed ./.pytest_cache/v/cache/lastfailed
+--- ./audit-results-20260816-160447/pre-write-snapshot/.pytest_cache/v/cache/lastfailed	2026-08-16 16:05:04
++++ ./.pytest_cache/v/cache/lastfailed	2026-08-16 16:05:54
+@@ -1 +1,5 @@
+-{}
+\ No newline at end of file
++{
++  "tests/test_api.py::test_api_security_and_sessions": true,
++  "tests/test_release_hygiene.py::test_built_artifacts_exclude_private_runtime_state": true,
++  "tests/test_trace_bundles.py::test_agent_records_bundle_only_when_configured": true
++}
+\ No newline at end of file
+diff -ru --ex ./audit-results-20260816-160447/pre-write-snapshot/audit-results-20260816-160447/00_setup.log ./audit-results-20260816-160447/00_setup.log
+--- ./audit-results-20260816-160447/pre-write-snapshot/audit-results-20260816-160447/00_setup.log	2026-08-16 16:05:05
++++ ./audit-results-20260816-160447/00_setup.log	2026-08-16 16:05:05
+@@ -12,3 +12,4 @@
+ ok      model: poolside/laguna-s-2.1:free
+ ok      connectivity: not checked — cloud reachability isn't probed to avoid spending a paid/rate-limited request
+ === Snapshotting workspace before write tests ===
++Snapshot saved to ./audit-results-20260816-160447/pre-write-snapshot
+Only in ./audit-results-20260816-160447: 02_test2.log
+Only in ./audit-results-20260816-160447: 02_test2_diff.log
+Only in ./audit-results-20260816-160447: pre-write-snapshot

@@ -1,0 +1,30 @@
+{
+  "blind_frozen": true,
+  "counts": {
+    "adversarial": 30,
+    "ambiguity": 30,
+    "blind": 100,
+    "capability_mode": 30,
+    "development": 60,
+    "end_to_end": 24,
+    "lifecycle": 40,
+    "regression": 50
+  },
+  "frozen_visible": true,
+  "generated_at": "2026-07-16T12:07:14.060394+00:00",
+  "hashes": {
+    "adversarial.json": "f7c7993e45d4611cf003d51de779a5d45cad9b9091b4abeb1dfbb93942141fd1",
+    "ambiguity.json": "266bc0dbf0c013b760c9511b33acfb793accf29c684040580392738e634cdd7e",
+    "blind_evaluator_contract.json": "75d10e70ec6e0a1794b101b0db862eb7293faaed56339e55b783a4421b910e3b",
+    "blind_inputs.json": "b1198e8617fe5b78b737676e6a0a73d202191a285f1d2f1368c2f3150c728842",
+    "blind_inputs.sha256": "22ed05f7fff540b7d80255caefc5c7629594a0983ff5f6bf9ae93a733a473a04",
+    "capability_modes.json": "b5a802f0d44b276574596efea9626c6a22f2c0596be016341230f7f66ea302a2",
+    "development.json": "b0236168538723081cf476b10f489e457c6f20cbcf943982fd6dd35bbafe0c5d",
+    "end_to_end.json": "830079184fda50a3eef39ac81649e774291241a3f82cd9b1dbf3313e88aed1e6",
+    "lifecycle.json": "9e765d41ff12a5eb59afebb0033e6354470fbbb811d3436226f255b9dc79871e",
+    "migration_report.json": "a36a72febcaeb15c197267a3545d13d2f8c2aa27e025c1f81fe4b6a46521d3b0",
+    "regression.json": "3ea272b3dcad5a8737a6f4664876182322f10bab007311a540fba99553d0d021",
+    "schema.json": "1e45ff75872c7d82c5a696f01715afd151d4970d584f43bbc561bfed4e71b5e9"
+  },
+  "schema_version": "2.0"
+}

@@ -1,0 +1,11 @@
+=== TEST 4: rate limit / fallback behavior (5x rapid trivial calls) ===
+--- call 1 ---
+Rate limited by provider for `nvidia/nemotron-3.5-lightning:free`. Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+--- call 2 ---
+Rate limited by provider for `nvidia/nemotron-3.5-lightning:free`. Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+--- call 3 ---
+Rate limited by provider for `nvidia/nemotron-3.5-lightning:free`. Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+--- call 4 ---
+Rate limited by provider for `nvidia/nemotron-3.5-lightning:free`. Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+--- call 5 ---
+Rate limited by provider for `nvidia/nemotron-3.5-lightning:free`. Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day

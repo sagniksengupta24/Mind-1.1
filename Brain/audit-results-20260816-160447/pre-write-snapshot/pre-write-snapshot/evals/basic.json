@@ -1,0 +1,10 @@
+{
+  "category": "harness",
+  "tasks": [
+    {
+      "name": "dry-run-connectivity",
+      "prompt": "Say that the agent is ready.",
+      "expected_contains": ["Dry run ready"]
+    }
+  ]
+}

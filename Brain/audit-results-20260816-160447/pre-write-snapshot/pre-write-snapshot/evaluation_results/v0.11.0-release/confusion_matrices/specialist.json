@@ -1,0 +1,37 @@
+[
+  {
+    "expected": "debugging",
+    "actual": "debugging",
+    "count": 8
+  },
+  {
+    "expected": "documentation",
+    "actual": "documentation",
+    "count": 10
+  },
+  {
+    "expected": "general",
+    "actual": "general",
+    "count": 14
+  },
+  {
+    "expected": "implementation",
+    "actual": "implementation",
+    "count": 54
+  },
+  {
+    "expected": "repository_inspector",
+    "actual": "repository_inspector",
+    "count": 53
+  },
+  {
+    "expected": "security_review",
+    "actual": "security_review",
+    "count": 33
+  },
+  {
+    "expected": "verification",
+    "actual": "verification",
+    "count": 28
+  }
+]

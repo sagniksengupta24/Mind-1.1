@@ -1,0 +1,6 @@
+=== TEST 1: trivial read ===
+[trace]
+- route=repository_inspector/file_inspection reason=direct_file_read confidence=0.90
+- plan_steps=3 risk=low
+[/trace]
+Rate limited by provider for `nvidia/nemotron-3.5-lightning:free`. Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day

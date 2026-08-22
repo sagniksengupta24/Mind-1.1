@@ -1,0 +1,30 @@
+{
+  "author_source_sha256": "53ff8b66af88626eb8300f032475e4809d5bf4eee9a74600c56e71924152356d",
+  "authoring_inputs_sha256": "6d4b7183a498f7a8f8a6d16a5d3a6605b5490b60cd079ef79c534fbf2b4e3a10",
+  "authoring_method": "no-tools Ollama process generated inputs from public behavior themes; labels deliberately not authored before candidate freeze",
+  "blind_inputs_sha256": "b1198e8617fe5b78b737676e6a0a73d202191a285f1d2f1368c2f3150c728842",
+  "case_count": 100,
+  "context": 32768,
+  "creation_timestamp": "2026-07-16T13:12:02.002858+00:00",
+  "duplicate_detection": {
+    "against": "all visible v2 and all prior blind inputs",
+    "character_trigram_cosine": 0.92,
+    "token_jaccard": 0.82
+  },
+  "evaluator_version": "indus-independent-blind-input-author-v3",
+  "external_label_mount_contract": "labels authored and owner-read-only only after source candidate freeze",
+  "fixture_sha256": "323d4e252e4aa6cbfdb0e302579a9960f4a060793495b64e7d7a9f254a26e650",
+  "isolation_boundary": "Ollama requests contained no repository path/source, visible prompt, router implementation/prompt, prior failure, label, or tool attachment",
+  "label_sha256": "pending_external_after_candidate_freeze",
+  "labels_exposed_during_tuning": false,
+  "labels_stored_in_repository": false,
+  "lifecycle_template_max_share": "validated by external label author after candidate freeze",
+  "model": "qwen2.5-coder:7b",
+  "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+  "seed_base": 75001,
+  "supersedes_invalid_freezes": [
+    "v1 controller embedded blueprints",
+    "v2 full-label author failed closed before writing output"
+  ],
+  "temperature": 0.75
+}

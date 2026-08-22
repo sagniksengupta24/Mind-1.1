@@ -1,0 +1,10 @@
+{
+  "category": "coding",
+  "tasks": [
+    {
+      "name": "coding-dry-run-harness",
+      "prompt": "Coding harness check: inspect a small Python bug if a live model is available.",
+      "expected_contains": ["Dry run ready", "Coding"]
+    }
+  ]
+}

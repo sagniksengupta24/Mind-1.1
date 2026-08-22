@@ -1,0 +1,37 @@
+{
+  "blind_labels_in_editable_repository": false,
+  "files": {
+    "adversarial.json": {
+      "case_count": 30,
+      "sha256": "c47a4453d3526052c35bd6975339b77426b7f388fabfa7121bf55def6c1c00fe"
+    },
+    "ambiguity.json": {
+      "case_count": 30,
+      "sha256": "b7b01f867285f8633ffe95ecde1f108f32dbe32741d453e040d1b0f1053b2f4f"
+    },
+    "blind_inputs.json": {
+      "case_count": 60,
+      "sha256": "fe0903bd6f8d116f77a7cbce37b1d4d2acaa9c8d59baec6bc042b26f620e5839"
+    },
+    "capability_modes.json": {
+      "case_count": 30,
+      "sha256": "db808bc82e5475caa85878d59d75c0e70e5769991a6ba35421da00dfd2bda58f"
+    },
+    "development.json": {
+      "case_count": 60,
+      "sha256": "2be41e3a444fe8cbf6bd6357387fbdf2dea46e66e8ffb33659ea986aaf5050f7"
+    },
+    "regression.json": {
+      "case_count": 50,
+      "sha256": "2ee75119ad6ec25ddae8c4fb05fe4f4d219a124ea524edd2116227636a705edb"
+    },
+    "schema.json": {
+      "case_count": 0,
+      "sha256": "a286c8bfa69f3b6594e32ffd8df73d10ebb6bdd417f3caac711a7a54fda9f987"
+    }
+  },
+  "frozen_before_routing_changes": true,
+  "schema_version": "1.0",
+  "suite_version": "semantic-routing-v1",
+  "total_cases": 260
+}

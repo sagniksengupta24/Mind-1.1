@@ -1,0 +1,10 @@
+{
+  "category": "repo_analysis",
+  "tasks": [
+    {
+      "name": "repo-analysis-dry-run-harness",
+      "prompt": "Repo analysis harness check: inspect project_map and summarize modules if a live model is available.",
+      "expected_contains": ["Dry run ready", "Repo analysis"]
+    }
+  ]
+}

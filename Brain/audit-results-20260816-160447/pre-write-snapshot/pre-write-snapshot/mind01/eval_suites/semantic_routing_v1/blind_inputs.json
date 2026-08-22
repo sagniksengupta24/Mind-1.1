@@ -1,0 +1,726 @@
+{
+  "cases": [
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-001",
+      "partition": "blind",
+      "prompt": "Inspect dependency declarations affecting cache invalidation in packages/blind_component_1/module_1.py.",
+      "workspace_fixture": "blind_fixture_001"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-002",
+      "partition": "blind",
+      "prompt": "Propose a minimal edit to packages/blind_component_2/module_2.py for schema migration, but do not apply it.",
+      "workspace_fixture": "blind_fixture_002"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-003",
+      "partition": "blind",
+      "prompt": "Show the existing patch proposal associated with patch review.",
+      "workspace_fixture": "blind_fixture_003"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-004",
+      "partition": "blind",
+      "prompt": "Compare packages/blind_component_4/module_4.py with its documented behavior for capability grants using repository evidence.",
+      "workspace_fixture": "blind_fixture_004"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-005",
+      "partition": "blind",
+      "prompt": "Read packages/blind_component_5/module_5.py directly and summarize how it handles regression reporting.",
+      "workspace_fixture": "blind_fixture_005"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "blind-006",
+      "partition": "blind",
+      "prompt": "Run the configured linter on packages/blind_component_6/module_6.py and report issues related to API pagination.",
+      "workspace_fixture": "blind_fixture_006"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-007",
+      "partition": "blind",
+      "prompt": "Fix path normalization in packages/blind_component_7/module_7.py, but this session has no write approval.",
+      "workspace_fixture": "blind_fixture_007"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-008",
+      "partition": "blind",
+      "prompt": "Review packages/blind_component_8/module_8.py for authentication and authorization risks involving timeout handling.",
+      "workspace_fixture": "blind_fixture_008"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-009",
+      "partition": "blind",
+      "prompt": "Assess whether workspace boundaries is supported by the current repository without changing anything.",
+      "workspace_fixture": "blind_fixture_009"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "blind-010",
+      "partition": "blind",
+      "prompt": "Run the targeted tests for packages/blind_component_10/module_10.py to verify risk classification; do not modify source.",
+      "workspace_fixture": "blind_fixture_010"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "blind-011",
+      "partition": "blind",
+      "prompt": "Create the approved file packages/blind_component_11/module_11.py implementing file creation.",
+      "workspace_fixture": "blind_fixture_011"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-012",
+      "partition": "blind",
+      "prompt": "Refresh local project knowledge for request validation; do not edit source files.",
+      "workspace_fixture": "blind_fixture_012"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-013",
+      "partition": "blind",
+      "prompt": "Verify the proposed change for artifact hashing without applying it to the workspace.",
+      "workspace_fixture": "blind_fixture_013"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-014",
+      "partition": "blind",
+      "prompt": "Search the indexed documentation for guidance about import safety.",
+      "workspace_fixture": "blind_fixture_014"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-015",
+      "partition": "blind",
+      "prompt": "Draft a proposed new file at packages/blind_component_15/module_15.py for security logging; leave the workspace unchanged.",
+      "workspace_fixture": "blind_fixture_015"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-016",
+      "partition": "blind",
+      "prompt": "Recall the recorded project decision about knowledge refresh.",
+      "workspace_fixture": "blind_fixture_016"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-017",
+      "partition": "blind",
+      "prompt": "Find every reference to blind_symbol_17 before assessing session expiry.",
+      "workspace_fixture": "blind_fixture_017"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-018",
+      "partition": "blind",
+      "prompt": "Locate the definition of the symbol blind_symbol_18 used by plugin discovery.",
+      "workspace_fixture": "blind_fixture_018"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "blind-019",
+      "partition": "blind",
+      "prompt": "Execute the repository's existing diagnostic command for output truncation.",
+      "workspace_fixture": "blind_fixture_019"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-020",
+      "partition": "blind",
+      "prompt": "Inspect packages/blind_component_20/module_20.py to diagnose model fallback before proposing any change.",
+      "workspace_fixture": "blind_fixture_020"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-021",
+      "partition": "blind",
+      "prompt": "Plan the implementation of ambiguity handling across the repository without calling tools yet.",
+      "workspace_fixture": "blind_fixture_021"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-022",
+      "partition": "blind",
+      "prompt": "Map the repository areas relevant to targeted replacement before opening packages/blind_component_22/module_22.py.",
+      "workspace_fixture": "blind_fixture_022"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "blind-023",
+      "partition": "blind",
+      "prompt": "Compile packages/blind_component_23/module_23.py with the project compiler to check error translation.",
+      "workspace_fixture": "blind_fixture_023"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "blind-024",
+      "partition": "blind",
+      "prompt": "Replace the complete contents of packages/blind_component_24/module_24.py with the already approved rollback recovery implementation.",
+      "workspace_fixture": "blind_fixture_024"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "blind-025",
+      "partition": "blind",
+      "prompt": "Test the existing patch for concurrent sessions using its configured verification command.",
+      "workspace_fixture": "blind_fixture_025"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-026",
+      "partition": "blind",
+      "prompt": "Explain what blind_symbol_26 does after grounding the answer in packages/blind_component_26/module_26.py.",
+      "workspace_fixture": "blind_fixture_026"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-027",
+      "partition": "blind",
+      "prompt": "Explain the tradeoffs of documentation retrieval without inspecting or changing this repository.",
+      "workspace_fixture": "blind_fixture_027"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "blind-028",
+      "partition": "blind",
+      "prompt": "After reading packages/blind_component_28/module_28.py, apply the approved small replacement needed for configuration loading.",
+      "workspace_fixture": "blind_fixture_028"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-029",
+      "partition": "blind",
+      "prompt": "Index source symbols needed to investigate test isolation, without changing product source.",
+      "workspace_fixture": "blind_fixture_029"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-030",
+      "partition": "blind",
+      "prompt": "Summarize the structure of packages/blind_component_30/module_30.py as it relates to policy enforcement.",
+      "workspace_fixture": "blind_fixture_030"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-031",
+      "partition": "blind",
+      "prompt": "Inspect dependency declarations affecting structured generation in packages/blind_component_31/module_31.py.",
+      "workspace_fixture": "blind_fixture_031"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-032",
+      "partition": "blind",
+      "prompt": "Propose a minimal edit to packages/blind_component_32/module_32.py for tool visibility, but do not apply it.",
+      "workspace_fixture": "blind_fixture_032"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-033",
+      "partition": "blind",
+      "prompt": "Show the existing patch proposal associated with full-file replacement.",
+      "workspace_fixture": "blind_fixture_033"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-034",
+      "partition": "blind",
+      "prompt": "Compare packages/blind_component_34/module_34.py with its documented behavior for database migration using repository evidence.",
+      "workspace_fixture": "blind_fixture_034"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-035",
+      "partition": "blind",
+      "prompt": "Read packages/blind_component_35/module_35.py directly and summarize how it handles symbol indexing.",
+      "workspace_fixture": "blind_fixture_035"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "blind-036",
+      "partition": "blind",
+      "prompt": "Run the configured linter on packages/blind_component_36/module_36.py and report issues related to HTTP error mapping.",
+      "workspace_fixture": "blind_fixture_036"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-037",
+      "partition": "blind",
+      "prompt": "Fix source archiving in packages/blind_component_37/module_37.py, but this session has no write approval.",
+      "workspace_fixture": "blind_fixture_037"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-038",
+      "partition": "blind",
+      "prompt": "Review packages/blind_component_38/module_38.py for authentication and authorization risks involving memory deletion.",
+      "workspace_fixture": "blind_fixture_038"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-039",
+      "partition": "blind",
+      "prompt": "Assess whether audit retention is supported by the current repository without changing anything.",
+      "workspace_fixture": "blind_fixture_039"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "blind-040",
+      "partition": "blind",
+      "prompt": "Run the targeted tests for packages/blind_component_40/module_40.py to verify trace correlation; do not modify source.",
+      "workspace_fixture": "blind_fixture_040"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "blind-041",
+      "partition": "blind",
+      "prompt": "Create the approved file packages/blind_component_41/module_41.py implementing receipt verification.",
+      "workspace_fixture": "blind_fixture_041"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-042",
+      "partition": "blind",
+      "prompt": "Refresh local project knowledge for repair budgets; do not edit source files.",
+      "workspace_fixture": "blind_fixture_042"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-043",
+      "partition": "blind",
+      "prompt": "Verify the proposed change for specialist routing without applying it to the workspace.",
+      "workspace_fixture": "blind_fixture_043"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-044",
+      "partition": "blind",
+      "prompt": "Search the indexed documentation for guidance about compiler diagnostics.",
+      "workspace_fixture": "blind_fixture_044"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-045",
+      "partition": "blind",
+      "prompt": "Draft a proposed new file at packages/blind_component_45/module_45.py for CLI startup; leave the workspace unchanged.",
+      "workspace_fixture": "blind_fixture_045"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-046",
+      "partition": "blind",
+      "prompt": "Recall the recorded project decision about documentation freshness.",
+      "workspace_fixture": "blind_fixture_046"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-047",
+      "partition": "blind",
+      "prompt": "Find every reference to blind_symbol_47 before assessing environment parsing.",
+      "workspace_fixture": "blind_fixture_047"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-048",
+      "partition": "blind",
+      "prompt": "Locate the definition of the symbol blind_symbol_48 used by version reporting.",
+      "workspace_fixture": "blind_fixture_048"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "blind-049",
+      "partition": "blind",
+      "prompt": "Execute the repository's existing diagnostic command for patch persistence.",
+      "workspace_fixture": "blind_fixture_049"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-050",
+      "partition": "blind",
+      "prompt": "Inspect packages/blind_component_50/module_50.py to diagnose dependency pinning before proposing any change.",
+      "workspace_fixture": "blind_fixture_050"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-051",
+      "partition": "blind",
+      "prompt": "Plan the implementation of rate limiting across the repository without calling tools yet.",
+      "workspace_fixture": "blind_fixture_051"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-052",
+      "partition": "blind",
+      "prompt": "Map the repository areas relevant to mode selection before opening packages/blind_component_52/module_52.py.",
+      "workspace_fixture": "blind_fixture_052"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "blind-053",
+      "partition": "blind",
+      "prompt": "Compile packages/blind_component_53/module_53.py with the project compiler to check response modes.",
+      "workspace_fixture": "blind_fixture_053"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "blind-054",
+      "partition": "blind",
+      "prompt": "Replace the complete contents of packages/blind_component_54/module_54.py with the already approved exact tool choice implementation.",
+      "workspace_fixture": "blind_fixture_054"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": true,
+        "write": false
+      },
+      "case_id": "blind-055",
+      "partition": "blind",
+      "prompt": "Test the existing patch for test selection using its configured verification command.",
+      "workspace_fixture": "blind_fixture_055"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-056",
+      "partition": "blind",
+      "prompt": "Explain what blind_symbol_56 does after grounding the answer in packages/blind_component_56/module_56.py.",
+      "workspace_fixture": "blind_fixture_056"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-057",
+      "partition": "blind",
+      "prompt": "Explain the tradeoffs of memory provenance without inspecting or changing this repository.",
+      "workspace_fixture": "blind_fixture_057"
+    },
+    {
+      "agent_mode": "write_approved",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": true
+      },
+      "case_id": "blind-058",
+      "partition": "blind",
+      "prompt": "After reading packages/blind_component_58/module_58.py, apply the approved small replacement needed for command allowlisting.",
+      "workspace_fixture": "blind_fixture_058"
+    },
+    {
+      "agent_mode": "propose",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-059",
+      "partition": "blind",
+      "prompt": "Index source symbols needed to investigate evaluation validation, without changing product source.",
+      "workspace_fixture": "blind_fixture_059"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "blind-060",
+      "partition": "blind",
+      "prompt": "Summarize the structure of packages/blind_component_60/module_60.py as it relates to shell approval.",
+      "workspace_fixture": "blind_fixture_060"
+    }
+  ],
+  "partition": "blind",
+  "suite_version": "semantic-routing-v1"
+}

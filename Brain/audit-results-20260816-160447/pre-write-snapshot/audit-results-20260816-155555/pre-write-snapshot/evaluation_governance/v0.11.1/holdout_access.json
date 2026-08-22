@@ -1,0 +1,8 @@
+{
+  "command": "evaluate_semantic_router --split internal_holdout --confirm-holdout-once",
+  "development_frozen": true,
+  "opened_at": "2026-07-29T21:58:58.019049+00:00",
+  "report_sha256": "0f3da4f8e82a0f77c86a9d020ec2246764dae44b93cca2a225b079877faca62d",
+  "run_mode": "live_ollama",
+  "schema_version": "1.0"
+}

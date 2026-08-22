@@ -1,0 +1,2 @@
+=== TEST 1: trivial read ===
+./run.sh: line 23: mind01: command not found

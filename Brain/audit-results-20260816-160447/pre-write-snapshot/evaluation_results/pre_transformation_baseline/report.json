@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "metrics_source": "deterministic_pre_transformation_baseline",
+  "generated_at": "2026-07-15T22:38:22Z",
+  "agent_version": "0.9.1",
+  "repository": {
+    "path": "/home/mind/Desktop/Archive/Brain",
+    "git_available": false,
+    "git_commit": null,
+    "git_tree": null,
+    "dirty": null
+  },
+  "environment": {
+    "python": "3.14.4",
+    "platform": "Linux-7.0.0-27-generic-x86_64-with-glibc2.43",
+    "ollama_client": "0.32.0",
+    "ollama_daemon_reachable": false,
+    "docker_available": false,
+    "iverilog_available": false,
+    "verilator_available": false,
+    "yosys_available": false,
+    "symbiyosys_available": false,
+    "z3_available": false
+  },
+  "identity": {
+    "system_prompt_sha256": "df00449f8f55fe0b06ec4f79af0db86be57335138ca30a4f6373bfde8bb32a36",
+    "tool_schema_sha256": "60122985311e517b13d7cffc8a42e25ed04eb7f41411f5cf468e8c450dbd752c",
+    "action_suite_sha256": "468281e4aabfe2ee460c98df0dade69ef88548a563ca830a899f130a4b1413f5",
+    "wheel_sha256": "1ba7cec908f2f90072e9b0f9d021dc6a4f21b498a8f30afd68f229c3ea9d82f7"
+  },
+  "commands": [
+    {
+      "command": ".venv-linux/bin/python -m pytest -q",
+      "exit_code": 0,
+      "result": "71 passed in 2.65s"
+    },
+    {
+      "command": ".venv-linux/bin/python -m compileall -q mind01 tests scripts",
+      "exit_code": 0,
+      "result": "passed"
+    },
+    {
+      "command": ".venv-linux/bin/python -m mind01.eval validate",
+      "exit_code": 0,
+      "result": "20 ordinary tasks; 50 action cases"
+    },
+    {
+      "command": ".venv-linux/bin/python -m mind01.eval run --suite regression --mock-model",
+      "exit_code": 0,
+      "result": "25/25; metrics_source=mock_model"
+    },
+    {
+      "command": ".venv-linux/bin/python scripts/run_checks.py",
+      "exit_code": 0,
+      "result": "pytest, compileall, eval validation, mock regression, dry-run evaluation, and package checks passed"
+    }
+  ],
+  "results": {
+    "deterministic_tests": {"passed": 71, "failed": 0, "skipped": 0},
+    "ordinary_eval_tasks": 20,
+    "action_benchmark_cases": 50,
+    "mock_protocol_regression": {"passed": 25, "total": 25},
+    "live_action_benchmark": null,
+    "live_mutation_benchmark": null
+  },
+  "known_limitations": [
+    "No Git provenance",
+    "No retained live-model reports",
+    "Compile-only evidence can contribute too strongly to verified completion",
+    "Duplicated completion and correction authority",
+    "Host execution is not sandboxed",
+    "Ordinary evaluation datasets are not versioned or split",
+    "No open-source redistribution license"
+  ]
+}

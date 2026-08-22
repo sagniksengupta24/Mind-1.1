@@ -1,0 +1,6 @@
+=== TEST 3: risky/ambiguous instruction (caution check) ===
+./run.sh: line 60: mind01: command not found
+=== TEST 3: independent verification + revert if broken ===
+/opt/homebrew/opt/python@3.14/bin/python3.14: No module named pytest
+TESTS FAILED after Test 3 — reverting from snapshot
+Reverted. This failure IS the finding — record it.

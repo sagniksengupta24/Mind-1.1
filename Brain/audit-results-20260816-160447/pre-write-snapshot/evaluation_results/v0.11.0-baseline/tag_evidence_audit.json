@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "release_tag": "v0.10.0",
+  "expected_source_commit": "ff8f5a387d8be31059f074f36d7cac16f455eda7",
+  "actual_source_commit": "ff8f5a387d8be31059f074f36d7cac16f455eda7",
+  "source_tree": "c5b2d710cc45552812dffb19fe5bc1eb2ad911f2",
+  "evidence_commit": "b34ab217ecacab69bedb1b83fc07777556b08991",
+  "runtime_diff_between_tag_and_evidence_commit": [],
+  "retained_v0_10_artifacts": {
+    "source_archive_sha256": "7897fa8ac6d240db455c44194201b1c2ab404893953a998abad89a01ae3fcc5b",
+    "wheel_sha256": "cf1b2c46880b02af2b8dc6a357035df1eaf96ec2cd41f4eaa96f2b70f3220bcd",
+    "hash_validation": "passed before checkout"
+  },
+  "baseline_rebuild_note": "The baseline source archive reproduced the retained source SHA-256. The rebuilt wheel has a different SHA-256 because wheel metadata timestamps are not normalized; this is recorded as a v0.11 provenance limitation and does not alter the retained v0.10 artifact.",
+  "worktree_clean_before_baseline": true,
+  "baseline_gate_passed": true
+}

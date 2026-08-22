@@ -1,0 +1,32 @@
+[
+  {
+    "expected": "blocked",
+    "actual": "blocked",
+    "count": 56
+  },
+  {
+    "expected": "explanation",
+    "actual": "explanation",
+    "count": 10
+  },
+  {
+    "expected": "inspection",
+    "actual": "inspection",
+    "count": 77
+  },
+  {
+    "expected": "mutation",
+    "actual": "mutation",
+    "count": 17
+  },
+  {
+    "expected": "planning",
+    "actual": "planning",
+    "count": 16
+  },
+  {
+    "expected": "verification",
+    "actual": "verification",
+    "count": 24
+  }
+]

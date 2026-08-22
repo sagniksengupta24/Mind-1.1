@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "agent_version": "0.10.0",
+  "suite": "real-mutation",
+  "fixtures": [
+    {
+      "id": "python-syntax-repair",
+      "source_dir": "syntax",
+      "task": "Repair the Python syntax error without changing unrelated behavior.",
+      "expected_paths": ["broken.py"],
+      "acceptance": "compileall"
+    },
+    {
+      "id": "failing-test-repair",
+      "source_dir": "failing_test",
+      "task": "Fix the implementation so all existing tests pass. Do not remove or weaken tests.",
+      "expected_paths": ["calc.py"],
+      "protected_paths": ["test_calc.py"],
+      "acceptance": "pytest"
+    },
+    {
+      "id": "small-feature",
+      "source_dir": "feature",
+      "task": "Implement the requested deterministic identifier-normalization function described in README.md and preserve existing behavior.",
+      "expected_paths": ["text_utils.py"],
+      "acceptance": "hidden_feature"
+    }
+  ]
+}

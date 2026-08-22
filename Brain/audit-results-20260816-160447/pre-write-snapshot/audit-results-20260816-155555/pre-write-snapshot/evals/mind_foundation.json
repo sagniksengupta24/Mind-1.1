@@ -1,0 +1,49 @@
+{
+  "tasks": [
+    {
+      "name": "code-tool-inspection",
+      "prompt": "Use project_map, then read mind01/tools.py. Explain in English what safety checks exist before shell commands run. Include the exact English words recursive remove and blocked.",
+      "expected_groups": [
+        ["recursive remove", "rm -rf", "-rf"],
+        ["dangerous", "blocked", "safety"]
+      ]
+    },
+    {
+      "name": "indian-language-explanation",
+      "prompt": "Explain in Bengali what this project is building. Mention local model, memory, and code tools.",
+      "expected_groups": [
+        ["local", "লোকাল", "লокাল", "স্থানীয়"],
+        ["memory", "মেমরি", "মেমোরি"],
+        ["code", "কোড"]
+      ]
+    },
+    {
+      "name": "semiconductor-basic",
+      "prompt": "Search docs for clock. Then explain setup time in one practical paragraph. Include the exact English words setup time and clock.",
+      "expected_groups": [
+        ["setup time", "সেটআপ"],
+        ["clock", "ক্লক"]
+      ]
+    },
+    {
+      "name": "memory-write",
+      "prompt": "Remember this startup direction: Mind1.1 focuses on code, Indian languages, semiconductor workflows, memory, and reasoning. Then confirm the saved direction using the exact English labels code, Indian languages, semiconductor, memory, reasoning.",
+      "expected_groups": [
+        ["code", "কোড"],
+        ["Indian", "ভারতীয়", "language", "ভাষা"],
+        ["semiconductor", "সেমিকন্ডাক্টর", "VLSI"],
+        ["memory", "মেমরি", "মেমোরি"],
+        ["reasoning", "reason", "যুক্তি"]
+      ]
+    },
+    {
+      "name": "memory-recall",
+      "prompt": "Recall the startup direction and summarize it in one sentence using the exact English labels code, semiconductor, memory.",
+      "expected_groups": [
+        ["code", "কোড"],
+        ["semiconductor", "সেমিকন্ডাক্টর", "VLSI"],
+        ["memory", "মেমরি", "মেমোরি"]
+      ]
+    }
+  ]
+}

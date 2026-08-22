@@ -1,0 +1,46 @@
+{
+  "release_status": "failed_blocked",
+  "agent_version": "0.11.0.dev0",
+  "source_commit": "812c510f5cfe4f26c46e923435ae89bd6f1229bb",
+  "evidence_commit": "6bc583bb5d5fbe4edc4c3dd15bd9a7614be6fa43",
+  "dataset_hashes": {
+    "development.json": "2be41e3a444fe8cbf6bd6357387fbdf2dea46e66e8ffb33659ea986aaf5050f7",
+    "regression.json": "2ee75119ad6ec25ddae8c4fb05fe4f4d219a124ea524edd2116227636a705edb",
+    "adversarial.json": "c47a4453d3526052c35bd6975339b77426b7f388fabfa7121bf55def6c1c00fe",
+    "capability_modes.json": "db808bc82e5475caa85878d59d75c0e70e5769991a6ba35421da00dfd2bda58f",
+    "ambiguity.json": "b7b01f867285f8633ffe95ecde1f108f32dbe32741d453e040d1b0f1053b2f4f",
+    "blind_inputs.json": "fe0903bd6f8d116f77a7cbce37b1d4d2acaa9c8d59baec6bc042b26f620e5839"
+  },
+  "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+  "passed_gates": [
+    "frozen_dataset_hash_validation",
+    "typed_route_schema",
+    "v0.10_deterministic_regression",
+    "v0.10_false_success_regressions_zero",
+    "forbidden_and_unauthorized_selection_zero"
+  ],
+  "failed_gates": [
+    "external_blind_evaluation",
+    "three_complete_live_runs",
+    "blind_accuracy_metrics",
+    "dataset_independence"
+  ],
+  "unresolved_cases": [
+    "16 frozen adversarial mutation-intent contradictions",
+    "existing-file proposal labels name eventual rather than first lifecycle tool"
+  ],
+  "reproduction_commands": [
+    "python -m pytest -q",
+    "python -m mind01.eval validate",
+    "python -m mind01.eval run --suite semantic-routing",
+    "python -m mind01.eval semantic-live --partition development --model qwen2.5-coder:7b --seed 1102 --output evaluation_results/v0.11.0-release/development_runs/run-002.json"
+  ],
+  "architectural_decisions": [
+    "typed deterministic five-stage routing",
+    "capability-bound route identity",
+    "single exposure authority",
+    "inspect existing source before proposal"
+  ],
+  "next_branch": null,
+  "next_implementation_action": "Obtain an independently controlled blind evaluator and create a corrected newly frozen dataset version before another release candidate."
+}

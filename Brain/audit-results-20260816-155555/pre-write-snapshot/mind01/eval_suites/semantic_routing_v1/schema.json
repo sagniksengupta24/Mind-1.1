@@ -1,0 +1,223 @@
+{
+  "$id": "indus-agent/semantic-routing-v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "agent_mode": {
+      "enum": [
+        "propose",
+        "read_only",
+        "unsafe",
+        "write_approved"
+      ]
+    },
+    "capabilities": {
+      "additionalProperties": false,
+      "properties": {
+        "network": {
+          "type": "boolean"
+        },
+        "shell": {
+          "type": "boolean"
+        },
+        "write": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "write",
+        "shell",
+        "network"
+      ],
+      "type": "object"
+    },
+    "case_id": {
+      "maxLength": 96,
+      "minLength": 3,
+      "type": "string"
+    },
+    "expected": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed_exact_tools": {
+          "items": {
+            "enum": [
+              "delete_memory",
+              "edit_file",
+              "file_summary",
+              "index_code",
+              "list_files",
+              "list_memories",
+              "list_patches",
+              "project_map",
+              "propose_edit_file",
+              "propose_write_file",
+              "query_knowledge",
+              "read_file",
+              "recall",
+              "refresh_knowledge",
+              "remember",
+              "run_command",
+              "search_code",
+              "search_docs",
+              "search_symbols",
+              "show_patch",
+              "test_patch",
+              "update_memory",
+              "write_file"
+            ]
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "intent_type": {
+          "type": "string"
+        },
+        "mutation_intent": {
+          "type": "boolean"
+        },
+        "response_mode": {
+          "enum": [
+            "action",
+            "final_answer",
+            "clarification",
+            "blocked"
+          ]
+        },
+        "risk_level": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "specialist": {
+          "enum": [
+            "general",
+            "repository_inspector",
+            "implementation",
+            "verification",
+            "debugging",
+            "documentation",
+            "security_review"
+          ]
+        },
+        "task_class": {
+          "enum": [
+            "inspection",
+            "mutation",
+            "verification",
+            "explanation",
+            "planning",
+            "blocked"
+          ]
+        },
+        "tool_family": {
+          "enum": [
+            "repository_discovery",
+            "file_inspection",
+            "symbol_inspection",
+            "documentation_retrieval",
+            "execution_verification",
+            "mutation_proposal",
+            "targeted_mutation",
+            "file_creation",
+            "patch_inspection",
+            "memory_retrieval",
+            "final_response",
+            "clarification",
+            "blocked"
+          ]
+        }
+      },
+      "required": [
+        "intent_type",
+        "task_class",
+        "specialist",
+        "tool_family",
+        "allowed_exact_tools",
+        "response_mode",
+        "mutation_intent",
+        "risk_level"
+      ],
+      "type": "object"
+    },
+    "forbidden_tools": {
+      "items": {
+        "enum": [
+          "delete_memory",
+          "edit_file",
+          "file_summary",
+          "index_code",
+          "list_files",
+          "list_memories",
+          "list_patches",
+          "project_map",
+          "propose_edit_file",
+          "propose_write_file",
+          "query_knowledge",
+          "read_file",
+          "recall",
+          "refresh_knowledge",
+          "remember",
+          "run_command",
+          "search_code",
+          "search_docs",
+          "search_symbols",
+          "show_patch",
+          "test_patch",
+          "update_memory",
+          "write_file"
+        ]
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "partition": {
+      "enum": [
+        "adversarial",
+        "ambiguity",
+        "blind",
+        "capability_mode",
+        "development",
+        "regression"
+      ]
+    },
+    "prompt": {
+      "maxLength": 4096,
+      "minLength": 8,
+      "type": "string"
+    },
+    "rationale_code": {
+      "maxLength": 96,
+      "minLength": 3,
+      "type": "string"
+    },
+    "tags": {
+      "items": {
+        "maxLength": 96,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "workspace_fixture": {
+      "maxLength": 256,
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "case_id",
+    "partition",
+    "prompt",
+    "workspace_fixture",
+    "agent_mode",
+    "capabilities"
+  ],
+  "title": "Indus Agent semantic routing evaluation case",
+  "type": "object"
+}

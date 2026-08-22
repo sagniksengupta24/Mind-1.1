@@ -1,0 +1,11 @@
+diff -ru --ex ./audit-results-20260816-155555/pre-write-snapshot/audit-results-20260816-155555/00_setup.log ./audit-results-20260816-155555/00_setup.log
+--- ./audit-results-20260816-155555/pre-write-snapshot/audit-results-20260816-155555/00_setup.log	2026-08-16 15:55:55
++++ ./audit-results-20260816-155555/00_setup.log	2026-08-16 15:55:56
+@@ -6,3 +6,4 @@
+ OPENROUTER_API_KEY=<unset>
+ --- mind01 doctor ---
+ === Snapshotting workspace before write tests ===
++Snapshot saved to ./audit-results-20260816-155555/pre-write-snapshot
+Only in ./audit-results-20260816-155555: 02_test2.log
+Only in ./audit-results-20260816-155555: 02_test2_diff.log
+Only in ./audit-results-20260816-155555: pre-write-snapshot

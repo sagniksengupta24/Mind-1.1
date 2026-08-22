@@ -1,0 +1,10 @@
+{
+  "category": "docs_rag",
+  "tasks": [
+    {
+      "name": "docs-rag-dry-run-harness",
+      "prompt": "Docs RAG harness check: search docs with citations like path:L1-L2 if a live model is available.",
+      "expected_contains": ["Dry run ready", "Docs RAG"]
+    }
+  ]
+}

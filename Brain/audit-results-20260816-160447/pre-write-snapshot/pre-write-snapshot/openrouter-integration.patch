@@ -1,0 +1,926 @@
+diff --git a/Brain/.env.example b/Brain/.env.example
+index 58aeed6..ff03099 100644
+--- a/Brain/.env.example
++++ b/Brain/.env.example
+@@ -12,3 +12,37 @@ MIND_API_PORT=8765
+ 
+ # Allowed CORS origin (must match where the frontend runs)
+ CORS_ORIGIN=http://localhost:3000
++
++# =========================================================================
++# Cloud LLM provider (optional) — see docs/llm_providers.md
++#
++# Everything below is read directly by AgentConfig.build() for the `ask`,
++# `chat`, `doctor`, and `serve-api` commands. Leaving LLM_PROVIDER unset
++# (or "ollama") keeps the original local-only behavior unchanged; nothing
++# below is required.
++# =========================================================================
++
++# ollama (default, local) | openrouter | openai_compatible
++LLM_PROVIDER=openrouter
++
++# Model ID as the provider names it. Prefer a free ":free" model on
++# OpenRouter to start — see https://openrouter.ai/models?max_price=0
++# (availability changes over time; don't hardcode this into agent code).
++LLM_MODEL=deepseek/deepseek-chat-v3.1:free
++
++# OpenRouter API key (used automatically when LLM_PROVIDER=openrouter)
++OPENROUTER_API_KEY=sk-or-v1-your-key-here
++
++# Only needed for LLM_PROVIDER=openai_compatible (Together, Groq,
++# Fireworks, a self-hosted vLLM/TGI server, ...):
++# LLM_BASE_URL=https://api.together.xyz/v1
++# LLM_API_KEY=your-key-here
++
++# Comma-separated model IDs tried in order if LLM_MODEL fails (rate
++# limit, 5xx, model unavailable). Auth errors never fall through, since
++# they won't improve on a different model.
++LLM_FALLBACK_MODELS=qwen/qwen3-235b-a22b:free,meta-llama/llama-3.3-70b-instruct:free
++
++# Optional OpenRouter attribution headers (recommended, not required):
++# LLM_SITE_URL=https://your-app.example.com
++# LLM_APP_NAME=mind01
+diff --git a/Brain/README.md b/Brain/README.md
+index ba7c95f..baf342a 100644
+--- a/Brain/README.md
++++ b/Brain/README.md
+@@ -2,7 +2,7 @@
+ 
+ Mind1.1 is a **local-first AI engineering-agent runtime** for repository work, coding, debugging, verification, semiconductor/VLSI assistance, mathematics, Indian-language technical learning, project memory, and documentation retrieval.
+ 
+-It is not a foundation model. It runs an Ollama-compatible local model and adds the engineering system around it: strict actions, routing, planning, controlled tools, deterministic verification, persistent sessions, provenance-aware project knowledge, receipts, rollback, traces, and evaluations.
++It is not a foundation model. It runs an Ollama-compatible local model by default and adds the engineering system around it: strict actions, routing, planning, controlled tools, deterministic verification, persistent sessions, provenance-aware project knowledge, receipts, rollback, traces, and evaluations. It can also run inference on a cloud, OpenAI-compatible provider such as OpenRouter instead of locally — see [docs/llm_providers.md](docs/llm_providers.md).
+ 
+ ## v0.11.1 candidate status
+ 
+diff --git a/Brain/docs/llm_providers.md b/Brain/docs/llm_providers.md
+new file mode 100644
+index 0000000..aa1c20e
+--- /dev/null
++++ b/Brain/docs/llm_providers.md
+@@ -0,0 +1,126 @@
++# LLM provider adapter
++
++Mind1.1 talks to exactly one seam for model calls: `Agent.llm`, an
++object with a `chat(messages, json_mode, response_schema) -> str` method.
++Historically that object was always an `OllamaClient` (`mind01/llm.py`),
++hardcoded at construction time in `Agent.__init__`.
++
++`mind01/llm_providers.py` adds a second implementation of that same
++surface, `OpenAICompatibleClient`, for any cloud, OpenAI-compatible
++`/chat/completions` endpoint — OpenRouter by default, or any other provider
++(Together, Groq, Fireworks, a self-hosted vLLM/TGI server, ...) via
++`base_url`/`api_key`. Inference runs on the provider's GPUs; nothing is
++downloaded or run locally. This lets the agent use 30B-70B+ open-weight
++models (DeepSeek, Qwen, Llama, ...) without owning the hardware for them.
++
++`Agent` and `OllamaSemanticClassifier` do not know which implementation
++they got — `build_llm_client(config)` is the only place that branches on
++provider:
++
++```text
++AgentConfig (provider, model, api_key, base_url, fallback_models, ...)
++        |
++        v
++build_llm_client(config)  --  the only provider branch point
++        |
++        +--> OllamaClient            (provider = "ollama", default)
++        +--> OpenAICompatibleClient  (provider = "openrouter" | "openai_compatible")
++        |
++        v
++Agent.llm.chat(...)  /  OllamaSemanticClassifier(client).predict_task(...)
++```
++
++## Configuring a provider
++
++Nothing here is required — the default (`provider=ollama`) is byte-for-byte
++the previous local-only behavior. To use a cloud provider, set env vars
++(see `.env.example`) or pass the equivalent CLI flags:
++
++| Env var                | CLI flag             | Meaning                                                        |
++|-------------------------|-----------------------|------------------------------------------------------------------|
++| `LLM_PROVIDER`          | `--provider`          | `ollama` (default) \| `openrouter` \| `openai_compatible`        |
++| `LLM_MODEL`             | `--model`             | Model ID as the provider names it                                 |
++| `OPENROUTER_API_KEY`    | `--api-key`           | Used automatically when provider is `openrouter`                  |
++| `LLM_API_KEY`           | `--api-key`           | Used for `openai_compatible`, or as a fallback for any provider   |
++| `LLM_BASE_URL`          | `--base-url`          | Required for `openai_compatible`; defaults to OpenRouter's URL for `openrouter` |
++| `LLM_FALLBACK_MODELS`   | `--fallback-models`   | Comma-separated model IDs tried in order on retryable failure     |
++| `LLM_SITE_URL`          | —                      | Optional `HTTP-Referer` sent to OpenRouter for attribution         |
++| `LLM_APP_NAME`          | —                      | Optional `X-Title` sent to OpenRouter for attribution              |
++
++Example (OpenRouter, free model, two free fallbacks):
++
++```bash
++export LLM_PROVIDER=openrouter
++export LLM_MODEL="deepseek/deepseek-chat-v3.1:free"
++export OPENROUTER_API_KEY="sk-or-v1-..."
++export LLM_FALLBACK_MODELS="qwen/qwen3-235b-a22b:free,meta-llama/llama-3.3-70b-instruct:free"
++
++mind01 ask --workspace . "Summarize this repo's routing design."
++```
++
++Or via CLI flags only, no env vars:
++
++```bash
++mind01 ask --workspace . --provider openrouter \
++  --model "deepseek/deepseek-chat-v3.1:free" \
++  --api-key "$OPENROUTER_API_KEY" \
++  --fallback-models "qwen/qwen3-235b-a22b:free,meta-llama/llama-3.3-70b-instruct:free" \
++  "Summarize this repo's routing design."
++```
++
++`serve-api` picks up the same env vars automatically (it builds
++`AgentConfig` the same way per request); no extra flags were added there.
++
++## What the adapter does
++
++- **Structured JSON output.** `Agent` always calls `chat(..., json_mode=True,
++  response_schema=<schema>)` — it has no unconstrained-prose path. The
++  cloud client mirrors `OllamaClient`'s behavior exactly: it starts
++  conservative (`response_format: json_object`, broadly supported), and
++  only enables `response_format: json_schema` once a live call proves the
++  model/deployment accepts it. If a `json_schema` attempt gets a `400`/`422`,
++  it's retried once as `json_object` in the same call and that capability is
++  remembered for the rest of the session — never falls through to
++  unconstrained text.
++- **Error handling.** Every HTTP failure becomes an `LLMError` (the same
++  exception type `Agent` already catches) with a `status_code` and a
++  provider-message-derived, bounded description — auth failures, missing
++  model, rate limiting, and payment-required are distinguished so the
++  agent's failure message is actionable.
++- **Retries.** `429`/`5xx` responses are retried with exponential backoff
++  (`max_retries`, default 2) before raising.
++- **Fallback models.** `chat()` tries `model`, then each entry in
++  `fallback_models` in order, on any retryable failure. Auth errors
++  (`401`/`403`) are never retried against a different model, since they
++  won't improve.
++- **Streaming.** `chat_stream()` yields content deltas from the endpoint's
++  SSE stream. Not currently wired into `Agent` (which does one blocking
++  call per step), but available for a UI/CLI that wants token-by-token
++  output.
++- **Tool/function calling.** `chat_with_tools()` sends OpenAI-style `tools`
++  and returns the raw assistant `message` (which may contain `tool_calls`)
++  unopinionated — `Agent`'s own action protocol is a JSON-schema-constrained
++  single response rather than native tool calls, so this method isn't
++  wired into the loop, but it's there for callers/extensions that want
++  native function calling from a tool-calling-capable model.
++
++## Adding another provider
++
++Any strictly OpenAI-compatible endpoint needs zero new code — set
++`LLM_PROVIDER=openai_compatible` and point `LLM_BASE_URL`/`LLM_API_KEY` at
++it. A provider with a genuinely different wire format gets its own class
++next to `OpenAICompatibleClient` in `llm_providers.py`, implementing the
++same `chat(messages, json_mode, response_schema) -> str` surface (plus the
++`.timeout` / `.last_output_mode` / `.last_server_version` /
++`.last_response_metadata` attributes `Agent` reads), and one more branch
++in `build_llm_client()`. No other module changes.
++
++## Known scope boundary
++
++`mind01/doctor.py`'s `run_doctor()` is provider-aware: for
++`provider=ollama` it does the original local reachability/model-pull
++checks. For a cloud provider it checks that an API key and base URL are
++configured, but does **not** make a live request to the provider (to
++avoid spending a paid or rate-limited call just for a health check) — an
++auth or connectivity problem will surface as a clear `LLMError` on the
++first real `ask`/`chat` call instead.
+diff --git a/Brain/mind01/agent.py b/Brain/mind01/agent.py
+index b42801e..40b4d7f 100644
+--- a/Brain/mind01/agent.py
++++ b/Brain/mind01/agent.py
+@@ -20,6 +20,7 @@ from .action_parser import (
+ from .config import AgentConfig
+ from .completion import CompletionAuthority
+ from .llm import LLMError, Message, OllamaClient
++from .llm_providers import build_llm_client
+ from .memory_intent import MemoryIntent, detect_memory_intent
+ from .modes import AgentMode
+ from .planning import Planner
+@@ -106,7 +107,11 @@ class Agent:
+             model_name=config.model,
+         )
+         self.traces = TraceStore(config.workspace)
+-        self.llm = OllamaClient(config.ollama_url, config.model, timeout=config.request_timeout_seconds)
++        # Provider (Ollama locally, or a cloud OpenAI-compatible endpoint
++        # like OpenRouter) is resolved entirely from `config` here — the
++        # rest of the agent only ever calls `.chat(...)` on whatever comes
++        # back, so switching providers/models never touches agent logic.
++        self.llm = build_llm_client(config)
+         self.router = HierarchicalRouter()
+         self.router_v2: SemanticRouterV2 | None = None
+         self.last_router_comparison: dict[str, Any] = {}
+@@ -114,13 +119,7 @@ class Agent:
+             classifier = (
+                 RuleBasedSemanticClassifier()
+                 if config.dry_run
+-                else OllamaSemanticClassifier(
+-                    OllamaClient(
+-                        config.ollama_url,
+-                        config.model,
+-                        timeout=config.request_timeout_seconds,
+-                    )
+-                )
++                else OllamaSemanticClassifier(build_llm_client(config))
+             )
+             self.router_v2 = SemanticRouterV2(classifier)
+         self.tool_exposure = ToolExposureAuthority()
+diff --git a/Brain/mind01/cli.py b/Brain/mind01/cli.py
+index 4ce5ed5..3c3f0a3 100644
+--- a/Brain/mind01/cli.py
++++ b/Brain/mind01/cli.py
+@@ -1,6 +1,7 @@
+ from __future__ import annotations
+ 
+ import argparse
++import os
+ import sys
+ from pathlib import Path
+ 
+@@ -43,7 +44,14 @@ def main(argv: list[str] | None = None) -> int:
+         if getattr(args, "eval", False):
+             config = build_config(args)
+             return run_doctor_eval(config)
+-        checks = run_doctor(args.model, args.ollama_url)
++        config = build_config(args)
++        checks = run_doctor(
++            config.model,
++            config.ollama_url,
++            provider=config.provider,
++            api_key=config.api_key,
++            base_url=config.base_url,
++        )
+         print(render_doctor(checks))
+         return 0 if all(check.ok for check in checks) else 2
+ 
+@@ -603,8 +611,41 @@ def build_parser() -> argparse.ArgumentParser:
+ 
+ def add_common(parser: argparse.ArgumentParser) -> None:
+     parser.add_argument("--workspace", default=".")
+-    parser.add_argument("--model", default="qwen2.5-coder:7b")
++    parser.add_argument("--model", default=os.environ.get("LLM_MODEL", "qwen2.5-coder:7b"))
+     parser.add_argument("--ollama-url", default="http://127.0.0.1:11434")
++    parser.add_argument(
++        "--provider",
++        choices=("ollama", "openrouter", "openai_compatible", "openai"),
++        default=None,
++        help=(
++            "Where inference runs. 'ollama' (default) uses your local server. "
++            "'openrouter' or 'openai_compatible' call a cloud, OpenAI-compatible "
++            "API instead — no local model download/run. Falls back to $LLM_PROVIDER, "
++            "then 'ollama'."
++        ),
++    )
++    parser.add_argument(
++        "--api-key",
++        default=None,
++        help="Cloud provider API key. Falls back to $OPENROUTER_API_KEY / $LLM_API_KEY.",
++    )
++    parser.add_argument(
++        "--base-url",
++        default=None,
++        help=(
++            "Cloud provider base URL (e.g. https://openrouter.ai/api/v1). "
++            "Defaults to OpenRouter's URL when --provider openrouter is used. "
++            "Falls back to $LLM_BASE_URL."
++        ),
++    )
++    parser.add_argument(
++        "--fallback-models",
++        default=None,
++        help=(
++            "Comma-separated model IDs to try in order if --model fails "
++            "(rate limit, 5xx, model unavailable). Falls back to $LLM_FALLBACK_MODELS."
++        ),
++    )
+     parser.add_argument("--max-steps", type=int, default=8)
+     parser.add_argument("--yes", action="store_true", help="Auto-approve edits/commands")
+     parser.add_argument("--dry-run", action="store_true", help="Skip model calls")
+@@ -634,6 +675,12 @@ def add_common(parser: argparse.ArgumentParser) -> None:
+ 
+ 
+ def build_config(args: argparse.Namespace) -> AgentConfig:
++    fallback_models_arg = getattr(args, "fallback_models", None)
++    fallback_models = (
++        tuple(item.strip() for item in fallback_models_arg.split(",") if item.strip())
++        if fallback_models_arg
++        else None
++    )
+     return AgentConfig.build(
+         workspace=args.workspace,
+         model=args.model,
+@@ -646,6 +693,10 @@ def build_config(args: argparse.Namespace) -> AgentConfig:
+         allow_shell=getattr(args, "allow_shell", False),
+         mode=getattr(args, "mode", AgentMode.READ_ONLY.value),
+         semantic_router=getattr(args, "semantic_router", "legacy"),
++        provider=getattr(args, "provider", None),
++        api_key=getattr(args, "api_key", None),
++        base_url=getattr(args, "base_url", None),
++        fallback_models=fallback_models,
+     )
+ 
+ 
+diff --git a/Brain/mind01/config.py b/Brain/mind01/config.py
+index 659c3d2..0d1244a 100644
+--- a/Brain/mind01/config.py
++++ b/Brain/mind01/config.py
+@@ -1,10 +1,18 @@
+ from __future__ import annotations
+ 
++import os
+ from dataclasses import dataclass
+ from pathlib import Path
+ 
+ from .modes import AgentMode, parse_agent_mode
+ 
++_KNOWN_PROVIDERS = {"ollama", "openrouter", "openai_compatible", "openai"}
++
++
++def _env_model_list(name: str) -> tuple[str, ...]:
++    raw = os.environ.get(name, "")
++    return tuple(item.strip() for item in raw.split(",") if item.strip())
++
+ 
+ @dataclass(frozen=True)
+ class AgentConfig:
+@@ -22,6 +30,20 @@ class AgentConfig:
+     semantic_router: str = "legacy"
+     trace_bundles: bool = False
+ 
++    # --- cloud LLM provider adapter -----------------------------------
++    # Default ("ollama") preserves existing local-first behavior exactly.
++    # Set provider to "openrouter" (or "openai_compatible" for any other
++    # OpenAI-compatible endpoint) to run inference on a provider's GPUs
++    # instead of locally. All of these are resolved from env vars in
++    # `build()` when not passed explicitly, so switching providers/models
++    # never requires touching agent code — see README / .env.example.
++    provider: str = "ollama"
++    api_key: str = ""
++    base_url: str = ""
++    fallback_models: tuple[str, ...] = ()
++    site_url: str = ""
++    app_name: str = "mind01"
++
+     @classmethod
+     def build(
+         cls,
+@@ -38,6 +60,12 @@ class AgentConfig:
+         request_timeout_seconds: int = 120,
+         semantic_router: str = "legacy",
+         trace_bundles: bool = False,
++        provider: str | None = None,
++        api_key: str | None = None,
++        base_url: str | None = None,
++        fallback_models: tuple[str, ...] | list[str] | None = None,
++        site_url: str | None = None,
++        app_name: str | None = None,
+     ) -> "AgentConfig":
+         root = Path(workspace).expanduser().resolve()
+         clean_model = model.strip()
+@@ -54,6 +82,36 @@ class AgentConfig:
+             raise ValueError("semantic_router must be legacy, v2, or compare.")
+         if not isinstance(trace_bundles, bool):
+             raise ValueError("trace_bundles must be a bool.")
++
++        # Any of these left as None (i.e. not explicitly passed by the
++        # caller) fall back to environment variables, so a bare
++        # `AgentConfig.build(...)` call from a script, notebook, or the
++        # HTTP API picks up provider config the same way the CLI does.
++        resolved_provider = (
++            provider if provider is not None else os.environ.get("LLM_PROVIDER", "ollama")
++        ).strip().lower()
++        if resolved_provider not in _KNOWN_PROVIDERS:
++            raise ValueError(
++                "provider must be one of: " + ", ".join(sorted(_KNOWN_PROVIDERS))
++            )
++
++        default_key_env = "OPENROUTER_API_KEY" if resolved_provider == "openrouter" else "LLM_API_KEY"
++        resolved_api_key = (
++            api_key
++            if api_key is not None
++            else os.environ.get(default_key_env) or os.environ.get("LLM_API_KEY", "")
++        )
++        resolved_base_url = base_url if base_url is not None else os.environ.get("LLM_BASE_URL", "")
++        resolved_fallbacks = (
++            tuple(fallback_models)
++            if fallback_models is not None
++            else _env_model_list("LLM_FALLBACK_MODELS")
++        )
++        resolved_site_url = site_url if site_url is not None else os.environ.get("LLM_SITE_URL", "")
++        resolved_app_name = (
++            app_name if app_name is not None else os.environ.get("LLM_APP_NAME", "mind01")
++        )
++
+         return cls(
+             workspace=root,
+             model=clean_model,
+@@ -68,4 +126,10 @@ class AgentConfig:
+             request_timeout_seconds=int(request_timeout_seconds),
+             semantic_router=semantic_router,
+             trace_bundles=trace_bundles,
++            provider=resolved_provider,
++            api_key=resolved_api_key,
++            base_url=resolved_base_url,
++            fallback_models=resolved_fallbacks,
++            site_url=resolved_site_url,
++            app_name=resolved_app_name,
+         )
+diff --git a/Brain/mind01/doctor.py b/Brain/mind01/doctor.py
+index f1be0cb..e6e0bc8 100644
+--- a/Brain/mind01/doctor.py
++++ b/Brain/mind01/doctor.py
+@@ -19,7 +19,15 @@ class Check:
+     fix: str = ""
+ 
+ 
+-def run_doctor(model: str, ollama_url: str) -> list[Check]:
++def run_doctor(model: str, ollama_url: str, *, provider: str = "ollama", api_key: str = "", base_url: str = "") -> list[Check]:
++    """Environment/connectivity checks.
++
++    `provider="ollama"` (the default, and the only mode when called with
++    just the original two positional args) preserves the original local
++    checks unchanged. For a cloud provider, pass `provider=` (and
++    `api_key`/`base_url`) to get provider-appropriate checks instead of
++    misleadingly checking for a local Ollama server that isn't in use.
++    """
+     checks = [
+         Check(
+             "python",
+@@ -27,6 +35,50 @@ def run_doctor(model: str, ollama_url: str) -> list[Check]:
+             f"{sys.version.split()[0]} on {platform.platform()}",
+         )
+     ]
++
++    if provider != "ollama":
++        checks.append(
++            Check(
++                "provider",
++                True,
++                f"using cloud provider `{provider}` — local Ollama checks skipped",
++            )
++        )
++        checks.append(
++            Check(
++                "api-key",
++                bool(api_key),
++                "present" if api_key else "missing",
++                "Set --api-key / OPENROUTER_API_KEY (or LLM_API_KEY) before running.",
++            )
++        )
++        resolved_base_url = base_url or ("https://openrouter.ai/api/v1" if provider == "openrouter" else "")
++        checks.append(
++            Check(
++                "base-url",
++                bool(resolved_base_url),
++                resolved_base_url or "not set",
++                "Set --base-url / LLM_BASE_URL." if not resolved_base_url else "",
++            )
++        )
++        checks.append(
++            Check(
++                "model",
++                bool(model.strip()),
++                model or "not set",
++                "Set --model / LLM_MODEL to a model ID your provider serves.",
++            )
++        )
++        checks.append(
++            Check(
++                "connectivity",
++                True,
++                "not checked — cloud reachability isn't probed to avoid spending a paid/rate-limited request",
++                "Run `mind01 ask ...` once; a connectivity or auth problem will surface there as a clear error.",
++            )
++        )
++        return checks
++
+     ollama_path = shutil.which("ollama")
+     checks.append(
+         Check(
+diff --git a/Brain/mind01/llm_providers.py b/Brain/mind01/llm_providers.py
+new file mode 100644
+index 0000000..7f944a4
+--- /dev/null
++++ b/Brain/mind01/llm_providers.py
+@@ -0,0 +1,408 @@
++"""Model-agnostic LLM provider adapter layer.
++
++`mind01.llm.OllamaClient` talks to a locally-running Ollama server.
++This module adds a second, duck-type-compatible client for any
++OpenAI-compatible cloud endpoint (OpenRouter, Together, Groq,
++Fireworks, a self-hosted vLLM/TGI server, ...), so the agent can run
++30B-70B+ open-weight models (DeepSeek, Qwen, Llama, ...) via a
++provider's GPUs instead of downloading and running them locally.
++
++Every client this module hands out — Ollama or cloud — exposes the
++same surface that `Agent` and `OllamaSemanticClassifier` already rely
++on:
++
++    chat(messages, json_mode=True, response_schema=None) -> str
++    .timeout                 (settable int, seconds)
++    .last_output_mode        (str, set after each chat() call)
++    .last_server_version     (str, informational)
++    .last_response_metadata  (dict | None)
++
++`build_llm_client(config)` is the single seam the rest of the agent
++needs to know about: it reads `AgentConfig.provider` (itself resolved
++from CLI flags / env vars in `config.py`) and returns the right
++client. No other module needs to branch on provider.
++
++Switching models or providers is therefore always a config/env-var
++change, never an agent-logic change.
++"""
++
++from __future__ import annotations
++
++import json
++import time
++import urllib.error
++import urllib.request
++from dataclasses import dataclass, field
++from typing import Any, Callable, Iterator
++
++from .llm import LLMError, Message, OllamaClient
++
++__all__ = [
++    "OpenAICompatibleClient",
++    "build_llm_client",
++    "DEFAULT_OPENROUTER_BASE_URL",
++    "DEFAULT_FREE_OPENROUTER_MODELS",
++]
++
++
++DEFAULT_OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
++
++# A short, curated chain of capable OpenRouter models that have historically
++# had a free ":free" variant. Used only when the caller hasn't configured a
++# model/fallback chain of their own (LLM_MODEL / LLM_FALLBACK_MODELS) — model
++# availability on OpenRouter's free tier changes over time, so treat this as
++# a reasonable starting point, not a guarantee.
++DEFAULT_FREE_OPENROUTER_MODELS: tuple[str, ...] = (
++    "deepseek/deepseek-chat-v3.1:free",
++    "qwen/qwen3-235b-a22b:free",
++    "meta-llama/llama-3.3-70b-instruct:free",
++)
++
++_RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
++
++
++@dataclass
++class OpenAICompatibleClient:
++    """Chat client for any OpenAI-compatible ``/chat/completions`` endpoint.
++
++    Works unmodified with OpenRouter and with any other OpenAI-compatible
++    provider by pointing ``base_url``/``api_key`` at it. Inference always
++    runs on the provider's infrastructure; nothing is downloaded locally.
++    """
++
++    base_url: str
++    model: str
++    api_key: str = ""
++    timeout: int = 120
++    temperature: float = 0.2
++    top_p: float = 0.9
++    fallback_models: tuple[str, ...] = ()
++    site_url: str = ""
++    app_name: str = "mind01"
++    max_retries: int = 2
++    retry_backoff_seconds: float = 1.5
++
++    # duck-typed surface expected by Agent / OllamaSemanticClassifier
++    last_output_mode: str = "json"
++    last_server_version: str = ""
++    last_response_metadata: dict[str, Any] | None = None
++    last_model_used: str = ""
++
++    # tri-state: None = untested, True/False = learned from a live call
++    _json_schema_capability: bool | None = field(default=None, repr=False)
++
++    def __post_init__(self) -> None:
++        self.base_url = self.base_url.rstrip("/")
++        self.last_server_version = self.model
++
++    # ------------------------------------------------------------------
++    # duck-typed surface (matches OllamaClient)
++    # ------------------------------------------------------------------
++
++    def model_metadata(self) -> dict[str, Any]:
++        return {
++            "model": self.model,
++            "provider_base_url": self.base_url,
++            "model_digest": "",
++            "json_schema_supported": bool(self._json_schema_capability),
++            "options": {
++                "temperature": self.temperature,
++                "top_p": self.top_p,
++                "timeout_seconds": self.timeout,
++            },
++        }
++
++    def supports_json_schema(self, *, refresh: bool = False) -> bool:
++        if refresh:
++            self._json_schema_capability = None
++        # Conservative default: unknown until a live call proves it, so we
++        # never burn a request assuming strict structured-output support
++        # most OpenRouter models don't have.
++        return bool(self._json_schema_capability)
++
++    def chat(
++        self,
++        messages: list[Message],
++        json_mode: bool = True,
++        *,
++        response_schema: dict[str, Any] | None = None,
++    ) -> str:
++        """Non-streaming chat call. Tries `model`, then each entry in
++        `fallback_models` in order, on retryable failures."""
++        models_to_try = [self.model, *self.fallback_models]
++        last_error: LLMError | None = None
++        for candidate in models_to_try:
++            try:
++                return self._chat_one_model(candidate, messages, json_mode, response_schema)
++            except LLMError as exc:
++                last_error = exc
++                if exc.status_code in {401, 403}:
++                    raise  # auth problems won't improve on another model
++                continue
++        assert last_error is not None
++        raise last_error
++
++    def chat_stream(
++        self,
++        messages: list[Message],
++        *,
++        json_mode: bool = True,
++        response_schema: dict[str, Any] | None = None,
++        on_token: Callable[[str], None] | None = None,
++    ) -> Iterator[str]:
++        """Yield content deltas as they stream in over SSE."""
++        payload = self._build_payload(self.model, messages, json_mode, response_schema)
++        payload["stream"] = True
++        request = urllib.request.Request(
++            f"{self.base_url}/chat/completions",
++            data=json.dumps(payload).encode("utf-8"),
++            headers=self._headers(),
++            method="POST",
++        )
++        try:
++            response = urllib.request.urlopen(request, timeout=self.timeout)
++        except urllib.error.HTTPError as exc:
++            raise self._http_error(exc, self.model) from exc
++        except urllib.error.URLError as exc:
++            raise LLMError(f"Could not reach {self.base_url}: {exc.reason}") from exc
++
++        with response:
++            for raw_line in response:
++                line = raw_line.decode("utf-8", errors="replace").strip()
++                if not line or not line.startswith("data:"):
++                    continue
++                data = line[len("data:"):].strip()
++                if data == "[DONE]":
++                    break
++                try:
++                    chunk = json.loads(data)
++                except json.JSONDecodeError:
++                    continue
++                choices = chunk.get("choices") or []
++                if not choices:
++                    continue
++                delta = choices[0].get("delta", {}).get("content")
++                if delta:
++                    if on_token:
++                        on_token(delta)
++                    yield delta
++
++    def chat_with_tools(
++        self,
++        messages: list[Message],
++        tools: list[dict[str, Any]],
++        *,
++        tool_choice: str | dict[str, Any] = "auto",
++    ) -> dict[str, Any]:
++        """Native OpenAI-style function/tool calling. Returns the raw
++        assistant `message` dict (may contain `tool_calls`) so callers
++        decide how to interpret it — this layer stays agent-agnostic."""
++        payload: dict[str, Any] = {
++            "model": self.model,
++            "messages": messages,
++            "tools": tools,
++            "tool_choice": tool_choice,
++            "temperature": self.temperature,
++            "stream": False,
++        }
++        body = self._post("/chat/completions", payload)
++        try:
++            return body["choices"][0]["message"]
++        except (KeyError, IndexError, TypeError) as exc:
++            raise LLMError(f"Unexpected tool-call response: {str(body)[:500]}") from exc
++
++    # ------------------------------------------------------------------
++    # internals
++    # ------------------------------------------------------------------
++
++    def _build_payload(
++        self,
++        model: str,
++        messages: list[Message],
++        json_mode: bool,
++        response_schema: dict[str, Any] | None,
++    ) -> dict[str, Any]:
++        payload: dict[str, Any] = {
++            "model": model,
++            "messages": messages,
++            "temperature": self.temperature,
++            "top_p": self.top_p,
++            "stream": False,
++        }
++        if response_schema and self.supports_json_schema():
++            payload["response_format"] = {
++                "type": "json_schema",
++                "json_schema": {"name": "agent_action", "schema": response_schema, "strict": True},
++            }
++            self.last_output_mode = "json_schema"
++        elif json_mode:
++            payload["response_format"] = {"type": "json_object"}
++            self.last_output_mode = "json"
++        else:
++            self.last_output_mode = "text"
++        return payload
++
++    def _chat_one_model(
++        self,
++        model: str,
++        messages: list[Message],
++        json_mode: bool,
++        response_schema: dict[str, Any] | None,
++    ) -> str:
++        payload = self._build_payload(model, messages, json_mode, response_schema)
++        schema_mode = "json_schema" in json.dumps(payload.get("response_format", {}))
++        try:
++            body = self._post("/chat/completions", payload)
++            if response_schema and schema_mode:
++                self._json_schema_capability = True
++        except LLMError as exc:
++            retry_as_json_object = (
++                response_schema
++                and schema_mode
++                and self._json_schema_capability is not False
++                and exc.status_code in {400, 422}
++            )
++            if not retry_as_json_object:
++                raise
++            # This deployment/model rejects structured `json_schema` output;
++            # learn that and fall back to plain JSON mode, never unconstrained
++            # prose, mirroring OllamaClient's own fallback behavior.
++            self._json_schema_capability = False
++            payload["response_format"] = {"type": "json_object"} if json_mode else None
++            if payload["response_format"] is None:
++                payload.pop("response_format", None)
++            self.last_output_mode = "json_fallback" if json_mode else "text"
++            body = self._post("/chat/completions", payload)
++
++        self.last_model_used = model
++        try:
++            choice = body["choices"][0]
++            content = choice["message"]["content"]
++        except (KeyError, IndexError, TypeError) as exc:
++            raise LLMError(f"Unexpected response from `{model}`: {str(body)[:500]}") from exc
++        if content is None:
++            raise LLMError(f"Empty completion content from `{model}`: {str(body)[:500]}")
++        usage = body.get("usage") if isinstance(body, dict) else None
++        if isinstance(usage, dict):
++            self.last_response_metadata = dict(usage)
++        return content
++
++    def _headers(self) -> dict[str, str]:
++        headers = {"Content-Type": "application/json"}
++        if self.api_key:
++            headers["Authorization"] = f"Bearer {self.api_key}"
++        if "openrouter.ai" in self.base_url:
++            # Optional but recommended by OpenRouter for attribution/rankings.
++            if self.site_url:
++                headers["HTTP-Referer"] = self.site_url
++            if self.app_name:
++                headers["X-Title"] = self.app_name
++        return headers
++
++    def _post(self, path: str, payload: dict[str, Any]) -> dict[str, Any]:
++        data = json.dumps(payload).encode("utf-8")
++        delay = self.retry_backoff_seconds
++        last_exc: LLMError | None = None
++        for attempt in range(self.max_retries + 1):
++            request = urllib.request.Request(
++                f"{self.base_url}{path}",
++                data=data,
++                headers=self._headers(),
++                method="POST",
++            )
++            try:
++                with urllib.request.urlopen(request, timeout=self.timeout) as response:
++                    raw = response.read().decode("utf-8")
++                try:
++                    return json.loads(raw)
++                except json.JSONDecodeError as exc:
++                    raise LLMError(f"Unexpected response body: {raw[:500]}") from exc
++            except urllib.error.HTTPError as exc:
++                error = self._http_error(exc, payload.get("model", self.model))
++                last_exc = error
++                if error.status_code in _RETRYABLE_STATUS_CODES and attempt < self.max_retries:
++                    time.sleep(delay)
++                    delay *= 2
++                    continue
++                raise error from exc
++            except urllib.error.URLError as exc:
++                last_exc = LLMError(f"Could not reach {self.base_url}: {exc.reason}")
++                if attempt < self.max_retries:
++                    time.sleep(delay)
++                    delay *= 2
++                    continue
++                raise last_exc from exc
++        assert last_exc is not None
++        raise last_exc
++
++    def _http_error(self, exc: urllib.error.HTTPError, model: str) -> LLMError:
++        detail = _extract_error_detail(exc)
++        if exc.code == 401:
++            return LLMError("Authentication failed: check your API key.", status_code=401)
++        if exc.code == 402:
++            return LLMError(f"Provider requires payment/credits for `{model}`.", status_code=402)
++        if exc.code == 404:
++            return LLMError(f"Model `{model}` not found at {self.base_url}.", status_code=404)
++        if exc.code == 429:
++            suffix = f" {detail}" if detail else ""
++            return LLMError(f"Rate limited by provider for `{model}`.{suffix}", status_code=429)
++        suffix = f": {detail}" if detail else "."
++        return LLMError(f"{self.base_url} HTTP {exc.code} rejected the request{suffix}", status_code=exc.code)
++
++
++def _extract_error_detail(exc: urllib.error.HTTPError) -> str:
++    try:
++        raw = exc.read().decode("utf-8", errors="replace")[:1000]
++    except (OSError, ValueError):
++        return ""
++    try:
++        body = json.loads(raw)
++    except json.JSONDecodeError:
++        return " ".join(raw.split())[:300]
++    if isinstance(body, dict):
++        err = body.get("error")
++        if isinstance(err, dict) and isinstance(err.get("message"), str):
++            return " ".join(err["message"].split())[:300]
++        if isinstance(err, str):
++            return " ".join(err.split())[:300]
++    return ""
++
++
++def build_llm_client(config: Any) -> Any:
++    """Factory: turn an `AgentConfig` into a concrete, duck-typed LLM client.
++
++    This is the *only* place that branches on provider. `Agent`,
++    `OllamaSemanticClassifier`, and everything downstream just call
++    `.chat(...)` on whatever comes back — switching providers/models is
++    purely a config/env-var change (`AgentConfig.provider`, `.model`,
++    `.api_key`, `.base_url`, `.fallback_models`), never an agent-logic one.
++    """
++    provider = (getattr(config, "provider", "ollama") or "ollama").strip().lower()
++
++    if provider == "ollama":
++        return OllamaClient(config.ollama_url, config.model, timeout=config.request_timeout_seconds)
++
++    if provider in {"openrouter", "openai_compatible", "openai"}:
++        base_url = config.base_url or (DEFAULT_OPENROUTER_BASE_URL if provider == "openrouter" else "")
++        if not base_url:
++            raise ValueError(
++                f"base_url is required for provider `{provider}` "
++                "(set --base-url or LLM_BASE_URL)."
++            )
++        if provider == "openrouter" and not config.api_key:
++            raise ValueError(
++                "OpenRouter requires an API key (set --api-key or OPENROUTER_API_KEY)."
++            )
++        return OpenAICompatibleClient(
++            base_url=base_url,
++            model=config.model,
++            api_key=config.api_key,
++            timeout=config.request_timeout_seconds,
++            fallback_models=tuple(config.fallback_models),
++            site_url=config.site_url,
++            app_name=config.app_name,
++        )
++
++    raise ValueError(
++        f"Unknown LLM provider `{provider}`. Use one of: ollama, openrouter, openai_compatible."
++    )
+diff --git a/Brain/mind01/semantic_router_v2.py b/Brain/mind01/semantic_router_v2.py
+index b1fa61c..83d7279 100644
+--- a/Brain/mind01/semantic_router_v2.py
++++ b/Brain/mind01/semantic_router_v2.py
+@@ -640,7 +640,7 @@ class RuleBasedSemanticClassifier:
+ class OllamaSemanticClassifier:
+     """Two-stage JSON-Schema classifier with at most one repair call overall."""
+ 
+-    def __init__(self, client: OllamaClient) -> None:
++    def __init__(self, client: "OllamaClient | Any") -> None:
+         self.client = client
+         self.stats = ModelCallStats()
+         self.model_identity = client.model

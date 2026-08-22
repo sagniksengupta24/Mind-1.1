@@ -1,0 +1,1092 @@
+{
+  "cases": [
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-001",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "ambiguous_mutation",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for token redaction; several unrelated handlers exist and no target is identified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_1",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-002",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "intent_type": "resolvable_target",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements path normalization, then report it without changing anything.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_2",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-003",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "missing_creation_contract",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for plugin discovery, but the required format and destination are unspecified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_3",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-004",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "unambiguous_explanation",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain test isolation conceptually; no repository evidence is requested.",
+      "rationale_code": "direct_explanation",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_4",
+        "direct_explanation"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-005",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "intent_type": "resolvable_repository_question",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether trace correlation uses one or multiple implementations.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_5",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-006",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "ambiguous_mutation",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for rate limiting; several unrelated handlers exist and no target is identified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_6",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-007",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "intent_type": "resolvable_target",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements schema migration, then report it without changing anything.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_7",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-008",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "missing_creation_contract",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for artifact hashing, but the required format and destination are unspecified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_8",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-009",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "unambiguous_explanation",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain rollback recovery conceptually; no repository evidence is requested.",
+      "rationale_code": "direct_explanation",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_9",
+        "direct_explanation"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-010",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "intent_type": "resolvable_repository_question",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether symbol indexing uses one or multiple implementations.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_10",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-011",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "ambiguous_mutation",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for documentation freshness; several unrelated handlers exist and no target is identified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_11",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-012",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "intent_type": "resolvable_target",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements memory provenance, then report it without changing anything.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_12",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-013",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "missing_creation_contract",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for timeout handling, but the required format and destination are unspecified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_13",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-014",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "unambiguous_explanation",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain output truncation conceptually; no repository evidence is requested.",
+      "rationale_code": "direct_explanation",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_14",
+        "direct_explanation"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-015",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "intent_type": "resolvable_repository_question",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether policy enforcement uses one or multiple implementations.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_15",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-016",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "ambiguous_mutation",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for receipt verification; several unrelated handlers exist and no target is identified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_16",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-017",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "intent_type": "resolvable_target",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements mode selection, then report it without changing anything.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_17",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-018",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "missing_creation_contract",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for patch review, but the required format and destination are unspecified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_18",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-019",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "unambiguous_explanation",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain import safety conceptually; no repository evidence is requested.",
+      "rationale_code": "direct_explanation",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_19",
+        "direct_explanation"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-020",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "intent_type": "resolvable_repository_question",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether concurrent sessions uses one or multiple implementations.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_20",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-021",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "ambiguous_mutation",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for HTTP error mapping; several unrelated handlers exist and no target is identified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_21",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-022",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "intent_type": "resolvable_target",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements environment parsing, then report it without changing anything.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_22",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-023",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "missing_creation_contract",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for command allowlisting, but the required format and destination are unspecified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_23",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-024",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "unambiguous_explanation",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain workspace boundaries conceptually; no repository evidence is requested.",
+      "rationale_code": "direct_explanation",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_24",
+        "direct_explanation"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-025",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "intent_type": "resolvable_repository_question",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether model fallback uses one or multiple implementations.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_25",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-026",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "ambiguous_mutation",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Fix the handler for structured generation; several unrelated handlers exist and no target is identified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_26",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-027",
+      "expected": {
+        "allowed_exact_tools": [
+          "search_code",
+          "search_symbols"
+        ],
+        "intent_type": "resolvable_target",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "symbol_inspection"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Find which file implements repair budgets, then report it without changing anything.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_27",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-028",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "missing_creation_contract",
+        "mutation_intent": true,
+        "response_mode": "clarification",
+        "risk_level": "high",
+        "specialist": "implementation",
+        "task_class": "blocked",
+        "tool_family": "clarification"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Create a configuration for response modes, but the required format and destination are unspecified.",
+      "rationale_code": "clarification_missing_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_28",
+        "clarification_missing_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-029",
+      "expected": {
+        "allowed_exact_tools": [],
+        "intent_type": "unambiguous_explanation",
+        "mutation_intent": false,
+        "response_mode": "final_answer",
+        "risk_level": "low",
+        "specialist": "general",
+        "task_class": "explanation",
+        "tool_family": "final_response"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Explain capability grants conceptually; no repository evidence is requested.",
+      "rationale_code": "direct_explanation",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_29",
+        "direct_explanation"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    },
+    {
+      "agent_mode": "read_only",
+      "capabilities": {
+        "network": false,
+        "shell": false,
+        "write": false
+      },
+      "case_id": "ambiguity-030",
+      "expected": {
+        "allowed_exact_tools": [
+          "project_map",
+          "search_code"
+        ],
+        "intent_type": "resolvable_repository_question",
+        "mutation_intent": false,
+        "response_mode": "action",
+        "risk_level": "low",
+        "specialist": "repository_inspector",
+        "task_class": "inspection",
+        "tool_family": "repository_discovery"
+      },
+      "forbidden_tools": [
+        "delete_memory",
+        "edit_file",
+        "remember",
+        "update_memory",
+        "write_file"
+      ],
+      "partition": "ambiguity",
+      "prompt": "Inspect the repository to determine whether security logging uses one or multiple implementations.",
+      "rationale_code": "repository_resolves_target",
+      "tags": [
+        "ambiguity",
+        "ambiguity_case_30",
+        "repository_resolves_target"
+      ],
+      "workspace_fixture": "fixtures/ambiguous_targets"
+    }
+  ],
+  "partition": "ambiguity",
+  "suite_version": "semantic-routing-v1"
+}

@@ -1,0 +1,61 @@
+# --- Archives / stray artifacts ---
+Brainn.zip
+
+# --- Node / frontend ---
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# --- Env & secrets (never commit) ---
+.env
+.env.local
+.env.*.local
+
+# --- Python / backend build & packaging ---
+dist/
+build/
+*.egg-info/
+*.whl
+__pycache__/
+**/__pycache__/
+.pycache/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# --- Python virtualenvs ---
+.venv/
+.venv-linux/
+
+# --- Local databases / logs / runtime state ---
+*.sqlite3
+*.db
+logs/
+eval_results/
+traces/
+receipts/
+reports/*.tmp
+
+# --- Agent tooling state (not source) ---
+.mind01/
+.project_knowledge/
+.repository_comprehension/
+
+# --- Curated, immutable release evidence retained in source control. ---
+evaluation_results/
+!evaluation_results/baseline-v0.9.0-deterministic/
+!evaluation_results/baseline-v0.9.0-deterministic/**
+!evaluation_results/20260715T205300Z-deterministic-v091/
+!evaluation_results/20260715T205300Z-deterministic-v091/**
+!evaluation_results/pre_transformation_baseline/
+!evaluation_results/pre_transformation_baseline/**
+!evaluation_results/v0.10.0-release/
+!evaluation_results/v0.10.0-release/**
+!evaluation_results/v0.11.0-baseline/
+!evaluation_results/v0.11.0-baseline/**
+!evaluation_results/v0.11.0-release/
+!evaluation_results/v0.11.0-release/**
+
+# --- Misc ---
+.DS_Store

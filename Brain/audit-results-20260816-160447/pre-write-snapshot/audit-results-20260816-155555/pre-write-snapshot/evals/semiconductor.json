@@ -1,0 +1,10 @@
+{
+  "category": "semiconductor",
+  "tasks": [
+    {
+      "name": "semiconductor-dry-run-harness",
+      "prompt": "Semiconductor harness check: explain setup time and clock behavior if a live model is available.",
+      "expected_contains": ["Dry run ready", "Semiconductor"]
+    }
+  ]
+}

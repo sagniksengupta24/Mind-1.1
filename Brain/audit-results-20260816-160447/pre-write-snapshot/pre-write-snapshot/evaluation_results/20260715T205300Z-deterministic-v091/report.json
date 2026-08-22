@@ -1,0 +1,36 @@
+{
+  "agent_version": "0.9.1",
+  "metrics_source": "deterministic_local_verification",
+  "git_commit": null,
+  "environment": {
+    "python": "3.14.4",
+    "ollama_available": false,
+    "ollama_error": "ollama executable not found"
+  },
+  "commands": [
+    {"command":"python -m pip install -e .[dev]","exit_code":0,"result":"mind01 0.9.1 installed with development dependencies"},
+    {"command":"python -m pytest -q","exit_code":0,"result":"69 passed in 2.64s"},
+    {"command":"python -m compileall mind01 tests","exit_code":0,"result":"passed; no intentionally invalid .py source encountered"},
+    {"command":"python scripts/run_checks.py","exit_code":0,"result":"69 tests, compileall, eval validation, mock regression 25/25, dry-run eval 1/1, package check all passed"},
+    {"command":"python -m mind01.eval validate","exit_code":0,"result":"20 ordinary tasks and 50 action cases validated"},
+    {"command":"python -m mind01.eval run --suite regression --mock-model","exit_code":0,"result":"25/25; metrics_source=mock_model"},
+    {"command":"python -m pip wheel . --no-deps","exit_code":0,"result":"mind01-0.9.1-py3-none-any.whl; sha256=c2ddb1188b0c290e51632bdb282c2dbc48c8fe97e5b7cb840b7ef129fc6f2380"},
+    {"command":"python -m build --no-isolation","exit_code":0,"result":"built dist/mind01-0.9.1.tar.gz and dist/mind01-0.9.1-py3-none-any.whl"},
+    {"command":"mind01 --version","exit_code":0,"result":"mind01 0.9.1"},
+    {"command":"python -c import mind01; print(mind01.__version__)","exit_code":0,"result":"0.9.1"},
+    {"command":"ollama list","exit_code":127,"result":"ollama: command not found"}
+  ],
+  "wheel": {
+    "path": "mind01-0.9.1-py3-none-any.whl",
+    "size_bytes": 121644,
+    "file_count": 67,
+    "metadata_version": "0.9.1",
+    "contains_action_suite": true,
+    "contains_broken_py_fixture": true,
+    "contains_materialized_broken_py": false,
+    "contains_runtime_state": false
+  },
+  "real_action_benchmark": null,
+  "real_mutation_smoke": null,
+  "real_metrics_note": "Not run because Ollama is not installed. No mocked value is substituted for real structural validity, semantic tool-family selection, unsafe-action, mutation-acceptance, or false-success metrics."
+}

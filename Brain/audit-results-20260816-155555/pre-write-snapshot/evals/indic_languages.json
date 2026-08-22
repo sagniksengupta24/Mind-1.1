@@ -1,0 +1,10 @@
+{
+  "category": "indic_languages",
+  "tasks": [
+    {
+      "name": "indic-languages-dry-run-harness",
+      "prompt": "Indic languages harness check: answer a beginner technical question in Hindi or Bengali if live.",
+      "expected_contains": ["Dry run ready", "Indic languages"]
+    }
+  ]
+}

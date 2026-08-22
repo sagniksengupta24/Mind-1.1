@@ -1,0 +1,29 @@
+{
+  "authoring_source": "manual-scenario-catalog",
+  "created_at": "2026-07-30T00:00:00Z",
+  "files": {
+    "development.json": {
+      "case_count": 100,
+      "sha256": "322efd681770faaf05d31af22bcf6c120c9eaadb47bd4aca6a612497d888289b"
+    },
+    "examples.json": {
+      "case_count": 100,
+      "sha256": "9014afa81c9195193d51a23a7bc5ddd5a3fc1da976191247cba94fa66a512646"
+    },
+    "internal_holdout.json": {
+      "case_count": 40,
+      "sha256": "86fafd9976f653906c72b9de72b5112d0368a608cf31fd0b0935603863ca390b"
+    }
+  },
+  "holdout_policy": "Do not load until development decisions are frozen; evaluate once.",
+  "manifest_content_hash": "09debe34cc43268f6bf9a673e1d31fcce1643d928e26c8119b090b7d132857cf",
+  "scenario_count": 20,
+  "schema_version": "1.0",
+  "split_policy": {
+    "development": 100,
+    "examples": 100,
+    "internal_holdout": 40
+  },
+  "suite_version": "semantic-routing-v2.1-fresh",
+  "total_cases": 240
+}

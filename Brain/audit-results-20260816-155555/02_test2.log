@@ -1,0 +1,6 @@
+=== TEST 2: multi-file pattern-following edit ===
+./run.sh: line 35: mind01: command not found
+=== TEST 2: independent test verification (not trusting agent's self-report) ===
+/opt/homebrew/opt/python@3.14/bin/python3.14: No module named pytest
+Independent pytest exit code: 1
+=== TEST 2: diff against pre-write snapshot ===

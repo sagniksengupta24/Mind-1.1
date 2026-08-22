@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "evaluation_repair": "RC3.1",
+  "runtime_frozen_commit": "18bec0972aec54fda372b8bf5a66f2508022565e",
+  "evaluator_frozen_commit": "18bec0972aec54fda372b8bf5a66f2508022565e",
+  "runtime_manifest_definition": "tracked mind01 Python files excluding paths containing eval, annotation_v3, or rc2_complete_run",
+  "runtime_file_count": 53,
+  "runtime_manifest_sha256": "be5f4eb246b6685caae878d6318d26e0ee69cf43c63d0b0e30cd0e207f2dd469",
+  "evaluator_file_count": 9,
+  "evaluator_manifest_sha256": "96e1ce2d57dd621bc4d3e14096a031ae83e1d06f1a4b52b44c7db43b52b55d94",
+  "evaluator_identity_sha256": "d2656a0bc944c00134232f81b843bd169d2b26517a12c7e4b875e2b2864eb27a",
+  "original_raw_candidate_pool_sha256": "153a3094a6ab875def495e22933b44c34b94936f3c1f97e3fdb262173947f418",
+  "independent_candidate_pool_sha256": "3ac2e64e23473c94a9ad8c66512712a62d96fcb98e765b41636b664bc8f676ff",
+  "independent_candidate_count": 180,
+  "old_blind_input_hash": "42187fcd812e314269598fc75f12ea89fff434d6fa570922b5debfd39f95792c",
+  "old_annotation_report_sha256": "111758163fb9cff3d4b75997bf51365812c173206594db3cea85471c3ae8fd10",
+  "old_private_labels_sha256": "fe67e37e1c7e937641ec20caa18b7e2234f15c7601ac83bd767fe3372a99214c",
+  "old_processed": 120,
+  "old_accepted": 117,
+  "old_rejected": 3,
+  "old_rejected_case_ids": [
+    "blind-v3-raw-039",
+    "blind-v3-raw-052",
+    "blind-v3-raw-135"
+  ],
+  "old_seal_status": "SUPERSEDED — insufficient accepted annotations after frozen evaluation",
+  "old_seal_failure_reason": "Exactly 120 cases were preselected; three frozen-evaluator rejections left only 117 eligible labels.",
+  "release_tag_present": false,
+  "runtime_or_evaluator_modification_permitted": false
+}

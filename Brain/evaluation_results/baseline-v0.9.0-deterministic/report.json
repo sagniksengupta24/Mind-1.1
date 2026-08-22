@@ -1,0 +1,26 @@
+{
+  "metrics_source": "deterministic_pre_change_baseline",
+  "agent_version": "0.9.0",
+  "workspace_git_commit": null,
+  "ollama_available": false,
+  "ollama_error": "ollama executable not found",
+  "pytest": {
+    "passed": 47,
+    "failed": 1,
+    "failure": "tests/test_evals.py expected 0.8.0 while runtime reported 0.9.0"
+  },
+  "compileall_passed": true,
+  "dry_run_eval": {
+    "passed": 7,
+    "total": 7
+  },
+  "active_response_formats_observed_in_source": [
+    "XML action_json",
+    "XML final_answer",
+    "Markdown-fenced XML normalization",
+    "plain-text final fallback in read-only/propose modes"
+  ],
+  "real_model_parser_incidents": [],
+  "real_model_metrics_available": false,
+  "note": "No raw real-model outputs were recorded because Ollama was unavailable in this environment."
+}

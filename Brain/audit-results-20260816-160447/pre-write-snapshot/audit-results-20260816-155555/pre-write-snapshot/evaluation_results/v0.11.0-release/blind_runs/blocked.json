@@ -1,0 +1,7 @@
+{
+  "status": "blocked",
+  "reason": "No independently controlled external blind labels or evaluator were supplied.",
+  "blind_inputs_sha256": "fe0903bd6f8d116f77a7cbce37b1d4d2acaa9c8d59baec6bc042b26f620e5839",
+  "labels_exposed_during_tuning": false,
+  "independence_warning": "Input archetypes are visible in the repository generator and cannot prove independent blind performance."
+}
